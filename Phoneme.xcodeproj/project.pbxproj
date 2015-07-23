@@ -13,6 +13,16 @@
 		4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4657422D1B616ADD00FE3E58 /* Images.xcassets */; };
 		465742311B616ADD00FE3E58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */; };
 		4657423D1B616ADE00FE3E58 /* PhonemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4657423C1B616ADE00FE3E58 /* PhonemeTests.swift */; };
+		465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742511B6170D000FE3E58 /* CustomImageCell.swift */; };
+		465742541B6174DC00FE3E58 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742531B6174DC00FE3E58 /* ImageCollectionViewController.swift */; };
+		465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465742491B616CB800FE3E58 /* Fam1.mp4 */; };
+		465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424A1B616CB800FE3E58 /* Fam2.mp4 */; };
+		465742571B617B8A00FE3E58 /* Fam3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424B1B616CB800FE3E58 /* Fam3.mp4 */; };
+		465742581B617B8A00FE3E58 /* Fam4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424C1B616CB800FE3E58 /* Fam4.mp4 */; };
+		465742591B617B8A00FE3E58 /* Fam5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424D1B616CB800FE3E58 /* Fam5.mp4 */; };
+		4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424E1B616CB800FE3E58 /* Fam6.mp4 */; };
+		4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424F1B616CB800FE3E58 /* Fam7.mp4 */; };
+		4657425C1B617B8A00FE3E58 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465742501B616CB800FE3E58 /* Intro.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		465742361B616ADE00FE3E58 /* PhonemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhonemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4657423B1B616ADE00FE3E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4657423C1B616ADE00FE3E58 /* PhonemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonemeTests.swift; sourceTree = "<group>"; };
+		465742491B616CB800FE3E58 /* Fam1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam1.mp4; sourceTree = "<group>"; };
+		4657424A1B616CB800FE3E58 /* Fam2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam2.mp4; sourceTree = "<group>"; };
+		4657424B1B616CB800FE3E58 /* Fam3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam3.mp4; sourceTree = "<group>"; };
+		4657424C1B616CB800FE3E58 /* Fam4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam4.mp4; sourceTree = "<group>"; };
+		4657424D1B616CB800FE3E58 /* Fam5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam5.mp4; sourceTree = "<group>"; };
+		4657424E1B616CB800FE3E58 /* Fam6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam6.mp4; sourceTree = "<group>"; };
+		4657424F1B616CB800FE3E58 /* Fam7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam7.mp4; sourceTree = "<group>"; };
+		465742501B616CB800FE3E58 /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
+		465742511B6170D000FE3E58 /* CustomImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageCell.swift; sourceTree = "<group>"; };
+		465742531B6174DC00FE3E58 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +97,12 @@
 		465742231B616ADD00FE3E58 /* Phoneme */ = {
 			isa = PBXGroup;
 			children = (
+				465742481B616C2600FE3E58 /* Audio */,
 				465742261B616ADD00FE3E58 /* AppDelegate.swift */,
 				465742281B616ADD00FE3E58 /* ViewController.swift */,
 				4657422A1B616ADD00FE3E58 /* Main.storyboard */,
+				465742531B6174DC00FE3E58 /* ImageCollectionViewController.swift */,
+				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
@@ -110,6 +133,21 @@
 				4657423B1B616ADE00FE3E58 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		465742481B616C2600FE3E58 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				465742491B616CB800FE3E58 /* Fam1.mp4 */,
+				4657424A1B616CB800FE3E58 /* Fam2.mp4 */,
+				4657424B1B616CB800FE3E58 /* Fam3.mp4 */,
+				4657424C1B616CB800FE3E58 /* Fam4.mp4 */,
+				4657424D1B616CB800FE3E58 /* Fam5.mp4 */,
+				4657424E1B616CB800FE3E58 /* Fam6.mp4 */,
+				4657424F1B616CB800FE3E58 /* Fam7.mp4 */,
+				465742501B616CB800FE3E58 /* Intro.mp4 */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +230,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465742591B617B8A00FE3E58 /* Fam5.mp4 in Resources */,
+				465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */,
+				465742581B617B8A00FE3E58 /* Fam4.mp4 in Resources */,
+				4657425C1B617B8A00FE3E58 /* Intro.mp4 in Resources */,
 				4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */,
+				4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */,
+				465742571B617B8A00FE3E58 /* Fam3.mp4 in Resources */,
+				4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */,
 				465742311B616ADD00FE3E58 /* LaunchScreen.xib in Resources */,
 				4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */,
+				465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465742541B6174DC00FE3E58 /* ImageCollectionViewController.swift in Sources */,
 				465742291B616ADD00FE3E58 /* ViewController.swift in Sources */,
+				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,
 				465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +459,7 @@
 				465742421B616ADE00FE3E58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		465742431B616ADE00FE3E58 /* Build configuration list for PBXNativeTarget "PhonemeTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +468,7 @@
 				465742451B616ADE00FE3E58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
