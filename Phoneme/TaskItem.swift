@@ -12,11 +12,19 @@ class TaskItem: NSObject {
     let audio : String
     let images: [String]
     let correctImage: String
+    var demo: Bool = false
+    var outro: String?
+    var requireResponse: Bool = true
     
-    init(audio:String, images:[String], correctImage: String){
+    convenience init(audio:String, images:[String], correctImage: String){
+        self.init(audio:audio, images: images, correctImage: correctImage, requireResponse: true)
+    }
+    
+    init(audio:String, images:[String], correctImage: String, requireResponse: Bool){
         self.audio = audio
         self.images = images
         self.correctImage = correctImage
+        self.requireResponse = requireResponse
     }
 }
 
@@ -24,6 +32,7 @@ class Task: NSObject{
     let intro: String
     let taskTitle: String
     let items: [TaskItem]
+    var outro : String?
     
     init(intro:String, title:String, items:[TaskItem]){
         self.intro = intro
