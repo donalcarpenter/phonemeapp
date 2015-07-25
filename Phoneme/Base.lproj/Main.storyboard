@@ -37,6 +37,16 @@
                                     <segue destination="iyH-QT-ihW" kind="show" identifier="rhymeoddity" id="0za-Dz-u3x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-1y-6qp">
+                                <rect key="frame" x="191" y="274" width="642" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Initial Phoneme">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UJk-kA-t4i" kind="show" identifier="initialphoneme" id="voQ-9K-i0I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -170,6 +180,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLV-sU-pEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="354"/>
+        </scene>
+        <!--Initial Phoneme View Controller-->
+        <scene sceneID="9DT-Lj-qNS">
+            <objects>
+                <viewController id="UJk-kA-t4i" customClass="InitialPhonemeViewController" customModule="Phoneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Awl-k8-jWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="F2H-P7-JXF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GMH-90-ffm">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ot0-lq-38D">
+                                <rect key="frame" x="324" y="38" width="377" height="354"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Q7-Fb-3bj">
+                                <rect key="frame" x="16" y="421" width="992" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IYJ-Um-2cn">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7Xr-nK-VTf" customClass="CustomImageCell" customModule="Phoneme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-mt-coZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="m3D-mt-coZ" firstAttribute="top" secondItem="7Xr-nK-VTf" secondAttribute="top" id="3mk-pK-GfX"/>
+                                            <constraint firstAttribute="trailing" secondItem="m3D-mt-coZ" secondAttribute="trailing" id="9bj-yW-mt2"/>
+                                            <constraint firstAttribute="trailing" secondItem="m3D-mt-coZ" secondAttribute="trailing" id="O0a-Wz-9tQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="m3D-mt-coZ" secondAttribute="bottom" id="VmF-Ve-g7y"/>
+                                            <constraint firstItem="m3D-mt-coZ" firstAttribute="leading" secondItem="7Xr-nK-VTf" secondAttribute="leading" id="WrY-bC-pes"/>
+                                            <constraint firstItem="m3D-mt-coZ" firstAttribute="leading" secondItem="7Xr-nK-VTf" secondAttribute="leading" id="btE-B5-pyC"/>
+                                            <constraint firstItem="m3D-mt-coZ" firstAttribute="top" secondItem="7Xr-nK-VTf" secondAttribute="top" id="fVa-1C-X5X"/>
+                                            <constraint firstAttribute="bottom" secondItem="m3D-mt-coZ" secondAttribute="bottom" id="yZp-ek-glC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="m3D-mt-coZ" id="exl-Xh-R4V"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="UJk-kA-t4i" id="qiL-5U-m7w"/>
+                                    <outlet property="delegate" destination="UJk-kA-t4i" id="3X3-ao-a4r"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2Q7-Fb-3bj" id="Rmv-Ey-K5c"/>
+                        <outlet property="topImage" destination="ot0-lq-38D" id="SAT-yr-Z91"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eZ-Yz-uLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140" y="1216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fne-do-96O">

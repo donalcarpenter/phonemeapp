@@ -35,8 +35,22 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
             TaskItem(audio:"Rhyme11", images:["tent", "lock", "sock"], correctImage: "tent"),
             TaskItem(audio:"Rhyme12", images:["shell", "duck", "bell"], correctImage: "duck"),
             TaskItem(audio:"Rhyme13", images:["ring", "sing", "lamb"], correctImage: "lamb")
-        ]
-    )
+        ])
+    
+    let initialPhonemeTask = Task(intro:"InitialPhonemeIntro", title: "Initial Phoneme Identity Task", items:
+        [   InitialPhonemeTaskItem(firstImage: "dog", audio: "InitialPhoneme1", images: ["moon", "duck", "whale"], correctImage: "duck", requireResponse: true, outro:"InitialPhoneme2"),
+            InitialPhonemeTaskItem(firstImage: "dog", audio: "InitialPhoneme3", images: ["horse", "rope", "door"], correctImage: "door", requireResponse: true, outro:"InitialPhoneme4"),
+            InitialPhonemeTaskItem(firstImage: "mouse", audio: "InitialPhoneme5", images: ["doll", "bear", "milk"], correctImage: "milk"),
+            InitialPhonemeTaskItem(firstImage: "mouse", audio: "InitialPhoneme6", images: ["mat", "dog", "book"], correctImage: "mat"),
+            InitialPhonemeTaskItem(firstImage: "seal", audio: "InitialPhoneme7", images: ["bee", "sun", "tent"], correctImage: "sun"),
+            InitialPhonemeTaskItem(firstImage: "seal", audio: "InitialPhoneme8", images: ["saw", "tie", "hook"], correctImage: "saw"),
+            InitialPhonemeTaskItem(firstImage: "cat", audio: "InitialPhoneme9", images: ["bus", "kite", "arm"], correctImage: "kite"),
+            InitialPhonemeTaskItem(firstImage: "cat", audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], correctImage: ""),
+            InitialPhonemeTaskItem(firstImage: "bee", audio: "InitialPhoneme11", images: ["cat", "leg", "ball"], correctImage: "ball"),
+            InitialPhonemeTaskItem(firstImage: "bee", audio: "InitialPhoneme12", images: ["car", "boat", "shoe"], correctImage: "boat"),
+            InitialPhonemeTaskItem(firstImage: "fish", audio: "InitialPhoneme13", images: ["foot", "hat", "pig"], correctImage: "foot"),
+            InitialPhonemeTaskItem(firstImage: "fish", audio: "InitialPhoneme14", images: ["duck", "bell", "fire"], correctImage: "fire")
+        ])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +75,13 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
             self.task = rhymeOddittyTask;
             dest.delegate = self;
             
+            return
+        }
+        
+        if(segue.identifier == "initialphoneme"){
+            let dest = segue.destinationViewController as! InitialPhonemeViewController
+            self.task = initialPhonemeTask
+            dest.delegate = self
             return
         }
     }
