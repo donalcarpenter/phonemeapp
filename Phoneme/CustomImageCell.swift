@@ -11,4 +11,6 @@ import UIKit
 class CustomImageCell: UICollectionViewCell {
 
     @IBOutlet weak var imageCell: UIImageView!
+    
+    var name: String?
 }

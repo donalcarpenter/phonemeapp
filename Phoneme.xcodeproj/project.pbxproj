@@ -23,6 +23,7 @@
 		4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424E1B616CB800FE3E58 /* Fam6.mp4 */; };
 		4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424F1B616CB800FE3E58 /* Fam7.mp4 */; };
 		4657425C1B617B8A00FE3E58 /* Intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465742501B616CB800FE3E58 /* Intro.mp4 */; };
+		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		465742501B616CB800FE3E58 /* Intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.mp4; sourceTree = "<group>"; };
 		465742511B6170D000FE3E58 /* CustomImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageCell.swift; sourceTree = "<group>"; };
 		465742531B6174DC00FE3E58 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
+				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
 			);
 			path = Phoneme;
 			sourceTree = "<group>";
@@ -147,7 +150,7 @@
 				4657424F1B616CB800FE3E58 /* Fam7.mp4 */,
 				465742501B616CB800FE3E58 /* Intro.mp4 */,
 			);
-			name = Audio;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				465742541B6174DC00FE3E58 /* ImageCollectionViewController.swift in Sources */,
+				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
 				465742291B616ADD00FE3E58 /* ViewController.swift in Sources */,
 				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,
 				465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */,
