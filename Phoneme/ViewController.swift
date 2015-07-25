@@ -15,7 +15,7 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
     var task :Task = Task.emptyTask
     
     let familiarizationTask: Task = Task(intro:"FamIntro", title:"Familiarisation", items:
-        [TaskItem(audio:"Fam1", images:["green-box"], correctImage:"green-box"),
+        [TaskItem(audio:"Fam1", images:["", "green-box", ""], correctImage:"green-box"),
             TaskItem(audio:"Fam3", images:["mouse", "seal", "dog"], correctImage:"dog"),
             TaskItem(audio:"Fam4", images:["cat", "bear", "spider"], correctImage:"cat"),
             TaskItem(audio:"Fam5", images:["fly", "bee", "snake"], correctImage:"bee"),
@@ -27,7 +27,7 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
             TaskItem(audio:"Rhyme3", images:["pig", "hat", "bat"], correctImage: "pig", requireResponse:false),
             TaskItem(audio:"Rhyme4", images:["cat", "mat", "bus"], correctImage: "bus"),
             TaskItem(audio:"Rhyme5", images:["peg", "doll", "leg"], correctImage: "doll"),
-            TaskItem(audio:"Rhyme6", images:["saw", "boe", "toe"], correctImage: "saw"),
+            TaskItem(audio:"Rhyme6", images:["saw", "toe", "bow"], correctImage: "saw"),
             TaskItem(audio:"Rhyme7", images:["sand", "hand", "cup"], correctImage: "cup"),
             TaskItem(audio:"Rhyme8", images:["hen", "car", "pen"], correctImage: "car"),
             TaskItem(audio:"Rhyme9", images:["dog", "book", "hook"], correctImage: "dog"),
@@ -36,13 +36,10 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
             TaskItem(audio:"Rhyme12", images:["shell", "duck", "bell"], correctImage: "duck"),
             TaskItem(audio:"Rhyme13", images:["ring", "sing", "lamb"], correctImage: "lamb")
         ]
-        
     )
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBarHidden = true
     }
 
