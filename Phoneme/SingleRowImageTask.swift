@@ -9,21 +9,21 @@
 import UIKit
 import AVFoundation
 
-var audioPlayer = AVAudioPlayer()
+var audioPlayer1 = AVAudioPlayer()
 
 protocol ImageCollectionViewControllerDelegate{
     var task : Task { get }
+    //var player: AudioManager { get }
 }
 
-class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate {
+class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var task: Task?
     var counter = 0
     var answers : [String]?
+    let audioManager = AudioManager()
     
     var delegate: ImageCollectionViewControllerDelegate?
-    
-    let postSynchronousPlaybackQueue = Queue<NSOperation>()
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,38 +32,26 @@ class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollec
         let count: Int = task!.items.count
         answers = [String](count:count, repeatedValue: "")
     }
-    
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
-        // urghh, this is needed because the api of AVAudioPlayer sucks so much... There is no 
-        // abilty to pass it a closure with a completion callback. so we need to do all this 
-        // crazy carry on...
-        while(!postSynchronousPlaybackQueue.isEmpty()){
-            NSOperationQueue.mainQueue().addOperation(postSynchronousPlaybackQueue.dequeue()!)
-        }
-    }
-    
+
     override func viewDidAppear(animated: Bool) {
 
         weak var weakself = self;
         
         self.navigationController?.navigationBarHidden = true
         
-        postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: { () -> Void in
+        audioManager.playAudioFrom(task!.intro, completionBlock: { () -> Void in
             if(!weakself!.task!.items[0].requireResponse){
                 
-                
-                weakself!.postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: { () -> Void in
+                weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].audio, completionBlock: {
+                    () -> Void in
                     weakself!.moveToNextTaskItem()
-                    }))
-                
-                weakself!.playMp4Audio(weakself!.task!.items[0].audio, async: false)
+                })
                 
             }else{
                 weakself!.playTaskItemAudioTrack()
             }
-        }))
+        })
         
-        playMp4Audio(task!.intro, async: false)
     }
     
     func moveToNextTaskItem(){
@@ -84,11 +72,9 @@ class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollec
             if(!task!.items[counter].requireResponse){
                 weak var weakself = self;
                 
-                weakself!.postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: { () -> Void in
+                audioManager.playAudioFrom(task!.items[counter].audio, completionBlock: { () -> Void in
                     weakself!.moveToNextTaskItem()
-                }))
-                
-                playMp4Audio(task!.items[counter].audio, async: false)
+                })
                 
             }else{
                 
@@ -135,14 +121,7 @@ class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollec
         
         let sound = task!.items[counter].audio
         
-
-        playMp4Audio(sound)
+        audioManager.playAudioFrom(sound)
     }
     
-    func playMp4Audio(source:String, async:Bool = true){
-        let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
-        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
-        audioPlayer.delegate = postSynchronousPlaybackQueue.isEmpty() ? nil : self
-        audioPlayer.play()
-    }
 }

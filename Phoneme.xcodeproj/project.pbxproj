@@ -23,6 +23,7 @@
 		464B04BC1B63BC39000312CC /* Rhyme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AE1B63BC39000312CC /* Rhyme13.mp4 */; };
 		464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AF1B63BC39000312CC /* RhymeIntro.mp4 */; };
 		464B04BF1B63F413000312CC /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04BE1B63F413000312CC /* Queue.swift */; };
+		464B04C11B640A2E000312CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04C01B640A2E000312CC /* AudioManager.swift */; };
 		465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742261B616ADD00FE3E58 /* AppDelegate.swift */; };
 		465742291B616ADD00FE3E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742281B616ADD00FE3E58 /* ViewController.swift */; };
 		4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4657422A1B616ADD00FE3E58 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		464B04AE1B63BC39000312CC /* Rhyme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme13.mp4; sourceTree = "<group>"; };
 		464B04AF1B63BC39000312CC /* RhymeIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeIntro.mp4; sourceTree = "<group>"; };
 		464B04BE1B63F413000312CC /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		464B04C01B640A2E000312CC /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		465742211B616ADD00FE3E58 /* Phoneme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoneme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465742251B616ADD00FE3E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		465742261B616ADD00FE3E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				465742241B616ADD00FE3E58 /* Supporting Files */,
 				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
 				464B04BE1B63F413000312CC /* Queue.swift */,
+				464B04C01B640A2E000312CC /* AudioManager.swift */,
 			);
 			path = Phoneme;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */,
+				464B04C11B640A2E000312CC /* AudioManager.swift in Sources */,
 				464B04BF1B63F413000312CC /* Queue.swift in Sources */,
 				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
 				465742291B616ADD00FE3E58 /* ViewController.swift in Sources */,
