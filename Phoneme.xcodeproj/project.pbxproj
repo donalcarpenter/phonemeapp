@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04A01B639F2B000312CC /* SingleRowImageTask.swift */; };
 		465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742261B616ADD00FE3E58 /* AppDelegate.swift */; };
 		465742291B616ADD00FE3E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742281B616ADD00FE3E58 /* ViewController.swift */; };
 		4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4657422A1B616ADD00FE3E58 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		464B04A01B639F2B000312CC /* SingleRowImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowImageTask.swift; sourceTree = "<group>"; };
 		465742211B616ADD00FE3E58 /* Phoneme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoneme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465742251B616ADD00FE3E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		465742261B616ADD00FE3E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
 				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
+				464B04A01B639F2B000312CC /* SingleRowImageTask.swift */,
 			);
 			path = Phoneme;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				465742541B6174DC00FE3E58 /* ImageCollectionViewController.swift in Sources */,
+				464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */,
 				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
 				465742291B616ADD00FE3E58 /* ViewController.swift in Sources */,
 				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,

@@ -1,26 +1,20 @@
 //
-//  ImageCollectionViewController.swift
+//  SingleRowImageTask.swift
 //  Phoneme
 //
-//  Created by donal on 23/07/2015.
+//  Created by donal on 25/07/2015.
 //  Copyright (c) 2015 donal. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-var audioPlayer1 = AVAudioPlayer()
+var audioPlayer = AVAudioPlayer()
 
-protocol ImageCollectionViewControllerDelegate{
-    var task : Task { get }
-}
-
-class ImageCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
+class SingleRowImageTask: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var task: Task?
     var counter = 0
-
     
     var delegate: ImageCollectionViewControllerDelegate?
     
@@ -32,11 +26,13 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         playAudioTrack()
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return task!.items[counter].images.count;
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomImageCell
         
         cell.selected = false
@@ -49,13 +45,12 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
         let width :CGFloat = (collectionView.frame.size.width / CGFloat(task!.items[counter].images.count)) - 20;
         
-        return CGSize(width: width, height: collectionView.frame.width - 300)
+        return CGSize(width: width, height: collectionView.frame.height - 40)
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         counter++
         
         if(counter >= task!.items.count){
@@ -63,7 +58,7 @@ class ImageCollectionViewController: UICollectionViewController, UICollectionVie
         }
         
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
-    
+        
         collectionView.reloadData()
         
         playAudioTrack()

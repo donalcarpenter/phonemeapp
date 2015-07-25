@@ -29,6 +29,7 @@ class Task: NSObject{
         self.intro = intro
         self.taskTitle = title
         self.items = items;
-        
     }
+    
+    static var emptyTask: Task = Task(intro:"", title:"empty", items:[TaskItem]())
 }
