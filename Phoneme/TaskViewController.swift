@@ -19,10 +19,26 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var bgimgOw: UIImageView?
+    
     override func viewWillAppear(animated: Bool) {
         task = delegate!.task
         let count: Int = task!.items.count
         answers = [String](count:count, repeatedValue: "")
+        
+        self.collectionView.hidden = true
+        
+        let bgimg = UIImage(named: "background-blur")
+        let bgimgw = UIImageView(frame: self.view.frame)
+        bgimgw.image = bgimg
+        
+        self.view.insertSubview(bgimgw, atIndex: 0)
+        
+        let bgimgO = UIImage(named: "background")
+        bgimgOw = UIImageView(frame: self.view.frame)
+        bgimgOw!.image = bgimgO
+        
+        self.view.insertSubview(bgimgOw!, atIndex: 1)
     }
     
     func loadTask(){
@@ -39,7 +55,16 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         self.navigationController?.navigationBarHidden = true
         
+        self.collectionView.hidden = true
+        
         audioManager.playAudioFrom(task!.intro, completionBlock: { () -> Void in
+            
+            self.collectionView.hidden = false;
+            
+            UIView.animateWithDuration(1.5){
+                weakself!.bgimgOw!.alpha = 0
+            }
+            
             if(!weakself!.task!.items[0].requireResponse){
                 
                 weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].audio, completionBlock: {

@@ -55,6 +55,22 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
+        
+        let bgimg = UIImage(named: "background-blur")
+        let bgimgw = UIImageView(frame: self.view.frame)
+        bgimgw.image = bgimg
+        
+        self.view.insertSubview(bgimgw, atIndex: 0)
+        
+        let bgimgO = UIImage(named: "background")
+        let bgimgOw = UIImageView(frame: self.view.frame)
+        bgimgOw.image = bgimgO
+        
+        self.view.insertSubview(bgimgOw, atIndex: 1)
+        
+        UIView.animateWithDuration(1.5){
+            bgimgOw.alpha = 0
+        }
     }
 
     override func didReceiveMemoryWarning() {

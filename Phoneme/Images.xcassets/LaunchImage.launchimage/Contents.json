@@ -44,7 +44,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "Default-Landscape-1.png",
+      "filename" : "1028-768-_mini_retina_-1.png",
       "scale" : "1x"
     },
     {
@@ -52,7 +52,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "Default-Landscape.png",
+      "filename" : "1028-768-_mini_retina_.png",
       "scale" : "1x"
     },
     {
@@ -60,7 +60,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "Default-Landscape@2x-1.png",
+      "filename" : "2048x1536px_for-retina_.png",
       "scale" : "2x"
     },
     {
@@ -68,7 +68,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "Default-Landscape@2x.png",
+      "filename" : "2048x1536px_for-retina_-1.png",
       "scale" : "2x"
     },
     {
@@ -94,7 +94,6 @@
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "Default-Landscape-2.png",
       "scale" : "1x"
     },
     {
@@ -107,7 +106,6 @@
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "Default-Landscape-3.png",
       "scale" : "1x"
     },
     {
@@ -121,7 +119,6 @@
       "orientation" : "portrait",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "Default-Landscape@2x-2.png",
       "scale" : "2x"
     },
     {
@@ -134,7 +131,6 @@
       "orientation" : "landscape",
       "idiom" : "ipad",
       "extent" : "to-status-bar",
-      "filename" : "Default-Landscape@2x-3.png",
       "scale" : "2x"
     },
     {
