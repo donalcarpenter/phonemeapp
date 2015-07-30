@@ -19,6 +19,11 @@ class TaskItem: NSObject {
     convenience init(audio:String, images:[String], correctImage: String){
         self.init(audio:audio, images: images, correctImage: correctImage, requireResponse: true)
     }
+
+    convenience init(audio:String, outro: String, images:[String], correctImage: String, requireResponse: Bool){
+        self.init(audio:audio, images: images, correctImage: correctImage, requireResponse: requireResponse)
+        self.outro = outro
+    }
     
     init(audio:String, images:[String], correctImage: String, requireResponse: Bool){
         self.audio = audio
@@ -38,6 +43,11 @@ class Task: NSObject{
         self.intro = intro
         self.taskTitle = title
         self.items = items;
+    }
+    
+    convenience init(intro:String, outro: String, title:String, items:[TaskItem]){
+        self.init(intro: intro, title: title, items: items)
+        self.outro = outro
     }
     
     static var emptyTask: Task = Task(intro:"", title:"empty", items:[TaskItem]())
