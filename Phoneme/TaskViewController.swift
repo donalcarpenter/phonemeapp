@@ -61,15 +61,27 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
             
             self.collectionView.hidden = false;
             
-            UIView.animateWithDuration(1.5){
+            UIView.animateWithDuration(0.5){
                 weakself!.bgimgOw!.alpha = 0
             }
             
             if(!weakself!.task!.items[0].requireResponse){
                 
+                // play the audio
                 weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].audio, completionBlock: {
                     () -> Void in
-                    weakself!.moveToNextTaskItem()
+                    
+                    let cont = {()-> Void in
+                        weakself!.moveToNextTaskItem()}
+                    
+                    if(weakself!.task!.items[0].outro != nil){
+                        
+                        weakself!.hideImagesThatArentCorrect(weakself!.collectionView, correctImage: weakself!.task!.items[0].correctImage)
+                        
+                        weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].outro!, completionBlock: cont)
+                    }else{
+                        cont()
+                    }
                 })
                 
             }else{
@@ -80,6 +92,17 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         })
         
+    }
+    
+    func hideImagesThatArentCorrect(collection: UICollectionView, correctImage: String){
+        for cell in collection.visibleCells(){
+            let taskCell = cell as! CustomImageCell
+            if (taskCell.name != correctImage){
+            UIView.animateWithDuration(0.2){
+                            taskCell.imageCell.alpha = 0
+                }
+            }
+        }
     }
     
     func moveToNextTaskItem(){
@@ -101,8 +124,19 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
             if(!task!.items[counter].requireResponse){
                 weak var weakself = self;
                 
-                audioManager.playAudioFrom(task!.items[counter].audio, completionBlock: { () -> Void in
-                    weakself!.moveToNextTaskItem()
+                var c = counter
+                
+                audioManager.playAudioFrom(task!.items[c].audio, completionBlock: { () -> Void in
+                    
+                    let cont = {()-> Void in
+                        weakself!.moveToNextTaskItem()}
+                    
+                    if(weakself!.task!.items[c].outro != nil){
+                        weakself!.hideImagesThatArentCorrect(weakself!.collectionView, correctImage: weakself!.task!.items[c].correctImage)
+                        weakself!.audioManager.playAudioFrom(weakself!.task!.items[c].outro!, completionBlock: cont)
+                    }else{
+                        cont()
+                    }
                 })
                 
             }else{
@@ -122,6 +156,7 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomImageCell
         
         cell.selected = false
+        cell.imageCell.alpha = 1
         
         let img = UIImage(named: task!.items[counter].images[indexPath.row])
         cell.imageCell.image = img
@@ -137,6 +172,10 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        if(!task!.items[counter].requireResponse){
+            return
+        }
         
         // capture current answer
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CustomImageCell
