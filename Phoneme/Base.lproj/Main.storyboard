@@ -24,7 +24,11 @@
                                 <state key="normal" title="Rhyme Oddity">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0v-J1-esl"/>
                                     <segue destination="iyH-QT-ihW" kind="show" identifier="rhymeoddity" id="0za-Dz-u3x"/>
                                 </connections>
                             </button>
@@ -35,7 +39,11 @@
                                 <state key="normal" title="Initial Phoneme">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhb-2N-JJw"/>
                                     <segue destination="UJk-kA-t4i" kind="show" identifier="initialphoneme" id="voQ-9K-i0I"/>
                                 </connections>
                             </button>
@@ -46,18 +54,26 @@
                                 <state key="normal" title="Familiarization">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pjG-Vu-Pmb"/>
                                     <segue destination="iyH-QT-ihW" kind="show" identifier="familiarization" id="bJO-17-9Nk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdd-BC-fjv">
                                 <rect key="frame" x="16" y="418" width="992" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Final Phoneme">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IHv-Yi-eOq"/>
                                     <segue destination="iyH-QT-ihW" kind="show" identifier="finalphoneme" id="pog-yf-7rX"/>
                                 </connections>
                             </button>
@@ -68,7 +84,10 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="FamiliarisationButton" destination="zqb-S0-U53" id="RVT-VD-0aA"/>
+                        <outlet property="FamiliarisationButton" destination="zqb-S0-U53" id="Xkp-1v-wly"/>
+                        <outlet property="finalPhonemeButton" destination="Kdd-BC-fjv" id="dMs-oc-BXJ"/>
+                        <outlet property="initialPhonemeButton" destination="aeO-1y-6qp" id="P75-rO-4Ew"/>
+                        <outlet property="rhymeOddityButton" destination="Ppf-DB-C2I" id="sGi-4f-imd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

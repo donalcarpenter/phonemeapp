@@ -16,6 +16,11 @@ protocol TaskSelectorViewControllerDelegate{
 class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
     
     @IBOutlet weak var FamiliarisationButton: UIButton!
+    @IBOutlet weak var rhymeOddityButton: UIButton!
+    @IBOutlet weak var initialPhonemeButton: UIButton!
+    @IBOutlet weak var finalPhonemeButton: UIButton!
+    
+    var selectedButton: UIButton?
     
     var task :Task = Task.emptyTask
     var delegate: TaskSelectorViewControllerDelegate?
@@ -43,6 +48,10 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
         if(delegate == nil){
             showErrorMessage("woops, something has gone badly wrong and results will not be saved.  If i were you i'd kill the app and start again...", userError: false)
         }
+    }
+    
+    @IBAction func trackSelectedButton(sender: UIButton) {
+        selectedButton = sender
     }
     
     func showErrorMessage(message: String, userError: Bool){
@@ -79,8 +88,13 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
                     
                     
                     return
-                }else{
-                    
+                }
+                else
+                {
+                    if let buttonToDisable = self.selectedButton
+                    {
+                        buttonToDisable.enabled = false
+                    }
                 }
             })
             

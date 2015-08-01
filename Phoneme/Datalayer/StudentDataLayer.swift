@@ -45,6 +45,18 @@ class StudentDataLayer: NSObject {
             
             student![key] = result.correctAnswers
             
+            var rawData = [NSDictionary]()
+            
+            for data in result.rawData!{
+                let dict : [String: AnyObject] =
+                ["index": data.index, "correctAnswer": data.correctAnswer, "givenAnswer" : data.givenAnswer]
+                
+                rawData.append(dict);
+            }
+        
+            student!["\(key)_raw"] = rawData
+        
+            
             student?.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
                 if(!success)
                 {
