@@ -20,8 +20,4 @@ class InitialPhonemeViewController: TaskViewController{
         
         topImage.image = UIImage(named: initPhonemeTask.firstImage)
     }
-    
-    override func processResults() {
-        // noop right now...
-    }
 }

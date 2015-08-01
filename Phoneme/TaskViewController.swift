@@ -14,6 +14,7 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
     var counter = 0
     var answers : [String]?
     let audioManager = AudioManager()
+    var taskResults = [TaskResultRawItem]()
     
     var delegate: ImageCollectionViewControllerDelegate?
     
@@ -46,7 +47,7 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func processResults(){
-        
+        delegate?.uploadResults(taskResults)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -180,7 +181,13 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
         // capture current answer
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CustomImageCell
         answers?[counter] = cell.name!
-        NSLog(cell.name!)
+        
+        var result = TaskResultRawItem(index: counter, correctAnswer: task!.items[counter].correctImage, givenAnswer: cell.name!)
+        
+        taskResults.append(result)
+        
+        NSLog("expected \(task!.items[counter].correctImage), got \(cell.name!)")
+        
         
         moveToNextTaskItem()
     }

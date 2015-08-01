@@ -9,7 +9,7 @@
 import UIKit
 
 // this class is a monster!
-class DataEntryViewController: UIViewController {
+class DataEntryViewController: UIViewController, TaskSelectorViewControllerDelegate {
 
     
     @IBOutlet weak var addNewSchool: UIButton!
@@ -46,12 +46,12 @@ class DataEntryViewController: UIViewController {
     
     var schoolsData: SchoolDataSource?
     var classesData: ClassesDataSource?
-    var studentsData : StudentDataSource?
+    var studentsData: StudentDataSource?
 
     
     var selectedSchool: SchoolsDataLayer?
     var selectedClass: ClassDataLayer?
-    var selectedStudent: StudentDataLayer?
+    var selectedStudent: StudentDataLayer = StudentDataLayer.emptyStudent
     
     override func  viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -90,7 +90,13 @@ class DataEntryViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleButtonEnabledStates", name: UITextFieldTextDidChangeNotification, object: nil)
         
         handleButtonEnabledStates()
+
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
     
     func setupTableRefreshers(){
         let schoolsRefresher = UIRefreshControl()
@@ -123,7 +129,7 @@ class DataEntryViewController: UIViewController {
         }
         
         let classId: String = self.selectedClass!.objectId
-        studentsData?.reloadStudentsForClass(classId)
+        studentsData!.reloadStudentsForClass(classId)
         refreshControl.endRefreshing()
     }
     
@@ -212,7 +218,7 @@ class DataEntryViewController: UIViewController {
             }
             
             self.studentIdentifier.text = ""
-            self.studentsData?.reloadStudentsForClass(self.selectedClass!.objectId)
+            self.studentsData!.reloadStudentsForClass(self.selectedClass!.objectId)
         }
     }
     
@@ -258,6 +264,15 @@ class DataEntryViewController: UIViewController {
         addNewSchool.enabled = !newSchoolName.text.isEmpty
         addNewClass.enabled = !(newClassName.text.isEmpty || addTeacherName.text.isEmpty)
         startTasksForStudent.enabled = (!studentIdentifier.text.isEmpty && studentGender.selectedSegmentIndex > -1)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "dophonemes")
+        {
+            if let dest = segue.destinationViewController as? ViewController{
+                dest.delegate = self
+            }
+        }
     }
     
     class SchoolDataSource : NSObject, UITableViewDataSource, UITableViewDelegate {
@@ -346,7 +361,7 @@ class DataEntryViewController: UIViewController {
             parent.setContainerViewComplete(parent.classContainer)
             parent.setContainerViewComplete(parent.schoolContainer)
             
-            parent.studentsData?.reloadStudentsForClass(parent.selectedClass!.objectId)
+            parent.studentsData!.reloadStudentsForClass(parent.selectedClass!.objectId)
         }
     }
     
@@ -394,8 +409,9 @@ class DataEntryViewController: UIViewController {
         
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             
-            // segue to phoneme test
+            self.parent.selectedStudent = parent.students![indexPath.row];
             
+            self.parent.performSegueWithIdentifier("dophonemes", sender: self.parent)
         }
     }
 }

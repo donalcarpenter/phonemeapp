@@ -14,15 +14,13 @@ var audioPlayer1 = AVAudioPlayer()
 protocol ImageCollectionViewControllerDelegate{
     var task : Task { get }
     //var player: AudioManager { get }
+    
+    func uploadResults(results: [TaskResultRawItem])
 }
 
 class SingleRowImageTask: TaskViewController {
     
     override func loadTask(){
         super.collectionView.reloadData()
-    }
-    
-    override func processResults(){
-        // noop
     }
 }

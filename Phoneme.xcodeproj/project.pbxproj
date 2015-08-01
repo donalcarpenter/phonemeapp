@@ -96,6 +96,7 @@
 		46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */; };
 		46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */; };
 		46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */; };
+		46F154F71B6D5D2000C203F6 /* TaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F61B6D5D2000C203F6 /* TaskResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDataLayer.swift; sourceTree = "<group>"; };
 		46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataLayer.swift; sourceTree = "<group>"; };
 		46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
+		46F154F61B6D5D2000C203F6 /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		465742231B616ADD00FE3E58 /* Phoneme */ = {
 			isa = PBXGroup;
 			children = (
+				46F154F51B6D5D0300C203F6 /* Model */,
 				4672DC891B6CBEFA00DED51D /* DataLayer */,
 				465742481B616C2600FE3E58 /* Audio */,
 				465742261B616ADD00FE3E58 /* AppDelegate.swift */,
@@ -270,11 +273,8 @@
 				4657422A1B616ADD00FE3E58 /* Main.storyboard */,
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
 				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
-				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
-				464B04BE1B63F413000312CC /* Queue.swift */,
 				464B04E21B642D8C000312CC /* InitialPhonemeTask.swift */,
 				464B04C01B640A2E000312CC /* AudioManager.swift */,
-				464B05041B6ABBEE000312CC /* TaskFactory.swift */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
 				46BED1821B6C17EF007E8E15 /* Frameworks */,
@@ -400,6 +400,17 @@
 				46BED17B1B6C17D2007E8E15 /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46F154F51B6D5D0300C203F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
+				464B04BE1B63F413000312CC /* Queue.swift */,
+				464B05041B6ABBEE000312CC /* TaskFactory.swift */,
+				46F154F61B6D5D2000C203F6 /* TaskResult.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +573,7 @@
 				464B04E11B6427A2000312CC /* InitialPhonemeViewController.swift in Sources */,
 				464B05051B6ABBEE000312CC /* TaskFactory.swift in Sources */,
 				46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */,
+				46F154F71B6D5D2000C203F6 /* TaskResult.swift in Sources */,
 				464B04BF1B63F413000312CC /* Queue.swift in Sources */,
 				46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */,
 				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
