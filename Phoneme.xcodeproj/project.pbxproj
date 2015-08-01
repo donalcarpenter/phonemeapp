@@ -73,7 +73,29 @@
 		4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424E1B616CB800FE3E58 /* Fam6.mp4 */; };
 		4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424F1B616CB800FE3E58 /* Fam7.mp4 */; };
 		4657425C1B617B8A00FE3E58 /* FamIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465742501B616CB800FE3E58 /* FamIntro.mp4 */; };
+		4672DC8B1B6CBF3900DED51D /* SchoolsDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4672DC8A1B6CBF3900DED51D /* SchoolsDataLayer.swift */; };
 		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
+		46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1761B6C17D2007E8E15 /* Bolts.framework */; };
+		46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1771B6C17D2007E8E15 /* Parse.framework */; };
+		46BED17E1B6C17D2007E8E15 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */; };
+		46BED17F1B6C17D2007E8E15 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */; };
+		46BED1801B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */; };
+		46BED1811B6C17D2007E8E15 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED17B1B6C17D2007E8E15 /* ParseUI.framework */; };
+		46BED1841B6C1855007E8E15 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1831B6C1855007E8E15 /* AudioToolbox.framework */; };
+		46BED1861B6C185D007E8E15 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1851B6C185D007E8E15 /* CFNetwork.framework */; };
+		46BED1881B6C1864007E8E15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1871B6C1864007E8E15 /* CoreGraphics.framework */; };
+		46BED18A1B6C186D007E8E15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1891B6C186C007E8E15 /* CoreLocation.framework */; };
+		46BED18C1B6C1874007E8E15 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED18B1B6C1874007E8E15 /* QuartzCore.framework */; };
+		46BED18E1B6C187C007E8E15 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED18D1B6C187C007E8E15 /* Security.framework */; };
+		46BED1901B6C1885007E8E15 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED18F1B6C1885007E8E15 /* StoreKit.framework */; };
+		46BED1921B6C188E007E8E15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1911B6C188E007E8E15 /* SystemConfiguration.framework */; };
+		46BED1941B6C189C007E8E15 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1931B6C189C007E8E15 /* libz.dylib */; };
+		46BED1961B6C18AD007E8E15 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */; };
+		46BED1981B6C196C007E8E15 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BED1971B6C196C007E8E15 /* keys.plist */; };
+		46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */; };
+		46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */; };
+		46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */; };
+		46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,7 +179,29 @@
 		4657424F1B616CB800FE3E58 /* Fam7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam7.mp4; sourceTree = "<group>"; };
 		465742501B616CB800FE3E58 /* FamIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FamIntro.mp4; sourceTree = "<group>"; };
 		465742511B6170D000FE3E58 /* CustomImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageCell.swift; sourceTree = "<group>"; };
+		4672DC8A1B6CBF3900DED51D /* SchoolsDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsDataLayer.swift; sourceTree = "<group>"; };
 		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		46BED1761B6C17D2007E8E15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Audio/Bolts.framework; sourceTree = "<group>"; };
+		46BED1771B6C17D2007E8E15 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Audio/Parse.framework; sourceTree = "<group>"; };
+		46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Audio/ParseCrashReporting.framework; sourceTree = "<group>"; };
+		46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Audio/ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Audio/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		46BED17B1B6C17D2007E8E15 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Audio/ParseUI.framework; sourceTree = "<group>"; };
+		46BED1831B6C1855007E8E15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		46BED1851B6C185D007E8E15 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		46BED1871B6C1864007E8E15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		46BED1891B6C186C007E8E15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		46BED18B1B6C1874007E8E15 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		46BED18D1B6C187C007E8E15 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		46BED18F1B6C1885007E8E15 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		46BED1911B6C188E007E8E15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		46BED1931B6C189C007E8E15 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		46BED1971B6C196C007E8E15 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
+		46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDataLayer.swift; sourceTree = "<group>"; };
+		46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataLayer.swift; sourceTree = "<group>"; };
+		46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +209,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BED1961B6C18AD007E8E15 /* libsqlite3.dylib in Frameworks */,
+				46BED1941B6C189C007E8E15 /* libz.dylib in Frameworks */,
+				46BED1921B6C188E007E8E15 /* SystemConfiguration.framework in Frameworks */,
+				46BED1901B6C1885007E8E15 /* StoreKit.framework in Frameworks */,
+				46BED18E1B6C187C007E8E15 /* Security.framework in Frameworks */,
+				46BED18C1B6C1874007E8E15 /* QuartzCore.framework in Frameworks */,
+				46BED18A1B6C186D007E8E15 /* CoreLocation.framework in Frameworks */,
+				46BED1881B6C1864007E8E15 /* CoreGraphics.framework in Frameworks */,
+				46BED1861B6C185D007E8E15 /* CFNetwork.framework in Frameworks */,
+				46BED1841B6C1855007E8E15 /* AudioToolbox.framework in Frameworks */,
+				46BED1811B6C17D2007E8E15 /* ParseUI.framework in Frameworks */,
+				46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */,
+				46BED17E1B6C17D2007E8E15 /* ParseCrashReporting.framework in Frameworks */,
+				46BED17F1B6C17D2007E8E15 /* ParseFacebookUtils.framework in Frameworks */,
+				46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */,
+				46BED1801B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +259,14 @@
 		465742231B616ADD00FE3E58 /* Phoneme */ = {
 			isa = PBXGroup;
 			children = (
+				4672DC891B6CBEFA00DED51D /* DataLayer */,
 				465742481B616C2600FE3E58 /* Audio */,
 				465742261B616ADD00FE3E58 /* AppDelegate.swift */,
 				465742281B616ADD00FE3E58 /* ViewController.swift */,
 				464B04A01B639F2B000312CC /* SingleRowImageTask.swift */,
 				464B04E01B6427A2000312CC /* InitialPhonemeViewController.swift */,
 				464B04E41B64347B000312CC /* TaskViewController.swift */,
+				46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */,
 				4657422A1B616ADD00FE3E58 /* Main.storyboard */,
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
 				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
@@ -215,6 +277,8 @@
 				464B05041B6ABBEE000312CC /* TaskFactory.swift */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
+				46BED1821B6C17EF007E8E15 /* Frameworks */,
+				46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */,
 			);
 			path = Phoneme;
 			sourceTree = "<group>";
@@ -223,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				465742251B616ADD00FE3E58 /* Info.plist */,
+				46BED1971B6C196C007E8E15 /* keys.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,6 +366,40 @@
 				465742501B616CB800FE3E58 /* FamIntro.mp4 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		4672DC891B6CBEFA00DED51D /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4672DC8A1B6CBF3900DED51D /* SchoolsDataLayer.swift */,
+				46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */,
+				46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */,
+			);
+			name = DataLayer;
+			path = Datalayer;
+			sourceTree = "<group>";
+		};
+		46BED1821B6C17EF007E8E15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */,
+				46BED1931B6C189C007E8E15 /* libz.dylib */,
+				46BED1911B6C188E007E8E15 /* SystemConfiguration.framework */,
+				46BED18F1B6C1885007E8E15 /* StoreKit.framework */,
+				46BED18D1B6C187C007E8E15 /* Security.framework */,
+				46BED18B1B6C1874007E8E15 /* QuartzCore.framework */,
+				46BED1891B6C186C007E8E15 /* CoreLocation.framework */,
+				46BED1871B6C1864007E8E15 /* CoreGraphics.framework */,
+				46BED1851B6C185D007E8E15 /* CFNetwork.framework */,
+				46BED1831B6C1855007E8E15 /* AudioToolbox.framework */,
+				46BED1761B6C17D2007E8E15 /* Bolts.framework */,
+				46BED1771B6C17D2007E8E15 /* Parse.framework */,
+				46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */,
+				46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */,
+				46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */,
+				46BED17B1B6C17D2007E8E15 /* ParseUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BED1981B6C196C007E8E15 /* keys.plist in Resources */,
 				464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */,
 				464B04D41B642783000312CC /* InitialPhoneme4.mp4 in Resources */,
 				464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */,
@@ -458,12 +558,17 @@
 				464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */,
 				464B04E31B642D8C000312CC /* InitialPhonemeTask.swift in Sources */,
 				464B04C11B640A2E000312CC /* AudioManager.swift in Sources */,
+				4672DC8B1B6CBF3900DED51D /* SchoolsDataLayer.swift in Sources */,
 				464B04E11B6427A2000312CC /* InitialPhonemeViewController.swift in Sources */,
 				464B05051B6ABBEE000312CC /* TaskFactory.swift in Sources */,
+				46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */,
 				464B04BF1B63F413000312CC /* Queue.swift in Sources */,
+				46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */,
 				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
 				465742291B616ADD00FE3E58 /* ViewController.swift in Sources */,
+				46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */,
 				464B04E51B64347B000312CC /* TaskViewController.swift in Sources */,
+				46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */,
 				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,
 				465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */,
 			);
@@ -595,6 +700,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Phoneme/Audio",
+				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -606,6 +715,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Phoneme/Audio",
+				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
