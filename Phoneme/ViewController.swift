@@ -13,7 +13,7 @@ protocol TaskSelectorViewControllerDelegate{
     var selectedStudent : StudentDataLayer { get }
 }
 
-class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
+class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegate {
     
     @IBOutlet weak var FamiliarisationButton: UIButton!
     @IBOutlet weak var rhymeOddityButton: UIButton!
@@ -25,15 +25,10 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
     var task :Task = Task.emptyTask
     var delegate: TaskSelectorViewControllerDelegate?
     
+    var outstandingTasks: Int = TaskFactory.count
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = true
-        
-        let bgimg = UIImage(named: "background-blur")
-        let bgimgw = UIImageView(frame: self.view.frame)
-        bgimgw.image = bgimg
-        
-        self.view.insertSubview(bgimgw, atIndex: 0)
         
         let bgimgO = UIImage(named: "background")
         let bgimgOw = UIImageView(frame: self.view.frame)
@@ -50,21 +45,12 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
         }
     }
     
-    @IBAction func trackSelectedButton(sender: UIButton) {
-        selectedButton = sender
+    @IBAction func returnToDataView(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
-    func showErrorMessage(message: String, userError: Bool){
-        
-        let alertController = UIAlertController(title: "problems...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            alertController.dismissViewControllerAnimated(true, completion: nil)
-        }
-        
-        alertController.addAction(OKAction)
-        
-        self.presentViewController(alertController, animated: true, completion: nil);
+    @IBAction func trackSelectedButton(sender: UIButton) {
+        selectedButton = sender
     }
 
     func uploadResults(results: [TaskResultRawItem]){
@@ -94,6 +80,19 @@ class ViewController: UIViewController, ImageCollectionViewControllerDelegate {
                     if let buttonToDisable = self.selectedButton
                     {
                         buttonToDisable.enabled = false
+                    }
+                    
+                    self.outstandingTasks--;
+                    
+                    if(self.outstandingTasks == 0){
+                        StudentDataLayer.setStudentCompleted(result.studentId, completionBlock: { (success, error) -> Void in
+                            if(success){
+                                // we need to do something here...
+                                self.navigationController?.popViewControllerAnimated(true)
+                            }else{
+                                self.showErrorMessage("The student it complete and all task results have been saved, but something went wrong. Check to see if the student isComplete attribute is true for \(result.studentId)", userError: false)
+                            }
+                        })
                     }
                 }
             })

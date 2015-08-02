@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Parse
 
 // this class is a monster!
-class DataEntryViewController: UIViewController, TaskSelectorViewControllerDelegate {
+class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerDelegate {
 
     
     @IBOutlet weak var addNewSchool: UIButton!
@@ -53,8 +54,10 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
     var selectedClass: ClassDataLayer?
     var selectedStudent: StudentDataLayer = StudentDataLayer.emptyStudent
     
-    override func  viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.setupTableRefreshers()
         
         schoolsData = SchoolDataSource(parent: self)
         classesData = ClassesDataSource(parent: self)
@@ -73,20 +76,6 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
         disableContainerView(classContainer)
         setContainerStateAction(schoolContainer)
         
-        let bgimg = UIImage(named: "background-blur")
-        let bgimgw = UIImageView(frame: self.view.frame)
-        bgimgw.image = bgimg
-        
-        self.view.insertSubview(bgimgw, atIndex: 0)
-        
-        self.navigationController?.navigationBarHidden = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.setupTableRefreshers()
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleButtonEnabledStates", name: UITextFieldTextDidChangeNotification, object: nil)
         
         handleButtonEnabledStates()
@@ -97,6 +86,10 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
+    @IBAction func logoutUser(sender: AnyObject) {
+        PFUser.logOut()
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     func setupTableRefreshers(){
         let schoolsRefresher = UIRefreshControl()
@@ -136,19 +129,6 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         schoolsData?.reloadSchools()
-    }
-    
-    func showErrorMessage(message: String, userError: Bool){
-        
-        let alertController = UIAlertController(title: "problems...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                alertController.dismissViewControllerAnimated(true, completion: nil)
-        }
-        
-        alertController.addAction(OKAction)
-        
-        self.presentViewController(alertController, animated: true, completion: nil);
     }
     
     @IBAction func dismissKeyboardEndOnExit(sender: UITextField) {
@@ -402,6 +382,21 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
             cell.isCompletedLabel.text = student.isCompleted ? "Complete" : "Pending"
             
             
+            let color =  (!student.isCompleted) ? UIColor.whiteColor() : UIColor.lightGrayColor()
+            
+            cell.identifierLabel.textColor = color
+            cell.dateOfBirthLabel.textColor = color
+            cell.genderLabel.textColor = color
+            cell.isCompletedLabel.textColor = color
+            
+            if(student.isCompleted){
+                cell.selectionStyle = UITableViewCellSelectionStyle.None
+                cell.accessoryType = UITableViewCellAccessoryType.None
+            }else{
+                cell.selectionStyle = UITableViewCellSelectionStyle.Gray
+                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            }
+            
             cell.backgroundColor = UIColor.blackColor().colorWithAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
             
             return cell
@@ -411,7 +406,10 @@ class DataEntryViewController: UIViewController, TaskSelectorViewControllerDeleg
             
             self.parent.selectedStudent = parent.students![indexPath.row];
             
-            self.parent.performSegueWithIdentifier("dophonemes", sender: self.parent)
+            if(!self.parent.selectedStudent.isCompleted)
+            {
+                self.parent.performSegueWithIdentifier("dophonemes", sender: self.parent)
+            }
         }
     }
 }

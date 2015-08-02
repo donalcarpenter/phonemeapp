@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
     var task: Task?
     var counter = 0
@@ -26,14 +26,6 @@ class TaskViewController: UIViewController, UICollectionViewDataSource, UICollec
         task = delegate!.task
         let count: Int = task!.items.count
         answers = [String](count:count, repeatedValue: "")
-        
-        self.collectionView.hidden = true
-        
-        let bgimg = UIImage(named: "background-blur")
-        let bgimgw = UIImageView(frame: self.view.frame)
-        bgimgw.image = bgimg
-        
-        self.view.insertSubview(bgimgw, atIndex: 0)
         
         let bgimgO = UIImage(named: "background")
         bgimgOw = UIImageView(frame: self.view.frame)

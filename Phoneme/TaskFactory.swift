@@ -9,6 +9,9 @@
 import UIKit
 
 class TaskFactory: NSObject {
+    
+    static let count: Int = 4
+    
     static let familiarisation = Task(intro:"FamIntro", title:"Familiarisation", items:
         [TaskItem(audio:"Fam1", images:["", "green-box", ""], correctImage:"green-box"),
             TaskItem(audio:"Fam3", images:["mouse", "seal", "dog"], correctImage:"dog"),

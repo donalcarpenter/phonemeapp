@@ -44,18 +44,32 @@ class StudentDataLayer: NSObject {
             let key = result.taskTitle.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil)
             
             student![key] = result.correctAnswers
+        
             
-            var rawData = [NSDictionary]()
-            
-            for data in result.rawData!{
-                let dict : [String: AnyObject] =
-                ["index": data.index, "correctAnswer": data.correctAnswer, "givenAnswer" : data.givenAnswer]
-                
-                rawData.append(dict);
+            student?.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
+                if(!success)
+                {
+                    completionBlock(success: false, error: "\(err)")
+                }
+                else{
+                    completionBlock(success: true, error: "")
+                    self.saveRawData(student!, key:key, rawResults:result.rawData)
+                }
+            })
+        })
+    }
+
+    static func setStudentCompleted(studentId: String, completionBlock: (success: Bool, error: String) -> Void){
+        
+        let query = PFQuery(className: "student")
+        
+        query.getObjectInBackgroundWithId(studentId, block: { (student: PFObject?, err: NSError?) -> Void in
+            if(err != nil){
+                completionBlock(success: false, error: "\(err)")
+                return
             }
         
-            student!["\(key)_raw"] = rawData
-        
+            student!["isCompleted"] = true
             
             student?.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
                 if(!success)
@@ -67,6 +81,41 @@ class StudentDataLayer: NSObject {
                 }
             })
         })
+    }
+    
+    static func saveRawData(student: PFObject, key: String, rawResults: [TaskResultRawItem]?){
+        
+        if(rawResults == nil){
+            return
+        }
+        
+        var rawData = [NSDictionary]()
+        
+        for data in rawResults!{
+            let dict : [String: AnyObject] =
+            ["index": data.index, "correctAnswer": data.correctAnswer, "givenAnswer" : data.givenAnswer]
+            
+            rawData.append(dict);
+        }
+        
+        let query = PFQuery(className: "rawResults")
+        query.whereKey("task", equalTo: key)
+        query.whereKey("student", equalTo: student)
+        
+        query.getFirstObjectInBackgroundWithBlock { (pfResults:PFObject?, err:NSError?) -> Void in
+            if let data = pfResults as PFObject!
+            {
+                data["results"] = rawData
+                data.saveInBackgroundWithBlock(nil)
+                
+            }else{
+                var data = PFObject(className: "rawResults")
+                data["task"] = key
+                data["student"] = student
+                data["results"] = rawData
+                data.saveInBackgroundWithBlock(nil)
+            }
+        }
     }
     
     func save(completionBlock: (success: Bool, error: String) -> Void){
