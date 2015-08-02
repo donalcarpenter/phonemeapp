@@ -117,13 +117,17 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
     }
     
     func refreshStudents(refreshControl: UIRefreshControl){
+        refreshStudentState()
+        refreshControl.endRefreshing()
+    }
+    
+    func refreshStudentState() {
         if(self.selectedClass == nil){
             return;
         }
         
         let classId: String = self.selectedClass!.objectId
         studentsData!.reloadStudentsForClass(classId)
-        refreshControl.endRefreshing()
     }
     
     override func viewDidAppear(animated: Bool) {

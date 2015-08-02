@@ -11,6 +11,7 @@ import Parse
 
 protocol TaskSelectorViewControllerDelegate{
     var selectedStudent : StudentDataLayer { get }
+    func refreshStudentState()
 }
 
 class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegate {
@@ -88,7 +89,8 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                         StudentDataLayer.setStudentCompleted(result.studentId, completionBlock: { (success, error) -> Void in
                             if(success){
                                 // we need to do something here...
-                                self.navigationController?.popViewControllerAnimated(true)
+                                self.delegate!.refreshStudentState()
+                                    self.navigationController?.popViewControllerAnimated(true)
                             }else{
                                 self.showErrorMessage("The student it complete and all task results have been saved, but something went wrong. Check to see if the student isComplete attribute is true for \(result.studentId)", userError: false)
                             }
