@@ -279,7 +279,6 @@
 				4657422A1B616ADD00FE3E58 /* Main.storyboard */,
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
 				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
-				464B04E21B642D8C000312CC /* InitialPhonemeTask.swift */,
 				464B04C01B640A2E000312CC /* AudioManager.swift */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
@@ -411,6 +410,7 @@
 		46F154F51B6D5D0300C203F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				464B04E21B642D8C000312CC /* InitialPhonemeTask.swift */,
 				46BBAFA01B62D72300B65571 /* TaskItem.swift */,
 				464B04BE1B63F413000312CC /* Queue.swift */,
 				464B05041B6ABBEE000312CC /* TaskFactory.swift */,

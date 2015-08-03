@@ -23,6 +23,9 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     var bgimgOw: UIImageView?
     
     override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
         task = delegate!.task
         let count: Int = task!.items.count
         answers = [String](count:count, repeatedValue: "")
@@ -32,6 +35,10 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         bgimgOw!.image = bgimgO
         
         self.view.insertSubview(bgimgOw!, atIndex: 1)
+        
+        self.navigationController?.navigationBarHidden = true
+        
+        self.collectionView.hidden = true
     }
     
     func loadTask(){
@@ -45,10 +52,6 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     override func viewDidAppear(animated: Bool) {
         
         weak var weakself = self;
-        
-        self.navigationController?.navigationBarHidden = true
-        
-        self.collectionView.hidden = true
         
         audioManager.playAudioFrom(task!.intro, completionBlock: { () -> Void in
             

@@ -36,18 +36,18 @@ class TaskFactory: NSObject {
             ])
     
     static let initialPhonemeTask = Task(intro:"InitialPhonemeIntro", title: "Initial Phoneme Identity Task", items:
-        [   InitialPhonemeTaskItem(firstImage: "dog", audio: "InitialPhoneme1", images: ["moon", "duck", "whale"], correctImage: "duck", requireResponse: true, outro:"InitialPhoneme2"),
-            InitialPhonemeTaskItem(firstImage: "dog", audio: "InitialPhoneme3", images: ["horse", "rope", "door"], correctImage: "door", requireResponse: true, outro:"InitialPhoneme4"),
-            InitialPhonemeTaskItem(firstImage: "mouse", audio: "InitialPhoneme5", images: ["doll", "bear", "milk"], correctImage: "milk"),
-            InitialPhonemeTaskItem(firstImage: "mouse", audio: "InitialPhoneme6", images: ["mat", "dog", "book"], correctImage: "mat"),
-            InitialPhonemeTaskItem(firstImage: "seal", audio: "InitialPhoneme7", images: ["bee", "sun", "tent"], correctImage: "sun"),
-            InitialPhonemeTaskItem(firstImage: "seal", audio: "InitialPhoneme8", images: ["saw", "tie", "hook"], correctImage: "saw"),
-            InitialPhonemeTaskItem(firstImage: "cat", audio: "InitialPhoneme9", images: ["bus", "kite", "arm"], correctImage: "kite"),
-            InitialPhonemeTaskItem(firstImage: "cat", audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], correctImage: ""),
-            InitialPhonemeTaskItem(firstImage: "bee", audio: "InitialPhoneme11", images: ["cat", "leg", "ball"], correctImage: "ball"),
-            InitialPhonemeTaskItem(firstImage: "bee", audio: "InitialPhoneme12", images: ["car", "boat", "shoe"], correctImage: "boat"),
-            InitialPhonemeTaskItem(firstImage: "fish", audio: "InitialPhoneme13", images: ["foot", "hat", "pig"], correctImage: "foot"),
-            InitialPhonemeTaskItem(firstImage: "fish", audio: "InitialPhoneme14", images: ["duck", "bell", "fire"], correctImage: "fire")
+        [   InitialPhonemeTaskItem(firstImage: "dog", delay:18, audio: "InitialPhoneme1", images: ["moon", "duck", "whale"], correctImage: "duck", requireResponse: true, outro:"InitialPhoneme2"),
+            InitialPhonemeTaskItem(firstImage: "dog", delay:4, audio: "InitialPhoneme3", images: ["horse", "rope", "door"], correctImage: "door", requireResponse: true, outro:"InitialPhoneme4"),
+            InitialPhonemeTaskItem(firstImage: "mouse", delay:13,  audio: "InitialPhoneme5", images: ["doll", "bear", "milk"], correctImage: "milk"),
+            InitialPhonemeTaskItem(firstImage: "mouse", delay:5, audio: "InitialPhoneme6", images: ["mat", "dog", "book"], correctImage: "mat"),
+            InitialPhonemeTaskItem(firstImage: "seal", delay:11,  audio: "InitialPhoneme7", images: ["bee", "sun", "tent"], correctImage: "sun"),
+            InitialPhonemeTaskItem(firstImage: "seal", delay:5, audio: "InitialPhoneme8", images: ["saw", "tie", "hook"], correctImage: "saw"),
+            InitialPhonemeTaskItem(firstImage: "cat", delay:11,  audio: "InitialPhoneme9", images: ["bus", "kite", "arm"], correctImage: "kite"),
+            InitialPhonemeTaskItem(firstImage: "cat", delay:5,  audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], correctImage: "comb"),
+            InitialPhonemeTaskItem(firstImage: "bee", delay:12, audio: "InitialPhoneme11", images: ["cat", "leg", "ball"], correctImage: "ball"),
+            InitialPhonemeTaskItem(firstImage: "bee", delay:5,  audio: "InitialPhoneme12", images: ["car", "boat", "shoe"], correctImage: "boat"),
+            InitialPhonemeTaskItem(firstImage: "fish", delay:13,  audio: "InitialPhoneme13", images: ["foot", "hat", "pig"], correctImage: "foot"),
+            InitialPhonemeTaskItem(firstImage: "fish", delay:5,  audio: "InitialPhoneme14", images: ["duck", "bell", "fire"], correctImage: "fire")
         ])
 
     static let finalPhonemeTask = Task(intro: "FinalPhonemeIntro", title: "Final Phoneme Indentity Task", items:
