@@ -23,9 +23,6 @@ class AuthenticationViewController: BaseUIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleButtonsEnableState", name: UITextFieldTextDidChangeNotification, object: nil)
         
         handleButtonsEnableState()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         
         if(PFUser.currentUser() != nil){
             self.performSegueWithIdentifier("dataentry", sender: self)
