@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4621E2581B6E27D000446739 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2571B6E27D000446739 /* AuthenticationViewController.swift */; };
 		4621E25A1B6E2E1600446739 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2591B6E2E1600446739 /* BaseUIViewController.swift */; };
+		4621E25C1B7030EC00446739 /* key2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4621E25B1B7030EC00446739 /* key2.plist */; };
 		464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04A01B639F2B000312CC /* SingleRowImageTask.swift */; };
 		464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A21B63BC39000312CC /* Rhyme1.mp4 */; };
 		464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A31B63BC39000312CC /* Rhyme2.mp4 */; };
@@ -93,7 +94,6 @@
 		46BED1921B6C188E007E8E15 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1911B6C188E007E8E15 /* SystemConfiguration.framework */; };
 		46BED1941B6C189C007E8E15 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1931B6C189C007E8E15 /* libz.dylib */; };
 		46BED1961B6C18AD007E8E15 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */; };
-		46BED1981B6C196C007E8E15 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BED1971B6C196C007E8E15 /* keys.plist */; };
 		46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */; };
 		46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */; };
 		46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */; };
@@ -114,6 +114,7 @@
 /* Begin PBXFileReference section */
 		4621E2571B6E27D000446739 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		4621E2591B6E2E1600446739 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		4621E25B1B7030EC00446739 /* key2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key2.plist; sourceTree = "<group>"; };
 		464B04A01B639F2B000312CC /* SingleRowImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowImageTask.swift; sourceTree = "<group>"; };
 		464B04A21B63BC39000312CC /* Rhyme1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme1.mp4; sourceTree = "<group>"; };
 		464B04A31B63BC39000312CC /* Rhyme2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme2.mp4; sourceTree = "<group>"; };
@@ -202,7 +203,6 @@
 		46BED1911B6C188E007E8E15 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		46BED1931B6C189C007E8E15 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		46BED1971B6C196C007E8E15 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
 		46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDataLayer.swift; sourceTree = "<group>"; };
 		46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataLayer.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				465742251B616ADD00FE3E58 /* Info.plist */,
-				46BED1971B6C196C007E8E15 /* keys.plist */,
+				4621E25B1B7030EC00446739 /* key2.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -499,7 +499,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BED1981B6C196C007E8E15 /* keys.plist in Resources */,
 				464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */,
 				464B04D41B642783000312CC /* InitialPhoneme4.mp4 in Resources */,
 				464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */,
@@ -528,6 +527,7 @@
 				464B04FD1B6ABB18000312CC /* FinalPhoneme9.mp4 in Resources */,
 				464B04FF1B6ABB18000312CC /* FinalPhoneme11.mp4 in Resources */,
 				464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */,
+				4621E25C1B7030EC00446739 /* key2.plist in Resources */,
 				464B04B61B63BC39000312CC /* Rhyme7.mp4 in Resources */,
 				464B04BA1B63BC39000312CC /* Rhyme11.mp4 in Resources */,
 				464B04DD1B642783000312CC /* InitialPhoneme13.mp4 in Resources */,

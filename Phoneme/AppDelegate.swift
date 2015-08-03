@@ -19,11 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.enableLocalDatastore()
         
+        let keysPath: String? = NSBundle.mainBundle().pathForResource("key2", ofType: "plist")
+        
+        if(keysPath == nil){
+            NSLog("Pleae add key2.plist file with parseAppId and parseClientId")
+            return false
+        }
+        
+        let keys = NSDictionary(contentsOfFile: keysPath!)!
+    
+        let appId: String = keys["parseAppId"] as! String
+        let clientId: String = keys["parseClientId"] as! String
         
         
-        Parse.setApplicationId("uMughG4wp1FyrQGri9iYpMRRP16SDu5l8oMzU4HY",
-            clientKey: "127QM6nDlGqNpmYEjW6bceFYtmcjzYWuPJoBFUqV")
-        
+        Parse.setApplicationId(appId,
+                clientKey: clientId)
+
         return true
     }
 
