@@ -10,6 +10,7 @@
 		4621E2581B6E27D000446739 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2571B6E27D000446739 /* AuthenticationViewController.swift */; };
 		4621E25A1B6E2E1600446739 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2591B6E2E1600446739 /* BaseUIViewController.swift */; };
 		4621E25C1B7030EC00446739 /* key2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4621E25B1B7030EC00446739 /* key2.plist */; };
+		4621E25E1B72A34D00446739 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4621E25D1B72A34D00446739 /* AVFoundation.framework */; };
 		464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04A01B639F2B000312CC /* SingleRowImageTask.swift */; };
 		464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A21B63BC39000312CC /* Rhyme1.mp4 */; };
 		464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A31B63BC39000312CC /* Rhyme2.mp4 */; };
@@ -115,6 +116,7 @@
 		4621E2571B6E27D000446739 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		4621E2591B6E2E1600446739 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		4621E25B1B7030EC00446739 /* key2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key2.plist; sourceTree = "<group>"; };
+		4621E25D1B72A34D00446739 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		464B04A01B639F2B000312CC /* SingleRowImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowImageTask.swift; sourceTree = "<group>"; };
 		464B04A21B63BC39000312CC /* Rhyme1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme1.mp4; sourceTree = "<group>"; };
 		464B04A31B63BC39000312CC /* Rhyme2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme2.mp4; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4621E25E1B72A34D00446739 /* AVFoundation.framework in Frameworks */,
 				46BED1961B6C18AD007E8E15 /* libsqlite3.dylib in Frameworks */,
 				46BED1941B6C189C007E8E15 /* libz.dylib in Frameworks */,
 				46BED1921B6C188E007E8E15 /* SystemConfiguration.framework in Frameworks */,
@@ -247,6 +250,7 @@
 		465742181B616ADD00FE3E58 = {
 			isa = PBXGroup;
 			children = (
+				4621E25D1B72A34D00446739 /* AVFoundation.framework */,
 				465742231B616ADD00FE3E58 /* Phoneme */,
 				465742391B616ADE00FE3E58 /* PhonemeTests */,
 				465742221B616ADD00FE3E58 /* Products */,
@@ -468,6 +472,7 @@
 				TargetAttributes = {
 					465742201B616ADD00FE3E58 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = KXQDM2VXYW;
 					};
 					465742351B616ADE00FE3E58 = {
 						CreatedOnToolsVersion = 6.4;
@@ -720,13 +725,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phoneme/Audio",
 				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -735,13 +744,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phoneme/Audio",
 				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -21,6 +21,7 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     }
     
     func playAudioFrom(source: String){
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
         let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
         audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
         audioPlayer.delegate = nil
@@ -31,6 +32,7 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
         let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
         postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: completionBlock))
         audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
         audioPlayer.delegate = self
         audioPlayer.play()
     }

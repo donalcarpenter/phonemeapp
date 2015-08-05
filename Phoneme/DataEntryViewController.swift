@@ -102,7 +102,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         
         let studentsRefresher = UIRefreshControl()
         studentsRefresher.addTarget(self, action: "refreshStudents:", forControlEvents: .ValueChanged)
-        studentsTableview.addSubview(classesRefresher)
+        studentsTableview.addSubview(studentsRefresher)
     }
     
     func refreshSchools(refreshControl: UIRefreshControl){
