@@ -20,7 +20,7 @@ protocol ImageCollectionViewControllerDelegate{
 
 class SingleRowImageTask: TaskViewController {
     
-    override func loadTask(){
+    override func loadTaskItems(){
         super.collectionView.reloadData()
     }
 }

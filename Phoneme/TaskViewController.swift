@@ -41,7 +41,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         self.collectionView.hidden = true
     }
     
-    func loadTask(){
+    func loadTaskItems(){
         
     }
     
@@ -51,41 +51,16 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     override func viewDidAppear(animated: Bool) {
         
-        weak var weakself = self;
-        
         audioManager.playAudioFrom(task!.intro, completionBlock: { () -> Void in
             
             self.collectionView.hidden = false;
             
             UIView.animateWithDuration(0.5){
-                weakself!.bgimgOw!.alpha = 0
+                self.bgimgOw!.alpha = 0
             }
             
-            if(!weakself!.task!.items[0].requireResponse){
-                
-                // play the audio
-                weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].audio, completionBlock: {
-                    () -> Void in
-                    
-                    let cont = {()-> Void in
-                        weakself!.moveToNextTaskItem()}
-                    
-                    if(weakself!.task!.items[0].outro != nil){
-                        
-                        weakself!.hideImagesThatArentCorrect(weakself!.collectionView, correctImage: weakself!.task!.items[0].correctImage)
-                        
-                        weakself!.audioManager.playAudioFrom(weakself!.task!.items[0].outro!, completionBlock: cont)
-                    }else{
-                        cont()
-                    }
-                })
-                
-            }else{
-                
-                weakself!.loadTask()
-                
-                weakself!.playTaskItemAudioTrack()
-            }
+            
+            self.presentTask(0)
         })
         
     }
@@ -115,31 +90,41 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         }
         else{
 
-            loadTask()
+            loadTaskItems()
             
-            if(!task!.items[counter].requireResponse){
-                weak var weakself = self;
+            presentTask(counter)
+
+        }
+    }
+    
+    func presentTask(counterIndex: Int){
+        if(!self.task!.items[counterIndex].requireResponse){
+            
+            var c = counterIndex
+            
+            audioManager.playAudioFrom(task!.items[c].audio, completionBlock: { () -> Void in
                 
-                var c = counter
+                let cont = {()-> Void in
+                    self.moveToNextTaskItem()}
                 
-                audioManager.playAudioFrom(task!.items[c].audio, completionBlock: { () -> Void in
+                if(self.task!.items[c].outro != nil){
                     
-                    let cont = {()-> Void in
-                        weakself!.moveToNextTaskItem()}
+                    self.hideImagesThatArentCorrect(self.collectionView, correctImage: self.task!.items[c].correctImage)
                     
-                    if(weakself!.task!.items[c].outro != nil){
-                        weakself!.hideImagesThatArentCorrect(weakself!.collectionView, correctImage: weakself!.task!.items[c].correctImage)
-                        weakself!.audioManager.playAudioFrom(weakself!.task!.items[c].outro!, completionBlock: cont)
-                    }else{
-                        cont()
-                    }
-                })
-                
-            }else{
-                
-                playTaskItemAudioTrack()
-                
+                    self.audioManager.playAudioFrom(self.task!.items[c].outro!, completionBlock: cont)
+                }else{
+                    cont()
+                }
+            })
+            
+        }else{
+            
+            if(counterIndex == 0){
+                loadTaskItems()
             }
+            
+            playTaskItemAudioTrack()
+            
         }
     }
     
@@ -157,6 +142,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         let img = UIImage(named: task!.items[counter].images[indexPath.row])
         cell.imageCell.image = img
         cell.name = task!.items[counter].images[indexPath.row]
+        
+        cell.userInteractionEnabled = true
         
         return cell
     }

@@ -13,7 +13,7 @@ class InitialPhonemeViewController: TaskViewController{
 
     @IBOutlet weak var topImage: UIImageView!
     
-    override func loadTask() {
+    override func loadTaskItems() {
     
         var initPhonemeTask = task?.items[counter] as! InitialPhonemeTaskItem
         
