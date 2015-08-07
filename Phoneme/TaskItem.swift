@@ -11,23 +11,25 @@ import UIKit
 class TaskItem: NSObject {
     let audio : String
     let images: [String]
+    let optionsCascade: [Double]
     let correctImage: String
     var demo: Bool = false
     var outro: String?
     var requireResponse: Bool = true
     
-    convenience init(audio:String, images:[String], correctImage: String){
-        self.init(audio:audio, images: images, correctImage: correctImage, requireResponse: true)
+    convenience init(audio:String, images:[String], cascade: [Double], correctImage: String){
+        self.init(audio:audio, images: images, cascade: cascade, correctImage: correctImage, requireResponse: true)
     }
 
-    convenience init(audio:String, outro: String, images:[String], correctImage: String, requireResponse: Bool){
-        self.init(audio:audio, images: images, correctImage: correctImage, requireResponse: requireResponse)
+    convenience init(audio:String, outro: String, images:[String], cascade: [Double], correctImage: String, requireResponse: Bool){
+        self.init(audio:audio, images: images, cascade: cascade, correctImage: correctImage, requireResponse: requireResponse)
         self.outro = outro
     }
     
-    init(audio:String, images:[String], correctImage: String, requireResponse: Bool){
+    init(audio:String, images:[String], cascade: [Double], correctImage: String, requireResponse: Bool){
         self.audio = audio
         self.images = images
+        self.optionsCascade = cascade
         self.correctImage = correctImage
         self.requireResponse = requireResponse
     }
