@@ -44,11 +44,15 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     }
     
     func loadTaskItems(){
-        
+        preconditionFailure("This method must be overridden")
     }
     
     func processResults(){
         delegate?.uploadResults(taskResults)
+    }
+    
+    func setTaskItemOptionView(view:UIView, task:TaskItem, index: Int){
+        preconditionFailure("This method must be overridden")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -95,7 +99,6 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             loadTaskItems()
             
             presentTask(counter)
-
         }
     }
     
@@ -137,26 +140,30 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomImageCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
         cell.selected = false
-        cell.imageCell.alpha = 0.2
         
-        let img = UIImage(named: task!.items[counter].images[indexPath.row])
-        cell.imageCell.image = img
-        cell.name = task!.items[counter].images[indexPath.row]
+        if let customCell = cell as? TaskItemOptionCell{
+            let optionView = customCell.presentationView()
+            optionView.alpha = 0.2
+            customCell.name = task!.items[counter].images[indexPath.row]
+            
+            setTaskItemOptionView(optionView, task:task!.items[counter], index:indexPath.row)
+        
+            let delay = task!.items[counter].optionsCascade[indexPath.row]
+            
+            dispatch_after(
+                dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                    cell.userInteractionEnabled = true
+                    UIView.animateWithDuration(0.2, animations: { () -> Void in
+                        optionView.alpha = 1
+                    })
+            })
+        }
+        
         
         cell.userInteractionEnabled = false
-        
-        let delay = task!.items[counter].optionsCascade[indexPath.row]
-        
-        dispatch_after(
-            dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-                cell.userInteractionEnabled = true
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-                    cell.imageCell.alpha = 1
-                })
-        })
         
         return cell
     }
@@ -164,7 +171,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width :CGFloat = (collectionView.frame.size.width / CGFloat(task!.items[counter].images.count)) - 20;
         
-        return CGSize(width: width, height: collectionView.frame.height - 40)
+        return CGSize(width: width, height: collectionView.frame.height - 20)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

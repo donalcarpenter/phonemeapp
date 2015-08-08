@@ -23,4 +23,13 @@ class SingleRowImageTask: TaskViewController {
     override func loadTaskItems(){
         super.collectionView.reloadData()
     }
+    
+    override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
+        
+        if let img = view as? UIImageView
+        {
+            img.image = UIImage(named: task.images[index])
+        }
+        
+    }
 }
