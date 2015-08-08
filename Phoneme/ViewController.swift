@@ -146,6 +146,20 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
             dest.delegate = self
             return
         }
+        
+        if(segue.identifier == "lettersound"){
+            let dest = segue.destinationViewController as! LetterNameRecognitionViewController
+            self.task = TaskFactory.letterSoundTask
+            dest.delegate = self
+            return
+        }
+        
+        if(segue.identifier == "singleword"){
+            let dest = segue.destinationViewController as! WordReadingTaskViewController
+            self.task = TaskFactory.singleWordTask
+            dest.delegate = self
+            return
+        }
     }
 }
 

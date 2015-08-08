@@ -7,6 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460505EF1B7633960053EB1C /* LSRec1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505D71B7633960053EB1C /* LSRec1.mp4 */; };
+		460505F01B7633960053EB1C /* LSRec2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505D81B7633960053EB1C /* LSRec2.mp4 */; };
+		460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505D91B7633960053EB1C /* LSRec3.mp4 */; };
+		460505F21B7633960053EB1C /* LSRec4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DA1B7633960053EB1C /* LSRec4.mp4 */; };
+		460505F31B7633960053EB1C /* LSRec5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DB1B7633960053EB1C /* LSRec5.mp4 */; };
+		460505F41B7633960053EB1C /* LSRec6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DC1B7633960053EB1C /* LSRec6.mp4 */; };
+		460505F51B7633960053EB1C /* LSRec7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DD1B7633960053EB1C /* LSRec7.mp4 */; };
+		460505F61B7633960053EB1C /* LSRec8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DE1B7633960053EB1C /* LSRec8.mp4 */; };
+		460505F71B7633960053EB1C /* LSRec9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505DF1B7633960053EB1C /* LSRec9.mp4 */; };
+		460505F81B7633960053EB1C /* LSRec10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E01B7633960053EB1C /* LSRec10.mp4 */; };
+		460505F91B7633960053EB1C /* LSRec11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E11B7633960053EB1C /* LSRec11.mp4 */; };
+		460505FA1B7633960053EB1C /* LSRec12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E21B7633960053EB1C /* LSRec12.mp4 */; };
+		460505FB1B7633960053EB1C /* LSRec13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E31B7633960053EB1C /* LSRec13.mp4 */; };
+		460505FC1B7633960053EB1C /* LSRec14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E41B7633960053EB1C /* LSRec14.mp4 */; };
+		460505FD1B7633960053EB1C /* LSRec15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E51B7633960053EB1C /* LSRec15.mp4 */; };
+		460505FE1B7633960053EB1C /* LSRec16.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E61B7633960053EB1C /* LSRec16.mp4 */; };
+		460505FF1B7633960053EB1C /* LSRec17.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E71B7633960053EB1C /* LSRec17.mp4 */; };
+		460506001B7633960053EB1C /* LSRec18.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E81B7633960053EB1C /* LSRec18.mp4 */; };
+		460506011B7633960053EB1C /* LSRec19.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505E91B7633960053EB1C /* LSRec19.mp4 */; };
+		460506021B7633960053EB1C /* LSRec20.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505EA1B7633960053EB1C /* LSRec20.mp4 */; };
+		460506031B7633960053EB1C /* LSRec21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505EB1B7633960053EB1C /* LSRec21.mp4 */; };
+		460506041B7633960053EB1C /* LSRec22.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505EC1B7633960053EB1C /* LSRec22.mp4 */; };
+		460506051B7633960053EB1C /* LSRec23.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505ED1B7633960053EB1C /* LSRec23.mp4 */; };
+		460506061B7633960053EB1C /* LSRecIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460505EE1B7633960053EB1C /* LSRecIntro.mp4 */; };
+		460506171B765B190053EB1C /* WordRead1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506071B765B180053EB1C /* WordRead1.mp4 */; };
+		460506181B765B190053EB1C /* WordRead2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506081B765B180053EB1C /* WordRead2.mp4 */; };
+		460506191B765B190053EB1C /* WordRead3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506091B765B180053EB1C /* WordRead3.mp4 */; };
+		4605061A1B765B190053EB1C /* WordRead4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060A1B765B180053EB1C /* WordRead4.mp4 */; };
+		4605061B1B765B190053EB1C /* WordRead5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060B1B765B180053EB1C /* WordRead5.mp4 */; };
+		4605061C1B765B190053EB1C /* WordRead6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060C1B765B180053EB1C /* WordRead6.mp4 */; };
+		4605061D1B765B190053EB1C /* WordRead7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060D1B765B180053EB1C /* WordRead7.mp4 */; };
+		4605061E1B765B190053EB1C /* WordRead8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060E1B765B180053EB1C /* WordRead8.mp4 */; };
+		4605061F1B765B190053EB1C /* WordRead9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4605060F1B765B180053EB1C /* WordRead9.mp4 */; };
+		460506201B765B190053EB1C /* WordRead10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506101B765B180053EB1C /* WordRead10.mp4 */; };
+		460506211B765B190053EB1C /* WordRead11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506111B765B180053EB1C /* WordRead11.mp4 */; };
+		460506221B765B190053EB1C /* WordRead12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506121B765B180053EB1C /* WordRead12.mp4 */; };
+		460506231B765B190053EB1C /* WordRead13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506131B765B180053EB1C /* WordRead13.mp4 */; };
+		460506241B765B190053EB1C /* WordRead14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506141B765B180053EB1C /* WordRead14.mp4 */; };
+		460506251B765B190053EB1C /* WordRead15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506151B765B190053EB1C /* WordRead15.mp4 */; };
+		460506261B765B190053EB1C /* WordReadIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 460506161B765B190053EB1C /* WordReadIntro.mp4 */; };
+		460506281B765C0A0053EB1C /* WordReadingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460506271B765C0A0053EB1C /* WordReadingTaskViewController.swift */; };
 		4621E2581B6E27D000446739 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2571B6E27D000446739 /* AuthenticationViewController.swift */; };
 		4621E25A1B6E2E1600446739 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2591B6E2E1600446739 /* BaseUIViewController.swift */; };
 		4621E25C1B7030EC00446739 /* key2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4621E25B1B7030EC00446739 /* key2.plist */; };
@@ -139,6 +180,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		460505D71B7633960053EB1C /* LSRec1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec1.mp4; sourceTree = "<group>"; };
+		460505D81B7633960053EB1C /* LSRec2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec2.mp4; sourceTree = "<group>"; };
+		460505D91B7633960053EB1C /* LSRec3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec3.mp4; sourceTree = "<group>"; };
+		460505DA1B7633960053EB1C /* LSRec4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec4.mp4; sourceTree = "<group>"; };
+		460505DB1B7633960053EB1C /* LSRec5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec5.mp4; sourceTree = "<group>"; };
+		460505DC1B7633960053EB1C /* LSRec6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec6.mp4; sourceTree = "<group>"; };
+		460505DD1B7633960053EB1C /* LSRec7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec7.mp4; sourceTree = "<group>"; };
+		460505DE1B7633960053EB1C /* LSRec8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec8.mp4; sourceTree = "<group>"; };
+		460505DF1B7633960053EB1C /* LSRec9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec9.mp4; sourceTree = "<group>"; };
+		460505E01B7633960053EB1C /* LSRec10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec10.mp4; sourceTree = "<group>"; };
+		460505E11B7633960053EB1C /* LSRec11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec11.mp4; sourceTree = "<group>"; };
+		460505E21B7633960053EB1C /* LSRec12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec12.mp4; sourceTree = "<group>"; };
+		460505E31B7633960053EB1C /* LSRec13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec13.mp4; sourceTree = "<group>"; };
+		460505E41B7633960053EB1C /* LSRec14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec14.mp4; sourceTree = "<group>"; };
+		460505E51B7633960053EB1C /* LSRec15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec15.mp4; sourceTree = "<group>"; };
+		460505E61B7633960053EB1C /* LSRec16.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec16.mp4; sourceTree = "<group>"; };
+		460505E71B7633960053EB1C /* LSRec17.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec17.mp4; sourceTree = "<group>"; };
+		460505E81B7633960053EB1C /* LSRec18.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec18.mp4; sourceTree = "<group>"; };
+		460505E91B7633960053EB1C /* LSRec19.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec19.mp4; sourceTree = "<group>"; };
+		460505EA1B7633960053EB1C /* LSRec20.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec20.mp4; sourceTree = "<group>"; };
+		460505EB1B7633960053EB1C /* LSRec21.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec21.mp4; sourceTree = "<group>"; };
+		460505EC1B7633960053EB1C /* LSRec22.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec22.mp4; sourceTree = "<group>"; };
+		460505ED1B7633960053EB1C /* LSRec23.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRec23.mp4; sourceTree = "<group>"; };
+		460505EE1B7633960053EB1C /* LSRecIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LSRecIntro.mp4; sourceTree = "<group>"; };
+		460506071B765B180053EB1C /* WordRead1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead1.mp4; sourceTree = "<group>"; };
+		460506081B765B180053EB1C /* WordRead2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead2.mp4; sourceTree = "<group>"; };
+		460506091B765B180053EB1C /* WordRead3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead3.mp4; sourceTree = "<group>"; };
+		4605060A1B765B180053EB1C /* WordRead4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead4.mp4; sourceTree = "<group>"; };
+		4605060B1B765B180053EB1C /* WordRead5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead5.mp4; sourceTree = "<group>"; };
+		4605060C1B765B180053EB1C /* WordRead6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead6.mp4; sourceTree = "<group>"; };
+		4605060D1B765B180053EB1C /* WordRead7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead7.mp4; sourceTree = "<group>"; };
+		4605060E1B765B180053EB1C /* WordRead8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead8.mp4; sourceTree = "<group>"; };
+		4605060F1B765B180053EB1C /* WordRead9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead9.mp4; sourceTree = "<group>"; };
+		460506101B765B180053EB1C /* WordRead10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead10.mp4; sourceTree = "<group>"; };
+		460506111B765B180053EB1C /* WordRead11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead11.mp4; sourceTree = "<group>"; };
+		460506121B765B180053EB1C /* WordRead12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead12.mp4; sourceTree = "<group>"; };
+		460506131B765B180053EB1C /* WordRead13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead13.mp4; sourceTree = "<group>"; };
+		460506141B765B180053EB1C /* WordRead14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead14.mp4; sourceTree = "<group>"; };
+		460506151B765B190053EB1C /* WordRead15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordRead15.mp4; sourceTree = "<group>"; };
+		460506161B765B190053EB1C /* WordReadIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WordReadIntro.mp4; sourceTree = "<group>"; };
+		460506271B765C0A0053EB1C /* WordReadingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordReadingTaskViewController.swift; sourceTree = "<group>"; };
 		4621E2571B6E27D000446739 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		4621E2591B6E2E1600446739 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		4621E25B1B7030EC00446739 /* key2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key2.plist; sourceTree = "<group>"; };
@@ -366,6 +448,46 @@
 		465742481B616C2600FE3E58 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				460506071B765B180053EB1C /* WordRead1.mp4 */,
+				460506081B765B180053EB1C /* WordRead2.mp4 */,
+				460506091B765B180053EB1C /* WordRead3.mp4 */,
+				4605060A1B765B180053EB1C /* WordRead4.mp4 */,
+				4605060B1B765B180053EB1C /* WordRead5.mp4 */,
+				4605060C1B765B180053EB1C /* WordRead6.mp4 */,
+				4605060D1B765B180053EB1C /* WordRead7.mp4 */,
+				4605060E1B765B180053EB1C /* WordRead8.mp4 */,
+				4605060F1B765B180053EB1C /* WordRead9.mp4 */,
+				460506101B765B180053EB1C /* WordRead10.mp4 */,
+				460506111B765B180053EB1C /* WordRead11.mp4 */,
+				460506121B765B180053EB1C /* WordRead12.mp4 */,
+				460506131B765B180053EB1C /* WordRead13.mp4 */,
+				460506141B765B180053EB1C /* WordRead14.mp4 */,
+				460506151B765B190053EB1C /* WordRead15.mp4 */,
+				460506161B765B190053EB1C /* WordReadIntro.mp4 */,
+				460505D71B7633960053EB1C /* LSRec1.mp4 */,
+				460505D81B7633960053EB1C /* LSRec2.mp4 */,
+				460505D91B7633960053EB1C /* LSRec3.mp4 */,
+				460505DA1B7633960053EB1C /* LSRec4.mp4 */,
+				460505DB1B7633960053EB1C /* LSRec5.mp4 */,
+				460505DC1B7633960053EB1C /* LSRec6.mp4 */,
+				460505DD1B7633960053EB1C /* LSRec7.mp4 */,
+				460505DE1B7633960053EB1C /* LSRec8.mp4 */,
+				460505DF1B7633960053EB1C /* LSRec9.mp4 */,
+				460505E01B7633960053EB1C /* LSRec10.mp4 */,
+				460505E11B7633960053EB1C /* LSRec11.mp4 */,
+				460505E21B7633960053EB1C /* LSRec12.mp4 */,
+				460505E31B7633960053EB1C /* LSRec13.mp4 */,
+				460505E41B7633960053EB1C /* LSRec14.mp4 */,
+				460505E51B7633960053EB1C /* LSRec15.mp4 */,
+				460505E61B7633960053EB1C /* LSRec16.mp4 */,
+				460505E71B7633960053EB1C /* LSRec17.mp4 */,
+				460505E81B7633960053EB1C /* LSRec18.mp4 */,
+				460505E91B7633960053EB1C /* LSRec19.mp4 */,
+				460505EA1B7633960053EB1C /* LSRec20.mp4 */,
+				460505EB1B7633960053EB1C /* LSRec21.mp4 */,
+				460505EC1B7633960053EB1C /* LSRec22.mp4 */,
+				460505ED1B7633960053EB1C /* LSRec23.mp4 */,
+				460505EE1B7633960053EB1C /* LSRecIntro.mp4 */,
 				465B4EFA1B7604940001EA66 /* LNRec1.mp4 */,
 				465B4EFB1B7604940001EA66 /* LNRec2.mp4 */,
 				465B4EFC1B7604940001EA66 /* LNRec3.mp4 */,
@@ -455,6 +577,7 @@
 				465742281B616ADD00FE3E58 /* ViewController.swift */,
 				464B04A01B639F2B000312CC /* SingleRowImageTask.swift */,
 				464B04E01B6427A2000312CC /* InitialPhonemeViewController.swift */,
+				460506271B765C0A0053EB1C /* WordReadingTaskViewController.swift */,
 				464B04E41B64347B000312CC /* TaskViewController.swift */,
 				465B4F2C1B7612070001EA66 /* LetterNameRecognitionViewController.swift */,
 				4621E2591B6E2E1600446739 /* BaseUIViewController.swift */,
@@ -597,7 +720,12 @@
 				464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */,
 				464B04D41B642783000312CC /* InitialPhoneme4.mp4 in Resources */,
 				464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */,
+				460506251B765B190053EB1C /* WordRead15.mp4 in Resources */,
 				465742591B617B8A00FE3E58 /* Fam5.mp4 in Resources */,
+				460506041B7633960053EB1C /* LSRec22.mp4 in Resources */,
+				460506021B7633960053EB1C /* LSRec20.mp4 in Resources */,
+				460506001B7633960053EB1C /* LSRec18.mp4 in Resources */,
+				460505FA1B7633960053EB1C /* LSRec12.mp4 in Resources */,
 				464B04B91B63BC39000312CC /* Rhyme10.mp4 in Resources */,
 				465B4F171B7604940001EA66 /* LNRec5.mp4 in Resources */,
 				465B4F251B7604940001EA66 /* LNRec20.mp4 in Resources */,
@@ -606,8 +734,12 @@
 				465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */,
 				464B04FA1B6ABB18000312CC /* FinalPhoneme6.mp4 in Resources */,
 				464B04B81B63BC39000312CC /* Rhyme9.mp4 in Resources */,
+				460505F81B7633960053EB1C /* LSRec10.mp4 in Resources */,
 				464B04F71B6ABB18000312CC /* FinalPhoneme3.mp4 in Resources */,
 				464B04D81B642783000312CC /* InitialPhoneme8.mp4 in Resources */,
+				460506011B7633960053EB1C /* LSRec19.mp4 in Resources */,
+				4605061E1B765B190053EB1C /* WordRead8.mp4 in Resources */,
+				460506241B765B190053EB1C /* WordRead14.mp4 in Resources */,
 				465B4F1D1B7604940001EA66 /* LNRec11.mp4 in Resources */,
 				464B04B41B63BC39000312CC /* Rhyme5.mp4 in Resources */,
 				464B04FB1B6ABB18000312CC /* FinalPhoneme7.mp4 in Resources */,
@@ -618,59 +750,90 @@
 				465B4F2A1B7604940001EA66 /* LNRec25.mp4 in Resources */,
 				464B04B31B63BC39000312CC /* Rhyme4.mp4 in Resources */,
 				465B4F141B7604940001EA66 /* LNRec2.mp4 in Resources */,
+				4605061F1B765B190053EB1C /* WordRead9.mp4 in Resources */,
 				464B04B51B63BC39000312CC /* Rhyme6.mp4 in Resources */,
+				460506191B765B190053EB1C /* WordRead3.mp4 in Resources */,
+				460505F71B7633960053EB1C /* LSRec9.mp4 in Resources */,
+				460505F41B7633960053EB1C /* LSRec6.mp4 in Resources */,
 				464B04DC1B642783000312CC /* InitialPhoneme12.mp4 in Resources */,
 				465B4F1B1B7604940001EA66 /* LNRec9.mp4 in Resources */,
 				464B04B21B63BC39000312CC /* Rhyme3.mp4 in Resources */,
 				464B04D31B642783000312CC /* InitialPhoneme3.mp4 in Resources */,
 				464B04F61B6ABB18000312CC /* FinalPhoneme2.mp4 in Resources */,
 				464B04DF1B642783000312CC /* InitialPhonemeIntro.mp4 in Resources */,
+				460506061B7633960053EB1C /* LSRecIntro.mp4 in Resources */,
+				4605061A1B765B190053EB1C /* WordRead4.mp4 in Resources */,
+				460506261B765B190053EB1C /* WordReadIntro.mp4 in Resources */,
 				465742581B617B8A00FE3E58 /* Fam4.mp4 in Resources */,
+				4605061C1B765B190053EB1C /* WordRead6.mp4 in Resources */,
 				465B4F231B7604940001EA66 /* LNRec17.mp4 in Resources */,
+				460505FB1B7633960053EB1C /* LSRec13.mp4 in Resources */,
 				464B04BC1B63BC39000312CC /* Rhyme13.mp4 in Resources */,
 				464B04FD1B6ABB18000312CC /* FinalPhoneme9.mp4 in Resources */,
+				460505F61B7633960053EB1C /* LSRec8.mp4 in Resources */,
 				464B04FF1B6ABB18000312CC /* FinalPhoneme11.mp4 in Resources */,
+				460506171B765B190053EB1C /* WordRead1.mp4 in Resources */,
 				465B4F2B1B7604940001EA66 /* LNRecIntro.mp4 in Resources */,
+				460506181B765B190053EB1C /* WordRead2.mp4 in Resources */,
 				464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */,
+				460505F01B7633960053EB1C /* LSRec2.mp4 in Resources */,
 				465B4F191B7604940001EA66 /* LNRec7.mp4 in Resources */,
 				4621E25C1B7030EC00446739 /* key2.plist in Resources */,
+				460505FF1B7633960053EB1C /* LSRec17.mp4 in Resources */,
+				460505F31B7633960053EB1C /* LSRec5.mp4 in Resources */,
 				464B04B61B63BC39000312CC /* Rhyme7.mp4 in Resources */,
 				464B04BA1B63BC39000312CC /* Rhyme11.mp4 in Resources */,
 				465B4F1E1B7604940001EA66 /* LNRec12.mp4 in Resources */,
 				464B04DD1B642783000312CC /* InitialPhoneme13.mp4 in Resources */,
 				464B04D21B642783000312CC /* InitialPhoneme2.mp4 in Resources */,
 				4657425C1B617B8A00FE3E58 /* FamIntro.mp4 in Resources */,
+				460506211B765B190053EB1C /* WordRead11.mp4 in Resources */,
+				460505F51B7633960053EB1C /* LSRec7.mp4 in Resources */,
+				460506221B765B190053EB1C /* WordRead12.mp4 in Resources */,
 				465B4F291B7604940001EA66 /* LNRec24.mp4 in Resources */,
 				465B4F131B7604940001EA66 /* LNRec1.mp4 in Resources */,
+				460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */,
 				465B4F281B7604940001EA66 /* LNRec23.mp4 in Resources */,
+				460506051B7633960053EB1C /* LSRec23.mp4 in Resources */,
 				465B4F161B7604940001EA66 /* LNRec4.mp4 in Resources */,
+				460506031B7633960053EB1C /* LSRec21.mp4 in Resources */,
 				464B04D91B642783000312CC /* InitialPhoneme9.mp4 in Resources */,
 				464B04DB1B642783000312CC /* InitialPhoneme11.mp4 in Resources */,
+				460505FC1B7633960053EB1C /* LSRec14.mp4 in Resources */,
 				464B05001B6ABB18000312CC /* FinalPhoneme12.mp4 in Resources */,
 				464B04D11B642783000312CC /* InitialPhoneme1.mp4 in Resources */,
 				464B04F81B6ABB18000312CC /* FinalPhoneme4.mp4 in Resources */,
 				4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */,
 				465B4F201B7604940001EA66 /* LNRec14.mp4 in Resources */,
 				465B4F181B7604940001EA66 /* LNRec6.mp4 in Resources */,
+				460505F21B7633960053EB1C /* LSRec4.mp4 in Resources */,
 				465B4F241B7604940001EA66 /* LNRec18.mp4 in Resources */,
 				464B04F51B6ABB18000312CC /* FinalPhoneme1.mp4 in Resources */,
 				464B04D61B642783000312CC /* InitialPhoneme6.mp4 in Resources */,
+				460505FD1B7633960053EB1C /* LSRec15.mp4 in Resources */,
 				464B04BB1B63BC39000312CC /* Rhyme12.mp4 in Resources */,
 				465B4F1C1B7604940001EA66 /* LNRec10.mp4 in Resources */,
+				460506231B765B190053EB1C /* WordRead13.mp4 in Resources */,
+				460505FE1B7633960053EB1C /* LSRec16.mp4 in Resources */,
 				4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */,
+				4605061D1B765B190053EB1C /* WordRead7.mp4 in Resources */,
 				465742571B617B8A00FE3E58 /* Fam3.mp4 in Resources */,
 				465B4F261B7604940001EA66 /* LNRec21.mp4 in Resources */,
 				464B05011B6ABB18000312CC /* FinalPhoneme13.mp4 in Resources */,
 				465B4F1A1B7604940001EA66 /* LNRec8.mp4 in Resources */,
+				460506201B765B190053EB1C /* WordRead10.mp4 in Resources */,
 				464B04DE1B642783000312CC /* InitialPhoneme14.mp4 in Resources */,
 				464B04D51B642783000312CC /* InitialPhoneme5.mp4 in Resources */,
 				464B05021B6ABB18000312CC /* FinalPhoneme14.mp4 in Resources */,
 				4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */,
+				460505F91B7633960053EB1C /* LSRec11.mp4 in Resources */,
 				465742311B616ADD00FE3E58 /* LaunchScreen.xib in Resources */,
 				4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */,
 				465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */,
 				464B04F91B6ABB18000312CC /* FinalPhoneme5.mp4 in Resources */,
+				4605061B1B765B190053EB1C /* WordRead5.mp4 in Resources */,
 				465B4F271B7604940001EA66 /* LNRec22.mp4 in Resources */,
+				460505EF1B7633960053EB1C /* LSRec1.mp4 in Resources */,
 				465B4F1F1B7604940001EA66 /* LNRec13.mp4 in Resources */,
 				465B4F221B7604940001EA66 /* LNRec16.mp4 in Resources */,
 				464B04FC1B6ABB18000312CC /* FinalPhoneme8.mp4 in Resources */,
@@ -696,6 +859,7 @@
 				464B04E31B642D8C000312CC /* InitialPhonemeTask.swift in Sources */,
 				464B04C11B640A2E000312CC /* AudioManager.swift in Sources */,
 				4672DC8B1B6CBF3900DED51D /* SchoolsDataLayer.swift in Sources */,
+				460506281B765C0A0053EB1C /* WordReadingTaskViewController.swift in Sources */,
 				4621E2581B6E27D000446739 /* AuthenticationViewController.swift in Sources */,
 				464B04E11B6427A2000312CC /* InitialPhonemeViewController.swift in Sources */,
 				464B05051B6ABBEE000312CC /* TaskFactory.swift in Sources */,

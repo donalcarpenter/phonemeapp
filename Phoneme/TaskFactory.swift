@@ -10,7 +10,7 @@ import UIKit
 
 class TaskFactory: NSObject {
     
-    static let count: Int = 4
+    static let count: Int = 7
     
     static let familiarisation = Task(intro:"FamIntro", title:"Familiarisation", items:
         [TaskItem(audio:"Fam1", images:["", "green-box", ""], cascade: [0,0,0], correctImage:"green-box"),
@@ -92,4 +92,46 @@ class TaskFactory: NSObject {
             TaskItem(audio: "LNRec23", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "v"),
             TaskItem(audio: "LNRec24", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "y"),
     ])
+    
+    static let letterSoundTask = Task(intro: "LSRecIntro", outro:"LSRec23", title:"Letter Name Recognition Task", items:
+        [
+            TaskItem(audio: "LSRec1", outro:"LSRec2", images:["j", "r", "", ""], cascade: [], correctImage:"r", requireResponse:true),
+            TaskItem(audio: "LSRec3", outro:"LSRec4", images:["j", "r", "", ""], cascade: [], correctImage:"j", requireResponse:true),
+            
+            TaskItem(audio: "LSRec5", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "m"),
+            TaskItem(audio: "LSRec6", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "s"),
+            TaskItem(audio: "LSRec7", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "k"),
+            TaskItem(audio: "LSRec8", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "b"),
+            TaskItem(audio: "LSRec9", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "n"),
+            TaskItem(audio: "LSRec10", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "f"),
+            
+            TaskItem(audio: "LSRec11", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "d"),
+            TaskItem(audio: "LSRec12", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "h"),
+            TaskItem(audio: "LSRec13", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "p"),
+            TaskItem(audio: "LSRec14", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "t"),
+            TaskItem(audio: "LSRec15", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "w"),
+            TaskItem(audio: "LSRec16", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "g"),
+            
+            TaskItem(audio: "LSRec17", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "c"),
+            TaskItem(audio: "LSRec18", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "z"),
+            TaskItem(audio: "LSRec19", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "l"),
+            TaskItem(audio: "LSRec20", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "q"),
+            TaskItem(audio: "LSRec21", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "v"),
+            TaskItem(audio: "LSRec22", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "y"),
+        ])
+    
+    static let singleWordTask = Task(intro:"WordReadIntro", outro: "WordRead15", title:"Single Word Reading Task", items:[
+            InitialPhonemeTaskItem(firstImage: "sheep", delay:0, audio: "WordRead1", images: ["sheep", "shark", "elephant"], cascade: [], correctImage: "sheep", requireResponse: false, outro:"WordRead2"),
+            InitialPhonemeTaskItem(firstImage: "frog", delay:0, audio: "WordRead3", images: ["pig", "frog", "fish"], cascade: [], correctImage: "frog", requireResponse: false, outro:"WordRead4"),
+            InitialPhonemeTaskItem(firstImage: "dog", delay: 3, audio: "WordRead5", images: ["dog", "dot", "man"], cascade: [], correctImage: "dog"),
+            InitialPhonemeTaskItem(firstImage: "mouse", delay: 4, audio: "WordRead6", images: ["ring", "mouse", "mouth"], cascade: [], correctImage: "mouse"),
+            InitialPhonemeTaskItem(firstImage: "seal", delay: 4, audio: "WordRead7", images: ["seat", "duck", "seal"], cascade: [], correctImage: "seal"),
+            InitialPhonemeTaskItem(firstImage: "cat", delay: 3, audio: "WordRead8", images: ["cat", "cake", "hen"], cascade: [], correctImage: "cat"),
+            InitialPhonemeTaskItem(firstImage: "bee", delay: 4, audio: "WordRead9", images: ["sun", "bee", "bear"], cascade: [], correctImage: "bee"),
+            InitialPhonemeTaskItem(firstImage: "fish", delay: 3, audio: "WordRead10", images: ["fire", "lock", "fish"], cascade: [], correctImage: "fish"),
+            InitialPhonemeTaskItem(firstImage: "snake", delay: 4, audio: "WordRead11", images: ["snake", "snail", "deer"], cascade: [], correctImage: "snake"),
+            InitialPhonemeTaskItem(firstImage: "shark", delay: 3, audio: "WordRead12", images: ["cow", "shark", "sheep"], cascade: [], correctImage: "shark"),
+            InitialPhonemeTaskItem(firstImage: "horse", delay: 3, audio: "WordRead13", images: ["house", "bug", "horse"], cascade: [], correctImage: "horse"),
+            InitialPhonemeTaskItem(firstImage: "spider", delay: 3, audio: "WordRead14", images: ["spider", "space", "pig"], cascade: [], correctImage: "spider"),
+        ])
 }

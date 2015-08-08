@@ -28,7 +28,7 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
         audioPlayer.play()
     }
     
-    func playAudioFrom(source: String, completionBlock: () -> Void){
+    func playAudioFrom(source: String, completionBlock: () -> Void){    
         let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
         postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: completionBlock))
         audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)

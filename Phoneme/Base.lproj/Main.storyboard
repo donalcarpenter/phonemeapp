@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-DB-C2I">
-                                <rect key="frame" x="16" y="208" width="992" height="72"/>
+                                <rect key="frame" x="16" y="187" width="992" height="72"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Rhyme Oddity">
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-1y-6qp">
-                                <rect key="frame" x="16" y="312" width="992" height="71"/>
+                                <rect key="frame" x="16" y="280" width="992" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Initial Phoneme">
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-S0-U53">
-                                <rect key="frame" x="16" y="107" width="992" height="71"/>
+                                <rect key="frame" x="16" y="92" width="992" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Familiarization">
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdd-BC-fjv">
-                                <rect key="frame" x="16" y="418" width="992" height="71"/>
+                                <rect key="frame" x="16" y="371" width="992" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Final Phoneme">
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-be-Tni">
-                                <rect key="frame" x="16" y="517" width="992" height="71"/>
+                                <rect key="frame" x="16" y="462" width="992" height="71"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="Letter Name Recognition">
@@ -99,6 +99,36 @@
                                 <connections>
                                     <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TVl-0R-yfn"/>
                                     <segue destination="7SV-Gi-vhg" kind="show" identifier="lettername" id="NVw-1D-pRq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxe-dL-FOn">
+                                <rect key="frame" x="16" y="549" width="992" height="71"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Letter Sound Recognition">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAi-2C-HTa"/>
+                                    <segue destination="7SV-Gi-vhg" kind="show" identifier="lettersound" id="Tog-Lo-3h2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSN-Vc-bIl">
+                                <rect key="frame" x="16" y="639" width="992" height="71"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="Single Word Reading">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="trackSelectedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ar-vg-sSp"/>
+                                    <segue destination="2L1-px-jYX" kind="show" identifier="singleword" id="kJH-tp-UIK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -753,6 +783,91 @@
             </objects>
             <point key="canvasLocation" x="2140" y="2071"/>
         </scene>
+        <!--Word Reading Task View Controller-->
+        <scene sceneID="hnI-Bm-pz0">
+            <objects>
+                <viewController id="2L1-px-jYX" customClass="WordReadingTaskViewController" customModule="Phoneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6b6-cd-Nk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="AJG-UL-aJk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5J-OX-8Qf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-D5-ZoK">
+                                <rect key="frame" x="324" y="28" width="376" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="376" id="T2l-bq-7Dq"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AD8-gR-gnX">
+                                <rect key="frame" x="120" y="469" width="773" height="231"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="Z8C-9o-4Ri"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mtX-7q-75Y">
+                                    <size key="itemSize" width="254" height="188"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gj4-y9-otX" customClass="CustomLetterCell" customModule="Phoneme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="254" height="188"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-1y-0Gy">
+                                                    <rect key="frame" x="23" y="39" width="209" height="109"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="VaX-1y-0Gy" firstAttribute="leading" secondItem="gj4-y9-otX" secondAttribute="leadingMargin" constant="15" id="E1g-GS-dfs"/>
+                                            <constraint firstItem="VaX-1y-0Gy" firstAttribute="top" secondItem="gj4-y9-otX" secondAttribute="topMargin" constant="31" id="Kpx-oU-DtD"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="VaX-1y-0Gy" secondAttribute="trailing" constant="14" id="eUd-7K-L9N"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="VaX-1y-0Gy" secondAttribute="bottom" constant="32" id="rqn-69-6P3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="VaX-1y-0Gy" id="aLW-2C-3u2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2L1-px-jYX" id="erk-li-LA2"/>
+                                    <outlet property="delegate" destination="2L1-px-jYX" id="YqP-03-Mkz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EYg-D5-ZoK" firstAttribute="top" secondItem="h5J-OX-8Qf" secondAttribute="topMargin" constant="28" id="4Z4-kU-DSj"/>
+                            <constraint firstItem="AD8-gR-gnX" firstAttribute="top" secondItem="EYg-D5-ZoK" secondAttribute="bottom" constant="71" id="7U5-eb-94B"/>
+                            <constraint firstItem="AD8-gR-gnX" firstAttribute="leading" secondItem="h5J-OX-8Qf" secondAttribute="leadingMargin" constant="45" id="7tB-6G-1MV"/>
+                            <constraint firstItem="EYg-D5-ZoK" firstAttribute="centerX" secondItem="h5J-OX-8Qf" secondAttribute="centerX" id="HC9-Oe-o13"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AD8-gR-gnX" secondAttribute="trailing" constant="174" id="qzD-CL-BsI"/>
+                            <constraint firstItem="AJG-UL-aJk" firstAttribute="top" secondItem="AD8-gR-gnX" secondAttribute="bottom" constant="68" id="wqW-Of-IQD"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="collectionView" destination="AD8-gR-gnX" id="PkA-q8-HPZ"/>
+                        <outlet property="imageforWord" destination="EYg-D5-ZoK" id="Vu5-9U-kCt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drx-he-D8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2140" y="2933"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fne-do-96O">
             <objects>
@@ -773,6 +888,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Tog-Lo-3h2"/>
         <segue reference="pog-yf-7rX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.34509803921568627" green="0.5725490196078431" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>

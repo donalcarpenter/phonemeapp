@@ -67,6 +67,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
                 self.bgimgOw!.alpha = 0
             }
             
+            self.loadTaskItems()
             
             self.presentTask(0)
         })
@@ -140,20 +141,14 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             
         }else{
             
-            if(counterIndex == 0){
-                loadTaskItems()
-            }
-            
             playTaskItemAudioTrack()
             
         }
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        NSLog("There are \(task!.items[counter].images.count) items")
         return task!.items[counter].images.count;
     }
-    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
@@ -234,10 +229,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     }
     
     func playTaskItemAudioTrack(){
-        
         let sound = task!.items[counter].audio
-        
         audioManager.playAudioFrom(sound)
     }
-
 }

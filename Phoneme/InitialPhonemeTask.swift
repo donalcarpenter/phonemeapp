@@ -16,6 +16,10 @@ class InitialPhonemeTaskItem : TaskItem{
         self.firstImage = firstImage
         self.delay = delay
         super.init(audio: audio, images: images, cascade: cascade, correctImage: correctImage, requireResponse: requireResponse)
+        
+        if(outro != ""){
+            self.outro = outro
+        }
     }
     
     convenience init(firstImage: String, delay: Double, audio:String, images:[String], cascade:[Double], correctImage: String){
