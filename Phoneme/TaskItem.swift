@@ -16,6 +16,7 @@ class TaskItem: NSObject {
     var demo: Bool = false
     var outro: String?
     var requireResponse: Bool = true
+    var blocking: Bool = false
     
     convenience init(audio:String, images:[String], cascade: [Double], correctImage: String){
         self.init(audio:audio, images: images, cascade: cascade, correctImage: correctImage, requireResponse: true)
@@ -40,11 +41,22 @@ class Task: NSObject{
     let taskTitle: String
     let items: [TaskItem]
     var outro : String?
+    var blocking: Bool = false
     
-    init(intro:String, title:String, items:[TaskItem]){
+    init(intro:String, title:String, blocking:Bool, items:[TaskItem]){
         self.intro = intro
         self.taskTitle = title
         self.items = items;
+        self.blocking = blocking
+    }
+
+    convenience init(intro:String, outro: String, title:String, blocking:Bool, items:[TaskItem]){
+        self.init(intro: intro, title: title, blocking:blocking, items: items)
+        self.outro = outro
+    }
+    
+    convenience init(intro:String, title:String, items:[TaskItem]){
+        self.init(intro: intro, title: title, blocking:false, items: items)
     }
     
     convenience init(intro:String, outro: String, title:String, items:[TaskItem]){

@@ -29,7 +29,7 @@ class TaskFactory: NSObject {
             TaskItem(audio:"Rhyme7", images:["sand", "hand", "cup"], cascade: [3, 4, 6], correctImage: "cup"),
             TaskItem(audio:"Rhyme8", images:["hen", "car", "pen"], cascade: [4, 5, 6], correctImage: "car"),
             TaskItem(audio:"Rhyme9", images:["dog", "book", "hook"], cascade: [3, 4, 6], correctImage: "dog"),
-            TaskItem(audio:"Rhyme10", images:["bun", "sun", "kite"], cascade: [3, 4, 5], correctImage: "kite"),
+            TaskItem(audio:"Rhyme10", images:["bun", "sun", "kite"], cascade: [3, 4, 6], correctImage: "kite"),
             TaskItem(audio:"Rhyme11", images:["tent", "lock", "sock"], cascade: [3, 5, 6], correctImage: "tent"),
             TaskItem(audio:"Rhyme12", images:["shell", "duck", "bell"], cascade: [3, 5, 6], correctImage: "duck"),
             TaskItem(audio:"Rhyme13", images:["ring", "sing", "lamb"], cascade: [4, 5, 6], correctImage: "lamb")
@@ -43,7 +43,7 @@ class TaskFactory: NSObject {
             InitialPhonemeTaskItem(firstImage: "seal", delay:11,  audio: "InitialPhoneme7", images: ["bee", "sun", "tent"], cascade: [3, 4, 6], correctImage: "sun"),
             InitialPhonemeTaskItem(firstImage: "seal", delay:5, audio: "InitialPhoneme8", images: ["saw", "tie", "hook"], cascade: [1, 2, 4], correctImage: "saw"),
             InitialPhonemeTaskItem(firstImage: "cat", delay:11,  audio: "InitialPhoneme9", images: ["bus", "kite", "arm"], cascade: [2, 4, 5], correctImage: "kite"),
-            InitialPhonemeTaskItem(firstImage: "cat", delay:5,  audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], cascade: [5, 7, 9], correctImage: "comb"),
+            InitialPhonemeTaskItem(firstImage: "cat", delay:5,  audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], cascade: [4, 6, 7], correctImage: "comb"),
             InitialPhonemeTaskItem(firstImage: "bee", delay:12, audio: "InitialPhoneme11", images: ["cat", "leg", "ball"], cascade: [2, 3, 4], correctImage: "ball"),
             InitialPhonemeTaskItem(firstImage: "bee", delay:5,  audio: "InitialPhoneme12", images: ["car", "boat", "shoe"], cascade: [1, 2, 3], correctImage: "boat"),
             InitialPhonemeTaskItem(firstImage: "fish", delay:13,  audio: "InitialPhoneme13", images: ["foot", "hat", "pig"], cascade: [1, 3, 4], correctImage: "foot"),
@@ -66,7 +66,7 @@ class TaskFactory: NSObject {
              TaskItem(audio: "FinalPhoneme14", images:["tent", "toast", "map"], cascade: [2, 4, 6], correctImage:"map")
         ])
     
-    static let letterNameTask = Task(intro: "LNRecIntro", outro:"LNRec25", title:"Letter Name Recognition Task", items:
+    static let letterNameTask = Task(intro: "LNRecIntro", outro:"LNRec25", title:"Letter Name Recognition Task", blocking: true, items:
         [
             TaskItem(audio: "LNRec1", outro:"LNRec2", images:["j", "r", "", ""], cascade: [], correctImage:"j", requireResponse:true),
             TaskItem(audio: "LNRec3", outro:"LNRec4", images:["j", "r", "", ""], cascade: [], correctImage:"r", requireResponse:true),
@@ -93,7 +93,7 @@ class TaskFactory: NSObject {
             TaskItem(audio: "LNRec24", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "y"),
     ])
     
-    static let letterSoundTask = Task(intro: "LSRecIntro", outro:"LSRec23", title:"Letter Name Recognition Task", items:
+    static let letterSoundTask = Task(intro: "LSRecIntro", outro:"LSRec23", title:"Letter Name Recognition Task", blocking:true, items:
         [
             TaskItem(audio: "LSRec1", outro:"LSRec2", images:["j", "r", "", ""], cascade: [], correctImage:"r", requireResponse:true),
             TaskItem(audio: "LSRec3", outro:"LSRec4", images:["j", "r", "", ""], cascade: [], correctImage:"j", requireResponse:true),
@@ -120,7 +120,7 @@ class TaskFactory: NSObject {
             TaskItem(audio: "LSRec22", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "y"),
         ])
     
-    static let singleWordTask = Task(intro:"WordReadIntro", outro: "WordRead15", title:"Single Word Reading Task", items:[
+    static let singleWordTask = Task(intro:"WordReadIntro", outro: "WordRead15", title:"Single Word Reading Task", blocking:false, items:[
             InitialPhonemeTaskItem(firstImage: "sheep", delay:0, audio: "WordRead1", images: ["sheep", "shark", "elephant"], cascade: [], correctImage: "sheep", requireResponse: false, outro:"WordRead2"),
             InitialPhonemeTaskItem(firstImage: "frog", delay:0, audio: "WordRead3", images: ["pig", "frog", "fish"], cascade: [], correctImage: "frog", requireResponse: false, outro:"WordRead4"),
             InitialPhonemeTaskItem(firstImage: "dog", delay: 3, audio: "WordRead5", images: ["dog", "dot", "man"], cascade: [], correctImage: "dog"),

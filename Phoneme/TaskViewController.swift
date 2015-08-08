@@ -57,6 +57,10 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         preconditionFailure("This method must be overridden")
     }
     
+    func itemWasSelected(view:UIView, task:TaskItem, index: Int){
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
         
         audioManager.playAudioFrom(task!.intro, completionBlock: { () -> Void in
@@ -140,9 +144,18 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             })
             
         }else{
+            let sound = task!.items[counter].audio
             
-            playTaskItemAudioTrack()
-            
+            if(task!.blocking)
+            {
+                collectionView.userInteractionEnabled = false
+                audioManager.playAudioFrom(sound, completionBlock: { () -> Void in
+                    self.collectionView.userInteractionEnabled = true
+                })
+            }
+            else{
+                audioManager.playAudioFrom(sound)
+            }
         }
     }
     
@@ -155,6 +168,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
         
         cell.selected = false
+        cell.userInteractionEnabled = true
         
         if let customCell = cell as? TaskItemOptionCell{
             let optionView = customCell.presentationView()
@@ -199,8 +213,13 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        if(!task!.items[counter].requireResponse){
+        if(!self.task!.items[counter].requireResponse){
             return
+        }
+        
+        // disable further taps
+        for c in collectionView.visibleCells() as! [UICollectionViewCell]{
+            c.userInteractionEnabled = false
         }
         
         // capture current answer
@@ -212,6 +231,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         taskResults.append(result)
         
         NSLog("expected \(task!.items[counter].correctImage), got \(cell.name!)")
+        
+        itemWasSelected(cell.presentationView(), task: task!.items[counter], index: indexPath.row)
         
         
         let cont = {()-> Void in
@@ -226,10 +247,5 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         }else{
             cont()
         }
-    }
-    
-    func playTaskItemAudioTrack(){
-        let sound = task!.items[counter].audio
-        audioManager.playAudioFrom(sound)
     }
 }

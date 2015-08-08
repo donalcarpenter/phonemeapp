@@ -23,10 +23,20 @@ class LetterNameRecognitionViewController: TaskViewController {
     }
     
     override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
-        
         if let lbl = view as? UILabel
         {
             lbl.text = task.images[index]
+        }
+    }
+    
+    override func itemWasSelected(view: UIView, task: TaskItem, index: Int) {
+        if let lbl = view as? UILabel
+        {
+            //lbl.textColor = UIColor.greenColor()
+            
+            //UIView.animateWithDuration(0.2, animations: { () -> Void in
+            //    lbl.textColor = UIColor.blackColor()
+            //})
         }
     }
     
