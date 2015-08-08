@@ -20,6 +20,9 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
     @IBOutlet weak var rhymeOddityButton: UIButton!
     @IBOutlet weak var initialPhonemeButton: UIButton!
     @IBOutlet weak var finalPhonemeButton: UIButton!
+    @IBOutlet weak var letterNameRecogButton: UIButton!
+    @IBOutlet weak var letterSoundButton: UIButton!
+    @IBOutlet weak var singleWordButton: UIButton!
     
     var selectedButton: UIButton?
     
@@ -41,9 +44,20 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
             bgimgOw.alpha = 0
         }
         
+        setEnableStateOnNonFamiliarisationButtons(false)
+        
         if(delegate == nil){
             showErrorMessage("woops, something has gone badly wrong and results will not be saved.  If i were you i'd kill the app and start again...", userError: false)
         }
+    }
+    
+    func setEnableStateOnNonFamiliarisationButtons(enabled:Bool){
+        rhymeOddityButton.enabled = enabled
+        initialPhonemeButton.enabled = enabled
+        finalPhonemeButton.enabled = enabled
+        letterNameRecogButton.enabled = enabled
+        letterSoundButton.enabled = enabled
+        singleWordButton.enabled = enabled
     }
     
     @IBAction func returnToDataView(sender: AnyObject) {
@@ -78,12 +92,32 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                 }
                 else
                 {
-                    if let buttonToDisable = self.selectedButton
-                    {
-                        buttonToDisable.enabled = false
+                    if(self.task == TaskFactory.familiarisation){
+                        if(results.count - correct >= 3){
+                            
+                            let audioManager = AudioManager()
+                            audioManager.playAudioFrom("FamiliarisationError")
+                            
+                            self.FamiliarisationButton.enabled = true;
+                            self.setEnableStateOnNonFamiliarisationButtons(false)
+                            
+                        }else{
+                            
+                            self.setEnableStateOnNonFamiliarisationButtons(true)
+                            self.FamiliarisationButton.enabled = false;
+                            
+                            self.outstandingTasks--;
+                        }
                     }
-                    
-                    self.outstandingTasks--;
+                    else
+                    {
+                        if let buttonToDisable = self.selectedButton
+                        {
+                            buttonToDisable.enabled = false
+                        }
+                        
+                        self.outstandingTasks--;
+                    }
                     
                     if(self.outstandingTasks == 0){
                         StudentDataLayer.setStudentCompleted(result.studentId, completionBlock: { (success, error) -> Void in

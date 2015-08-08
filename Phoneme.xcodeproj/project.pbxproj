@@ -150,6 +150,7 @@
 		46B8B15A1B76812300D74B15 /* Rhyme11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1551B76812300D74B15 /* Rhyme11.mp4 */; };
 		46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1561B76812300D74B15 /* Rhyme13.mp4 */; };
 		46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */; };
+		46B8B15F1B76989900D74B15 /* FamiliarisationError.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B15E1B76989900D74B15 /* FamiliarisationError.mp4 */; };
 		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
 		46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1761B6C17D2007E8E15 /* Bolts.framework */; };
 		46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1771B6C17D2007E8E15 /* Parse.framework */; };
@@ -331,6 +332,7 @@
 		46B8B1551B76812300D74B15 /* Rhyme11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme11.mp4; sourceTree = "<group>"; };
 		46B8B1561B76812300D74B15 /* Rhyme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme13.mp4; sourceTree = "<group>"; };
 		46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeEnding.mp4; sourceTree = "<group>"; };
+		46B8B15E1B76989900D74B15 /* FamiliarisationError.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FamiliarisationError.mp4; sourceTree = "<group>"; };
 		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		46BED1761B6C17D2007E8E15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Audio/Bolts.framework; sourceTree = "<group>"; };
 		46BED1771B6C17D2007E8E15 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Audio/Parse.framework; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				4657424F1B616CB800FE3E58 /* Fam7.mp4 */,
 				465742501B616CB800FE3E58 /* FamIntro.mp4 */,
 				46B8B1401B767E9000D74B15 /* FamiliarisationEnding.mp4 */,
+				46B8B15E1B76989900D74B15 /* FamiliarisationError.mp4 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */,
 				465B4F131B7604940001EA66 /* LNRec1.mp4 in Resources */,
 				460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */,
+				46B8B15F1B76989900D74B15 /* FamiliarisationError.mp4 in Resources */,
 				46B8B1431B767F2D00D74B15 /* FinalPhonEnding.mp4 in Resources */,
 				465B4F281B7604940001EA66 /* LNRec23.mp4 in Resources */,
 				460506051B7633960053EB1C /* LSRec23.mp4 in Resources */,
