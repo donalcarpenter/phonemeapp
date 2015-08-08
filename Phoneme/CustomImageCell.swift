@@ -23,7 +23,3 @@ class CustomImageCell: UICollectionViewCell, TaskItemOptionCell {
         return imageCell!
     }
 }
-
-class CustomLetterCell: UICollectionViewCell {
-    
-}

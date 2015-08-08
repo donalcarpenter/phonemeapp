@@ -15,8 +15,11 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     var answers : [String]?
     let audioManager = AudioManager()
     var taskResults = [TaskResultRawItem]()
+    let bgimgO = UIImage(named: "background")
     
     var delegate: ImageCollectionViewControllerDelegate?
+    
+    var rows = 1
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,7 +35,6 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         let count: Int = task!.items.count
         answers = [String](count:count, repeatedValue: "")
         
-        let bgimgO = UIImage(named: "background")
         bgimgOw = UIImageView(frame: self.view.frame)
         bgimgOw!.image = bgimgO
         
@@ -73,10 +75,10 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     func hideImagesThatArentCorrect(collection: UICollectionView, correctImage: String){
         for cell in collection.visibleCells(){
-            let taskCell = cell as! CustomImageCell
+            let taskCell = cell as! TaskItemOptionCell
             if (taskCell.name != correctImage){
             UIView.animateWithDuration(0.2){
-                            taskCell.imageCell.alpha = 0
+                    taskCell.presentationView().alpha = 0
                 }
             }
         }
@@ -87,12 +89,25 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         
         if(counter >= task!.items.count){
             
-            processResults()
-            
+
             audioPlayer.stop()
             
-            self.navigationController?.popViewControllerAnimated(true)
+            let cont = {()-> Void in
+                self.processResults()
+                self.navigationController?.popViewControllerAnimated(true)
+            }
             
+            if self.task!.outro != nil{
+                UIView.animateWithDuration(0.5){
+                    self.collectionView.alpha = 0
+                    self.bgimgOw!.alpha = 1
+                }
+                
+                audioManager.playAudioFrom(task!.outro!, completionBlock: cont)
+                
+            }else{
+                cont()
+            }
         }
         else{
 
@@ -117,6 +132,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
                     self.hideImagesThatArentCorrect(self.collectionView, correctImage: self.task!.items[c].correctImage)
                     
                     self.audioManager.playAudioFrom(self.task!.items[c].outro!, completionBlock: cont)
+                    
                 }else{
                     cont()
                 }
@@ -134,6 +150,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        NSLog("There are \(task!.items[counter].images.count) items")
         return task!.items[counter].images.count;
     }
     
@@ -146,32 +163,43 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         
         if let customCell = cell as? TaskItemOptionCell{
             let optionView = customCell.presentationView()
-            optionView.alpha = 0.2
+            
             customCell.name = task!.items[counter].images[indexPath.row]
             
             setTaskItemOptionView(optionView, task:task!.items[counter], index:indexPath.row)
         
-            let delay = task!.items[counter].optionsCascade[indexPath.row]
-            
-            dispatch_after(
-                dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-                    cell.userInteractionEnabled = true
-                    UIView.animateWithDuration(0.2, animations: { () -> Void in
-                        optionView.alpha = 1
-                    })
-            })
+            if(indexPath.row < task!.items[counter].optionsCascade.count && task!.items[counter].optionsCascade[indexPath.row] > 0){
+                
+                optionView.alpha = 0.2
+                cell.userInteractionEnabled = false
+                
+                let delay = task!.items[counter].optionsCascade[indexPath.row]
+                
+                dispatch_after(
+                    dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                        cell.userInteractionEnabled = true
+                        UIView.animateWithDuration(0.2, animations: { () -> Void in
+                            optionView.alpha = 1
+                        })
+                })
+            }else{
+                optionView.alpha = 1
+                cell.userInteractionEnabled = true
+            }
         }
         
         
-        cell.userInteractionEnabled = false
+        
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width :CGFloat = (collectionView.frame.size.width / CGFloat(task!.items[counter].images.count)) - 20;
         
-        return CGSize(width: width, height: collectionView.frame.height - 20)
+        let width :CGFloat = (collectionView.frame.size.width / CGFloat(task!.items[counter].images.count / rows)) - 20;
+        let height: CGFloat = (collectionView.frame.height - 20) / CGFloat(rows)
+        
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -181,7 +209,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         }
         
         // capture current answer
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CustomImageCell
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! TaskItemOptionCell
         answers?[counter] = cell.name!
         
         var result = TaskResultRawItem(index: counter, correctAnswer: task!.items[counter].correctImage, givenAnswer: cell.name!)
@@ -191,7 +219,18 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         NSLog("expected \(task!.items[counter].correctImage), got \(cell.name!)")
         
         
-        moveToNextTaskItem()
+        let cont = {()-> Void in
+            self.moveToNextTaskItem()}
+        
+        if(self.task!.items[counter].outro != nil){
+            
+            self.hideImagesThatArentCorrect(self.collectionView, correctImage: self.task!.items[counter].correctImage)
+            
+            self.audioManager.playAudioFrom(self.task!.items[counter].outro!, completionBlock: cont)
+            
+        }else{
+            cont()
+        }
     }
     
     func playTaskItemAudioTrack(){

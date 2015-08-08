@@ -139,6 +139,13 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
             dest.delegate = self
             return
         }
+        
+        if(segue.identifier == "lettername"){
+            let dest = segue.destinationViewController as! LetterNameRecognitionViewController
+            self.task = TaskFactory.letterNameTask
+            dest.delegate = self
+            return
+        }
     }
 }
 

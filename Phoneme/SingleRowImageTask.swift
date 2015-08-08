@@ -30,6 +30,5 @@ class SingleRowImageTask: TaskViewController {
         {
             img.image = UIImage(named: task.images[index])
         }
-        
     }
 }

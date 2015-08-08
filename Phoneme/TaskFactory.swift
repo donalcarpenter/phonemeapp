@@ -65,4 +65,31 @@ class TaskFactory: NSObject {
              TaskItem(audio: "FinalPhoneme13", images:["world", "walk", "face"], cascade: [2, 4, 6], correctImage:"world"),
              TaskItem(audio: "FinalPhoneme14", images:["tent", "toast", "map"], cascade: [2, 4, 6], correctImage:"map")
         ])
+    
+    static let letterNameTask = Task(intro: "LNRecIntro", outro:"LNRec25", title:"Letter Name Recognition Task", items:
+        [
+            TaskItem(audio: "LNRec1", outro:"LNRec2", images:["j", "r", "", ""], cascade: [], correctImage:"j", requireResponse:true),
+            TaskItem(audio: "LNRec3", outro:"LNRec4", images:["j", "r", "", ""], cascade: [], correctImage:"r", requireResponse:true),
+            
+            TaskItem(audio: "LNRec5", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "m"),
+            TaskItem(audio: "LNRec6", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "s"),
+            TaskItem(audio: "LNRec7", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "k"),
+            TaskItem(audio: "LNRec8", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "b"),
+            TaskItem(audio: "LNRec9", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "n"),
+            TaskItem(audio: "LNRec10", outro:"LNRec11", images: ["b", "s", "n", "m", "f", "k"], cascade: [0,0,0,0,0,0], correctImage: "f", requireResponse:true),
+            
+            TaskItem(audio: "LNRec12", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "d"),
+            TaskItem(audio: "LNRec13", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "h"),
+            TaskItem(audio: "LNRec14", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "p"),
+            TaskItem(audio: "LNRec15", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "t"),
+            TaskItem(audio: "LNRec16", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "w"),
+            TaskItem(audio: "LNRec17", images: ["d", "w", "h", "t", "g", "p"], cascade: [0,0,0,0,0,0], correctImage: "g"),
+
+            TaskItem(audio: "LNRec18", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "c"),
+            TaskItem(audio: "LNRec20", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "z"),
+            TaskItem(audio: "LNRec21", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "l"),
+            TaskItem(audio: "LNRec22", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "q"),
+            TaskItem(audio: "LNRec23", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "v"),
+            TaskItem(audio: "LNRec24", images: ["q", "v", "z", "l", "c", "y"], cascade: [0,0,0,0,0,0], correctImage: "y"),
+    ])
 }
