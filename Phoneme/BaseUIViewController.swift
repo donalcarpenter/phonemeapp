@@ -10,15 +10,18 @@ import UIKit
 
 class BaseUIViewController: UIViewController {
 
+    var showBackgroundBlur = true
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let bgimg = UIImage(named: "background-blur")
-        let bgimgw = UIImageView(frame: self.view.frame)
-        bgimgw.image = bgimg
-        
-        self.view.insertSubview(bgimgw, atIndex: 0)
+        if(showBackgroundBlur){
+            let bgimg = UIImage(named: "background-blur")
+            let bgimgw = UIImageView(frame: self.view.frame)
+            bgimgw.image = bgimg
+            
+            self.view.insertSubview(bgimgw, atIndex: 0)
+        }
         
         self.navigationController?.navigationBarHidden = true
     }

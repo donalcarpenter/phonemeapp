@@ -24,6 +24,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     override func viewWillAppear(animated: Bool) {
         
+        showBackgroundBlur = false
+        
         super.viewWillAppear(animated)
         
         task = delegate!.task
@@ -132,18 +134,29 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         return task!.items[counter].images.count;
     }
     
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomImageCell
         
         cell.selected = false
-        cell.imageCell.alpha = 1
+        cell.imageCell.alpha = 0.2
         
         let img = UIImage(named: task!.items[counter].images[indexPath.row])
         cell.imageCell.image = img
         cell.name = task!.items[counter].images[indexPath.row]
         
-        cell.userInteractionEnabled = true
+        cell.userInteractionEnabled = false
+        
+        let delay = task!.items[counter].optionsCascade[indexPath.row]
+        
+        dispatch_after(
+            dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                cell.userInteractionEnabled = true
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    cell.imageCell.alpha = 1
+                })
+        })
         
         return cell
     }
