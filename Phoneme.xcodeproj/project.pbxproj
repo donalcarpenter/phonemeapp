@@ -57,15 +57,10 @@
 		464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A31B63BC39000312CC /* Rhyme2.mp4 */; };
 		464B04B21B63BC39000312CC /* Rhyme3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A41B63BC39000312CC /* Rhyme3.mp4 */; };
 		464B04B31B63BC39000312CC /* Rhyme4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A51B63BC39000312CC /* Rhyme4.mp4 */; };
-		464B04B41B63BC39000312CC /* Rhyme5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A61B63BC39000312CC /* Rhyme5.mp4 */; };
 		464B04B51B63BC39000312CC /* Rhyme6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A71B63BC39000312CC /* Rhyme6.mp4 */; };
-		464B04B61B63BC39000312CC /* Rhyme7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A81B63BC39000312CC /* Rhyme7.mp4 */; };
 		464B04B71B63BC39000312CC /* Rhyme8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A91B63BC39000312CC /* Rhyme8.mp4 */; };
-		464B04B81B63BC39000312CC /* Rhyme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AA1B63BC39000312CC /* Rhyme9.mp4 */; };
 		464B04B91B63BC39000312CC /* Rhyme10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AB1B63BC39000312CC /* Rhyme10.mp4 */; };
-		464B04BA1B63BC39000312CC /* Rhyme11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AC1B63BC39000312CC /* Rhyme11.mp4 */; };
 		464B04BB1B63BC39000312CC /* Rhyme12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AD1B63BC39000312CC /* Rhyme12.mp4 */; };
-		464B04BC1B63BC39000312CC /* Rhyme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AE1B63BC39000312CC /* Rhyme13.mp4 */; };
 		464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04AF1B63BC39000312CC /* RhymeIntro.mp4 */; };
 		464B04BF1B63F413000312CC /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04BE1B63F413000312CC /* Queue.swift */; };
 		464B04C11B640A2E000312CC /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04C01B640A2E000312CC /* AudioManager.swift */; };
@@ -74,13 +69,8 @@
 		464B04D31B642783000312CC /* InitialPhoneme3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C41B642783000312CC /* InitialPhoneme3.mp4 */; };
 		464B04D41B642783000312CC /* InitialPhoneme4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C51B642783000312CC /* InitialPhoneme4.mp4 */; };
 		464B04D51B642783000312CC /* InitialPhoneme5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C61B642783000312CC /* InitialPhoneme5.mp4 */; };
-		464B04D61B642783000312CC /* InitialPhoneme6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C71B642783000312CC /* InitialPhoneme6.mp4 */; };
 		464B04D71B642783000312CC /* InitialPhoneme7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C81B642783000312CC /* InitialPhoneme7.mp4 */; };
-		464B04D81B642783000312CC /* InitialPhoneme8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04C91B642783000312CC /* InitialPhoneme8.mp4 */; };
-		464B04D91B642783000312CC /* InitialPhoneme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CA1B642783000312CC /* InitialPhoneme9.mp4 */; };
-		464B04DA1B642783000312CC /* InitialPhoneme10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CB1B642783000312CC /* InitialPhoneme10.mp4 */; };
 		464B04DB1B642783000312CC /* InitialPhoneme11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CC1B642783000312CC /* InitialPhoneme11.mp4 */; };
-		464B04DC1B642783000312CC /* InitialPhoneme12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CD1B642783000312CC /* InitialPhoneme12.mp4 */; };
 		464B04DD1B642783000312CC /* InitialPhoneme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CE1B642783000312CC /* InitialPhoneme13.mp4 */; };
 		464B04DE1B642783000312CC /* InitialPhoneme14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04CF1B642783000312CC /* InitialPhoneme14.mp4 */; };
 		464B04DF1B642783000312CC /* InitialPhonemeIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04D01B642783000312CC /* InitialPhonemeIntro.mp4 */; };
@@ -95,7 +85,6 @@
 		464B04FA1B6ABB18000312CC /* FinalPhoneme6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04EB1B6ABB18000312CC /* FinalPhoneme6.mp4 */; };
 		464B04FB1B6ABB18000312CC /* FinalPhoneme7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04EC1B6ABB18000312CC /* FinalPhoneme7.mp4 */; };
 		464B04FC1B6ABB18000312CC /* FinalPhoneme8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04ED1B6ABB18000312CC /* FinalPhoneme8.mp4 */; };
-		464B04FD1B6ABB18000312CC /* FinalPhoneme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04EE1B6ABB18000312CC /* FinalPhoneme9.mp4 */; };
 		464B04FE1B6ABB18000312CC /* FinalPhoneme10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04EF1B6ABB18000312CC /* FinalPhoneme10.mp4 */; };
 		464B04FF1B6ABB18000312CC /* FinalPhoneme11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04F01B6ABB18000312CC /* FinalPhoneme11.mp4 */; };
 		464B05001B6ABB18000312CC /* FinalPhoneme12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04F11B6ABB18000312CC /* FinalPhoneme12.mp4 */; };
@@ -146,6 +135,21 @@
 		465B4F2D1B7612070001EA66 /* LetterNameRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465B4F2C1B7612070001EA66 /* LetterNameRecognitionViewController.swift */; };
 		465B4F321B7615460001EA66 /* CustomLetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465B4F311B7615460001EA66 /* CustomLetterCell.swift */; };
 		4672DC8B1B6CBF3900DED51D /* SchoolsDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4672DC8A1B6CBF3900DED51D /* SchoolsDataLayer.swift */; };
+		46B8B1411B767E9000D74B15 /* FamiliarisationEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1401B767E9000D74B15 /* FamiliarisationEnding.mp4 */; };
+		46B8B1431B767F2D00D74B15 /* FinalPhonEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1421B767F2D00D74B15 /* FinalPhonEnding.mp4 */; };
+		46B8B1451B767FEF00D74B15 /* FinalPhoneme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1441B767FEF00D74B15 /* FinalPhoneme9.mp4 */; };
+		46B8B1471B76801300D74B15 /* InitialPhoneme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1461B76801300D74B15 /* InitialPhoneme9.mp4 */; };
+		46B8B1491B76806500D74B15 /* InitialPhoneme12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1481B76806500D74B15 /* InitialPhoneme12.mp4 */; };
+		46B8B14B1B76809400D74B15 /* InitialPhoneme10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B14A1B76809400D74B15 /* InitialPhoneme10.mp4 */; };
+		46B8B14D1B7680A100D74B15 /* InitPhonEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B14C1B7680A100D74B15 /* InitPhonEnding.mp4 */; };
+		46B8B14F1B7680CE00D74B15 /* InitialPhoneme6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B14E1B7680CE00D74B15 /* InitialPhoneme6.mp4 */; };
+		46B8B1511B76810200D74B15 /* InitialPhoneme8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1501B76810200D74B15 /* InitialPhoneme8.mp4 */; };
+		46B8B1571B76812300D74B15 /* Rhyme5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1521B76812300D74B15 /* Rhyme5.mp4 */; };
+		46B8B1581B76812300D74B15 /* Rhyme7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1531B76812300D74B15 /* Rhyme7.mp4 */; };
+		46B8B1591B76812300D74B15 /* Rhyme9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1541B76812300D74B15 /* Rhyme9.mp4 */; };
+		46B8B15A1B76812300D74B15 /* Rhyme11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1551B76812300D74B15 /* Rhyme11.mp4 */; };
+		46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1561B76812300D74B15 /* Rhyme13.mp4 */; };
+		46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */; };
 		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
 		46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1761B6C17D2007E8E15 /* Bolts.framework */; };
 		46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1771B6C17D2007E8E15 /* Parse.framework */; };
@@ -230,15 +234,10 @@
 		464B04A31B63BC39000312CC /* Rhyme2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme2.mp4; sourceTree = "<group>"; };
 		464B04A41B63BC39000312CC /* Rhyme3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme3.mp4; sourceTree = "<group>"; };
 		464B04A51B63BC39000312CC /* Rhyme4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme4.mp4; sourceTree = "<group>"; };
-		464B04A61B63BC39000312CC /* Rhyme5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme5.mp4; sourceTree = "<group>"; };
 		464B04A71B63BC39000312CC /* Rhyme6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme6.mp4; sourceTree = "<group>"; };
-		464B04A81B63BC39000312CC /* Rhyme7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme7.mp4; sourceTree = "<group>"; };
 		464B04A91B63BC39000312CC /* Rhyme8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme8.mp4; sourceTree = "<group>"; };
-		464B04AA1B63BC39000312CC /* Rhyme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme9.mp4; sourceTree = "<group>"; };
 		464B04AB1B63BC39000312CC /* Rhyme10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme10.mp4; sourceTree = "<group>"; };
-		464B04AC1B63BC39000312CC /* Rhyme11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme11.mp4; sourceTree = "<group>"; };
 		464B04AD1B63BC39000312CC /* Rhyme12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme12.mp4; sourceTree = "<group>"; };
-		464B04AE1B63BC39000312CC /* Rhyme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme13.mp4; sourceTree = "<group>"; };
 		464B04AF1B63BC39000312CC /* RhymeIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeIntro.mp4; sourceTree = "<group>"; };
 		464B04BE1B63F413000312CC /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		464B04C01B640A2E000312CC /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
@@ -247,13 +246,8 @@
 		464B04C41B642783000312CC /* InitialPhoneme3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme3.mp4; sourceTree = "<group>"; };
 		464B04C51B642783000312CC /* InitialPhoneme4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme4.mp4; sourceTree = "<group>"; };
 		464B04C61B642783000312CC /* InitialPhoneme5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme5.mp4; sourceTree = "<group>"; };
-		464B04C71B642783000312CC /* InitialPhoneme6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme6.mp4; sourceTree = "<group>"; };
 		464B04C81B642783000312CC /* InitialPhoneme7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme7.mp4; sourceTree = "<group>"; };
-		464B04C91B642783000312CC /* InitialPhoneme8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme8.mp4; sourceTree = "<group>"; };
-		464B04CA1B642783000312CC /* InitialPhoneme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme9.mp4; sourceTree = "<group>"; };
-		464B04CB1B642783000312CC /* InitialPhoneme10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme10.mp4; sourceTree = "<group>"; };
 		464B04CC1B642783000312CC /* InitialPhoneme11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme11.mp4; sourceTree = "<group>"; };
-		464B04CD1B642783000312CC /* InitialPhoneme12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme12.mp4; sourceTree = "<group>"; };
 		464B04CE1B642783000312CC /* InitialPhoneme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme13.mp4; sourceTree = "<group>"; };
 		464B04CF1B642783000312CC /* InitialPhoneme14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme14.mp4; sourceTree = "<group>"; };
 		464B04D01B642783000312CC /* InitialPhonemeIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhonemeIntro.mp4; sourceTree = "<group>"; };
@@ -268,7 +262,6 @@
 		464B04EB1B6ABB18000312CC /* FinalPhoneme6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme6.mp4; sourceTree = "<group>"; };
 		464B04EC1B6ABB18000312CC /* FinalPhoneme7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme7.mp4; sourceTree = "<group>"; };
 		464B04ED1B6ABB18000312CC /* FinalPhoneme8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme8.mp4; sourceTree = "<group>"; };
-		464B04EE1B6ABB18000312CC /* FinalPhoneme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme9.mp4; sourceTree = "<group>"; };
 		464B04EF1B6ABB18000312CC /* FinalPhoneme10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme10.mp4; sourceTree = "<group>"; };
 		464B04F01B6ABB18000312CC /* FinalPhoneme11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme11.mp4; sourceTree = "<group>"; };
 		464B04F11B6ABB18000312CC /* FinalPhoneme12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme12.mp4; sourceTree = "<group>"; };
@@ -323,6 +316,21 @@
 		465B4F2C1B7612070001EA66 /* LetterNameRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterNameRecognitionViewController.swift; sourceTree = "<group>"; };
 		465B4F311B7615460001EA66 /* CustomLetterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLetterCell.swift; sourceTree = "<group>"; };
 		4672DC8A1B6CBF3900DED51D /* SchoolsDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolsDataLayer.swift; sourceTree = "<group>"; };
+		46B8B1401B767E9000D74B15 /* FamiliarisationEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FamiliarisationEnding.mp4; sourceTree = "<group>"; };
+		46B8B1421B767F2D00D74B15 /* FinalPhonEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhonEnding.mp4; sourceTree = "<group>"; };
+		46B8B1441B767FEF00D74B15 /* FinalPhoneme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme9.mp4; sourceTree = "<group>"; };
+		46B8B1461B76801300D74B15 /* InitialPhoneme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme9.mp4; sourceTree = "<group>"; };
+		46B8B1481B76806500D74B15 /* InitialPhoneme12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme12.mp4; sourceTree = "<group>"; };
+		46B8B14A1B76809400D74B15 /* InitialPhoneme10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme10.mp4; sourceTree = "<group>"; };
+		46B8B14C1B7680A100D74B15 /* InitPhonEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitPhonEnding.mp4; sourceTree = "<group>"; };
+		46B8B14E1B7680CE00D74B15 /* InitialPhoneme6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme6.mp4; sourceTree = "<group>"; };
+		46B8B1501B76810200D74B15 /* InitialPhoneme8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = InitialPhoneme8.mp4; sourceTree = "<group>"; };
+		46B8B1521B76812300D74B15 /* Rhyme5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme5.mp4; sourceTree = "<group>"; };
+		46B8B1531B76812300D74B15 /* Rhyme7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme7.mp4; sourceTree = "<group>"; };
+		46B8B1541B76812300D74B15 /* Rhyme9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme9.mp4; sourceTree = "<group>"; };
+		46B8B1551B76812300D74B15 /* Rhyme11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme11.mp4; sourceTree = "<group>"; };
+		46B8B1561B76812300D74B15 /* Rhyme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme13.mp4; sourceTree = "<group>"; };
+		46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeEnding.mp4; sourceTree = "<group>"; };
 		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		46BED1761B6C17D2007E8E15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Audio/Bolts.framework; sourceTree = "<group>"; };
 		46BED1771B6C17D2007E8E15 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Audio/Parse.framework; sourceTree = "<group>"; };
@@ -518,16 +526,17 @@
 				464B04C41B642783000312CC /* InitialPhoneme3.mp4 */,
 				464B04C51B642783000312CC /* InitialPhoneme4.mp4 */,
 				464B04C61B642783000312CC /* InitialPhoneme5.mp4 */,
-				464B04C71B642783000312CC /* InitialPhoneme6.mp4 */,
+				46B8B14E1B7680CE00D74B15 /* InitialPhoneme6.mp4 */,
 				464B04C81B642783000312CC /* InitialPhoneme7.mp4 */,
-				464B04C91B642783000312CC /* InitialPhoneme8.mp4 */,
-				464B04CA1B642783000312CC /* InitialPhoneme9.mp4 */,
-				464B04CB1B642783000312CC /* InitialPhoneme10.mp4 */,
+				46B8B1501B76810200D74B15 /* InitialPhoneme8.mp4 */,
+				46B8B1461B76801300D74B15 /* InitialPhoneme9.mp4 */,
+				46B8B14A1B76809400D74B15 /* InitialPhoneme10.mp4 */,
 				464B04CC1B642783000312CC /* InitialPhoneme11.mp4 */,
-				464B04CD1B642783000312CC /* InitialPhoneme12.mp4 */,
+				46B8B1481B76806500D74B15 /* InitialPhoneme12.mp4 */,
 				464B04CE1B642783000312CC /* InitialPhoneme13.mp4 */,
 				464B04CF1B642783000312CC /* InitialPhoneme14.mp4 */,
 				464B04D01B642783000312CC /* InitialPhonemeIntro.mp4 */,
+				46B8B14C1B7680A100D74B15 /* InitPhonEnding.mp4 */,
 				464B04E61B6ABB18000312CC /* FinalPhoneme1.mp4 */,
 				464B04E71B6ABB18000312CC /* FinalPhoneme2.mp4 */,
 				464B04E81B6ABB18000312CC /* FinalPhoneme3.mp4 */,
@@ -536,27 +545,29 @@
 				464B04EB1B6ABB18000312CC /* FinalPhoneme6.mp4 */,
 				464B04EC1B6ABB18000312CC /* FinalPhoneme7.mp4 */,
 				464B04ED1B6ABB18000312CC /* FinalPhoneme8.mp4 */,
-				464B04EE1B6ABB18000312CC /* FinalPhoneme9.mp4 */,
+				46B8B1441B767FEF00D74B15 /* FinalPhoneme9.mp4 */,
 				464B04EF1B6ABB18000312CC /* FinalPhoneme10.mp4 */,
 				464B04F01B6ABB18000312CC /* FinalPhoneme11.mp4 */,
 				464B04F11B6ABB18000312CC /* FinalPhoneme12.mp4 */,
 				464B04F21B6ABB18000312CC /* FinalPhoneme13.mp4 */,
 				464B04F31B6ABB18000312CC /* FinalPhoneme14.mp4 */,
 				464B04F41B6ABB18000312CC /* FinalPhonemeIntro.mp4 */,
+				46B8B1421B767F2D00D74B15 /* FinalPhonEnding.mp4 */,
 				464B04A21B63BC39000312CC /* Rhyme1.mp4 */,
 				464B04A31B63BC39000312CC /* Rhyme2.mp4 */,
 				464B04A41B63BC39000312CC /* Rhyme3.mp4 */,
 				464B04A51B63BC39000312CC /* Rhyme4.mp4 */,
-				464B04A61B63BC39000312CC /* Rhyme5.mp4 */,
+				46B8B1521B76812300D74B15 /* Rhyme5.mp4 */,
 				464B04A71B63BC39000312CC /* Rhyme6.mp4 */,
-				464B04A81B63BC39000312CC /* Rhyme7.mp4 */,
+				46B8B1531B76812300D74B15 /* Rhyme7.mp4 */,
 				464B04A91B63BC39000312CC /* Rhyme8.mp4 */,
-				464B04AA1B63BC39000312CC /* Rhyme9.mp4 */,
+				46B8B1541B76812300D74B15 /* Rhyme9.mp4 */,
 				464B04AB1B63BC39000312CC /* Rhyme10.mp4 */,
-				464B04AC1B63BC39000312CC /* Rhyme11.mp4 */,
+				46B8B1551B76812300D74B15 /* Rhyme11.mp4 */,
 				464B04AD1B63BC39000312CC /* Rhyme12.mp4 */,
-				464B04AE1B63BC39000312CC /* Rhyme13.mp4 */,
+				46B8B1561B76812300D74B15 /* Rhyme13.mp4 */,
 				464B04AF1B63BC39000312CC /* RhymeIntro.mp4 */,
+				46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */,
 				465742491B616CB800FE3E58 /* Fam1.mp4 */,
 				4657424A1B616CB800FE3E58 /* Fam2.mp4 */,
 				4657424B1B616CB800FE3E58 /* Fam3.mp4 */,
@@ -565,6 +576,7 @@
 				4657424E1B616CB800FE3E58 /* Fam6.mp4 */,
 				4657424F1B616CB800FE3E58 /* Fam7.mp4 */,
 				465742501B616CB800FE3E58 /* FamIntro.mp4 */,
+				46B8B1401B767E9000D74B15 /* FamiliarisationEnding.mp4 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -731,19 +743,18 @@
 				465B4F251B7604940001EA66 /* LNRec20.mp4 in Resources */,
 				464B05031B6ABB18000312CC /* FinalPhonemeIntro.mp4 in Resources */,
 				465B4F211B7604940001EA66 /* LNRec15.mp4 in Resources */,
+				46B8B1581B76812300D74B15 /* Rhyme7.mp4 in Resources */,
 				465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */,
 				464B04FA1B6ABB18000312CC /* FinalPhoneme6.mp4 in Resources */,
-				464B04B81B63BC39000312CC /* Rhyme9.mp4 in Resources */,
 				460505F81B7633960053EB1C /* LSRec10.mp4 in Resources */,
 				464B04F71B6ABB18000312CC /* FinalPhoneme3.mp4 in Resources */,
-				464B04D81B642783000312CC /* InitialPhoneme8.mp4 in Resources */,
 				460506011B7633960053EB1C /* LSRec19.mp4 in Resources */,
+				46B8B1511B76810200D74B15 /* InitialPhoneme8.mp4 in Resources */,
 				4605061E1B765B190053EB1C /* WordRead8.mp4 in Resources */,
+				46B8B14F1B7680CE00D74B15 /* InitialPhoneme6.mp4 in Resources */,
 				460506241B765B190053EB1C /* WordRead14.mp4 in Resources */,
 				465B4F1D1B7604940001EA66 /* LNRec11.mp4 in Resources */,
-				464B04B41B63BC39000312CC /* Rhyme5.mp4 in Resources */,
 				464B04FB1B6ABB18000312CC /* FinalPhoneme7.mp4 in Resources */,
-				464B04DA1B642783000312CC /* InitialPhoneme10.mp4 in Resources */,
 				465B4F151B7604940001EA66 /* LNRec3.mp4 in Resources */,
 				464B04B71B63BC39000312CC /* Rhyme8.mp4 in Resources */,
 				464B04FE1B6ABB18000312CC /* FinalPhoneme10.mp4 in Resources */,
@@ -755,7 +766,6 @@
 				460506191B765B190053EB1C /* WordRead3.mp4 in Resources */,
 				460505F71B7633960053EB1C /* LSRec9.mp4 in Resources */,
 				460505F41B7633960053EB1C /* LSRec6.mp4 in Resources */,
-				464B04DC1B642783000312CC /* InitialPhoneme12.mp4 in Resources */,
 				465B4F1B1B7604940001EA66 /* LNRec9.mp4 in Resources */,
 				464B04B21B63BC39000312CC /* Rhyme3.mp4 in Resources */,
 				464B04D31B642783000312CC /* InitialPhoneme3.mp4 in Resources */,
@@ -768,8 +778,6 @@
 				4605061C1B765B190053EB1C /* WordRead6.mp4 in Resources */,
 				465B4F231B7604940001EA66 /* LNRec17.mp4 in Resources */,
 				460505FB1B7633960053EB1C /* LSRec13.mp4 in Resources */,
-				464B04BC1B63BC39000312CC /* Rhyme13.mp4 in Resources */,
-				464B04FD1B6ABB18000312CC /* FinalPhoneme9.mp4 in Resources */,
 				460505F61B7633960053EB1C /* LSRec8.mp4 in Resources */,
 				464B04FF1B6ABB18000312CC /* FinalPhoneme11.mp4 in Resources */,
 				460506171B765B190053EB1C /* WordRead1.mp4 in Resources */,
@@ -781,35 +789,39 @@
 				4621E25C1B7030EC00446739 /* key2.plist in Resources */,
 				460505FF1B7633960053EB1C /* LSRec17.mp4 in Resources */,
 				460505F31B7633960053EB1C /* LSRec5.mp4 in Resources */,
-				464B04B61B63BC39000312CC /* Rhyme7.mp4 in Resources */,
-				464B04BA1B63BC39000312CC /* Rhyme11.mp4 in Resources */,
+				46B8B1411B767E9000D74B15 /* FamiliarisationEnding.mp4 in Resources */,
 				465B4F1E1B7604940001EA66 /* LNRec12.mp4 in Resources */,
 				464B04DD1B642783000312CC /* InitialPhoneme13.mp4 in Resources */,
 				464B04D21B642783000312CC /* InitialPhoneme2.mp4 in Resources */,
+				46B8B14D1B7680A100D74B15 /* InitPhonEnding.mp4 in Resources */,
 				4657425C1B617B8A00FE3E58 /* FamIntro.mp4 in Resources */,
 				460506211B765B190053EB1C /* WordRead11.mp4 in Resources */,
 				460505F51B7633960053EB1C /* LSRec7.mp4 in Resources */,
 				460506221B765B190053EB1C /* WordRead12.mp4 in Resources */,
+				46B8B1471B76801300D74B15 /* InitialPhoneme9.mp4 in Resources */,
 				465B4F291B7604940001EA66 /* LNRec24.mp4 in Resources */,
+				46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */,
+				46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */,
 				465B4F131B7604940001EA66 /* LNRec1.mp4 in Resources */,
 				460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */,
+				46B8B1431B767F2D00D74B15 /* FinalPhonEnding.mp4 in Resources */,
 				465B4F281B7604940001EA66 /* LNRec23.mp4 in Resources */,
 				460506051B7633960053EB1C /* LSRec23.mp4 in Resources */,
 				465B4F161B7604940001EA66 /* LNRec4.mp4 in Resources */,
+				46B8B15A1B76812300D74B15 /* Rhyme11.mp4 in Resources */,
 				460506031B7633960053EB1C /* LSRec21.mp4 in Resources */,
-				464B04D91B642783000312CC /* InitialPhoneme9.mp4 in Resources */,
 				464B04DB1B642783000312CC /* InitialPhoneme11.mp4 in Resources */,
 				460505FC1B7633960053EB1C /* LSRec14.mp4 in Resources */,
 				464B05001B6ABB18000312CC /* FinalPhoneme12.mp4 in Resources */,
 				464B04D11B642783000312CC /* InitialPhoneme1.mp4 in Resources */,
 				464B04F81B6ABB18000312CC /* FinalPhoneme4.mp4 in Resources */,
 				4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */,
+				46B8B1571B76812300D74B15 /* Rhyme5.mp4 in Resources */,
 				465B4F201B7604940001EA66 /* LNRec14.mp4 in Resources */,
 				465B4F181B7604940001EA66 /* LNRec6.mp4 in Resources */,
 				460505F21B7633960053EB1C /* LSRec4.mp4 in Resources */,
 				465B4F241B7604940001EA66 /* LNRec18.mp4 in Resources */,
 				464B04F51B6ABB18000312CC /* FinalPhoneme1.mp4 in Resources */,
-				464B04D61B642783000312CC /* InitialPhoneme6.mp4 in Resources */,
 				460505FD1B7633960053EB1C /* LSRec15.mp4 in Resources */,
 				464B04BB1B63BC39000312CC /* Rhyme12.mp4 in Resources */,
 				465B4F1C1B7604940001EA66 /* LNRec10.mp4 in Resources */,
@@ -822,16 +834,20 @@
 				464B05011B6ABB18000312CC /* FinalPhoneme13.mp4 in Resources */,
 				465B4F1A1B7604940001EA66 /* LNRec8.mp4 in Resources */,
 				460506201B765B190053EB1C /* WordRead10.mp4 in Resources */,
+				46B8B1451B767FEF00D74B15 /* FinalPhoneme9.mp4 in Resources */,
 				464B04DE1B642783000312CC /* InitialPhoneme14.mp4 in Resources */,
+				46B8B1491B76806500D74B15 /* InitialPhoneme12.mp4 in Resources */,
 				464B04D51B642783000312CC /* InitialPhoneme5.mp4 in Resources */,
 				464B05021B6ABB18000312CC /* FinalPhoneme14.mp4 in Resources */,
 				4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */,
 				460505F91B7633960053EB1C /* LSRec11.mp4 in Resources */,
 				465742311B616ADD00FE3E58 /* LaunchScreen.xib in Resources */,
 				4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */,
+				46B8B1591B76812300D74B15 /* Rhyme9.mp4 in Resources */,
 				465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */,
 				464B04F91B6ABB18000312CC /* FinalPhoneme5.mp4 in Resources */,
 				4605061B1B765B190053EB1C /* WordRead5.mp4 in Resources */,
+				46B8B14B1B76809400D74B15 /* InitialPhoneme10.mp4 in Resources */,
 				465B4F271B7604940001EA66 /* LNRec22.mp4 in Resources */,
 				460505EF1B7633960053EB1C /* LSRec1.mp4 in Resources */,
 				465B4F1F1B7604940001EA66 /* LNRec13.mp4 in Resources */,

@@ -12,14 +12,14 @@ class TaskFactory: NSObject {
     
     static let count: Int = 7
     
-    static let familiarisation = Task(intro:"FamIntro", title:"Familiarisation", items:
+    static let familiarisation = Task(intro:"FamIntro", outro:"FamiliarisationEnding", title:"Familiarisation", items:
         [TaskItem(audio:"Fam1", images:["", "green-box", ""], cascade: [0,0,0], correctImage:"green-box"),
             TaskItem(audio:"Fam3", images:["mouse", "seal", "dog"], cascade: [3,4,5], correctImage:"dog"),
             TaskItem(audio:"Fam4", images:["cat", "bear", "spider"], cascade: [2,3,5], correctImage:"cat"),
             TaskItem(audio:"Fam5", images:["fly", "bee", "snake"], cascade: [2,3,5], correctImage:"bee"),
             TaskItem(audio:"Fam6", images:["cow", "pig", "fish"], cascade: [2, 3, 4], correctImage:"fish")])
     
-    static let rhymeOddittyTask = Task(intro: "RhymeIntro", title: "Rhyme Odditty", items:
+    static let rhymeOddittyTask = Task(intro: "RhymeIntro", outro: "RhymeEnding", title: "Rhyme Odditty", items:
             [TaskItem(audio: "Rhyme1", images:["cat", "hat", "boat", "goat"], cascade: [0,0,0, 0], correctImage:"cat", requireResponse:false),
             TaskItem(audio:"Rhyme2", images: ["fish", "dish", "ball"], cascade: [6, 8, 10], correctImage:"ball", requireResponse:false),
             TaskItem(audio:"Rhyme3", images:["pig", "hat", "bat"], cascade: [3, 5, 6], correctImage: "pig", requireResponse:false),
@@ -29,13 +29,13 @@ class TaskFactory: NSObject {
             TaskItem(audio:"Rhyme7", images:["sand", "hand", "cup"], cascade: [3, 4, 6], correctImage: "cup"),
             TaskItem(audio:"Rhyme8", images:["hen", "car", "pen"], cascade: [4, 5, 6], correctImage: "car"),
             TaskItem(audio:"Rhyme9", images:["dog", "book", "hook"], cascade: [3, 4, 6], correctImage: "dog"),
-            TaskItem(audio:"Rhyme10", images:["bun", "sun", "kite"], cascade: [4, 5, 6], correctImage: "kite"),
+            TaskItem(audio:"Rhyme10", images:["bun", "sun", "kite"], cascade: [3, 4, 5], correctImage: "kite"),
             TaskItem(audio:"Rhyme11", images:["tent", "lock", "sock"], cascade: [3, 5, 6], correctImage: "tent"),
             TaskItem(audio:"Rhyme12", images:["shell", "duck", "bell"], cascade: [3, 5, 6], correctImage: "duck"),
             TaskItem(audio:"Rhyme13", images:["ring", "sing", "lamb"], cascade: [4, 5, 6], correctImage: "lamb")
             ])
     
-    static let initialPhonemeTask = Task(intro:"InitialPhonemeIntro", title: "Initial Phoneme Identity Task", items:
+    static let initialPhonemeTask = Task(intro:"InitialPhonemeIntro", outro:"InitPhonEnding", title: "Initial Phoneme Identity Task", items:
         [   InitialPhonemeTaskItem(firstImage: "dog", delay:18, audio: "InitialPhoneme1", images: ["moon", "duck", "whale"], cascade: [2, 3, 5], correctImage: "duck", requireResponse: true, outro:"InitialPhoneme2"),
             InitialPhonemeTaskItem(firstImage: "dog", delay:4, audio: "InitialPhoneme3", images: ["horse", "rope", "door"], cascade: [1, 2, 3], correctImage: "door", requireResponse: true, outro:"InitialPhoneme4"),
             InitialPhonemeTaskItem(firstImage: "mouse", delay:13,  audio: "InitialPhoneme5", images: ["doll", "bear", "milk"], cascade: [1, 2, 3], correctImage: "milk"),
@@ -50,7 +50,7 @@ class TaskFactory: NSObject {
             InitialPhonemeTaskItem(firstImage: "fish", delay:5,  audio: "InitialPhoneme14", images: ["duck", "bell", "fire"], cascade: [1, 2, 3], correctImage: "fire")
         ])
 
-    static let finalPhonemeTask = Task(intro: "FinalPhonemeIntro", title: "Final Phoneme Indentity Task", items:
+    static let finalPhonemeTask = Task(intro: "FinalPhonemeIntro", outro:"FinalPhonEnding", title: "Final Phoneme Indentity Task", items:
     [
         TaskItem(audio: "FinalPhoneme1", outro:"FinalPhoneme2", images:["cat", "can", "man"], cascade: [8, 10, 12], correctImage:"cat", requireResponse:false),
              TaskItem(audio: "FinalPhoneme3", outro:"FinalPhoneme4", images:["shoe", "kite", "ship"], cascade: [3, 4, 6], correctImage:"ship", requireResponse:false),
