@@ -20,9 +20,10 @@ class TaskFactory: NSObject {
             TaskItem(audio:"Fam6", images:["cow", "pig", "fish"], cascade: [2, 3, 4], correctImage:"fish")])
     
     static let rhymeOddittyTask = Task(intro: "RhymeIntro", outro: "RhymeEnding", title: "Rhyme Odditty", items:
-            [TaskItem(audio: "Rhyme1", images:["cat", "hat", "boat", "goat"], cascade: [0,0,0, 0], correctImage:"cat", requireResponse:false),
-            TaskItem(audio:"Rhyme2", images: ["fish", "dish", "ball"], cascade: [6, 8, 10], correctImage:"ball", requireResponse:false),
-            TaskItem(audio:"Rhyme3", images:["pig", "hat", "bat"], cascade: [3, 5, 6], correctImage: "pig", requireResponse:false),
+            [TaskItem(audio: "RhymeCatHat", images:["cat", "hat"], cascade: [0,0,0, 0], correctImage:"cat", requireResponse:false),
+            TaskItem(audio: "RhymeBoatGoat", images:["boat", "goat"], cascade: [0,0], correctImage:"cat", requireResponse:false),
+                TaskItem(audio:"RhymeFishDish", outro:"RhymeBall", images: ["fish", "dish", "ball"], cascade: [6, 8, 10], correctImage:"ball", requireResponse:false),
+                TaskItem(audio:"RhymeHatBat", outro:"RhymePig", images:["pig", "hat", "bat"], cascade: [3, 5, 6], correctImage: "pig", requireResponse:false),
             TaskItem(audio:"Rhyme4", images:["cat", "mat", "bus"], cascade: [4, 5, 6], correctImage: "bus"),
             TaskItem(audio:"Rhyme5", images:["peg", "doll", "leg"], cascade: [4, 5, 6], correctImage: "doll"),
             TaskItem(audio:"Rhyme6", images:["saw", "toe", "bow"], cascade: [3, 5, 6], correctImage: "saw"),
@@ -43,7 +44,7 @@ class TaskFactory: NSObject {
             InitialPhonemeTaskItem(firstImage: "seal", delay:11,  audio: "InitialPhoneme7", images: ["bee", "sun", "tent"], cascade: [3, 4, 6], correctImage: "sun"),
             InitialPhonemeTaskItem(firstImage: "seal", delay:5, audio: "InitialPhoneme8", images: ["saw", "tie", "hook"], cascade: [1, 2, 4], correctImage: "saw"),
             InitialPhonemeTaskItem(firstImage: "cat", delay:11,  audio: "InitialPhoneme9", images: ["bus", "kite", "arm"], cascade: [2, 4, 5], correctImage: "kite"),
-            InitialPhonemeTaskItem(firstImage: "cat", delay:5,  audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], cascade: [4, 6, 7], correctImage: "comb"),
+            InitialPhonemeTaskItem(firstImage: "cat", delay:5,  audio: "InitialPhoneme10", images: ["comb", "dish", "soap"], cascade: [4, 5, 7], correctImage: "comb"),
             InitialPhonemeTaskItem(firstImage: "bee", delay:12, audio: "InitialPhoneme11", images: ["cat", "leg", "ball"], cascade: [2, 3, 4], correctImage: "ball"),
             InitialPhonemeTaskItem(firstImage: "bee", delay:5,  audio: "InitialPhoneme12", images: ["car", "boat", "shoe"], cascade: [1, 2, 3], correctImage: "boat"),
             InitialPhonemeTaskItem(firstImage: "fish", delay:13,  audio: "InitialPhoneme13", images: ["foot", "hat", "pig"], cascade: [1, 3, 4], correctImage: "foot"),

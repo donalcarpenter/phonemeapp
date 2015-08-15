@@ -737,7 +737,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="geO-RB-Qog">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="geO-RB-Qog">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1dH-Vu-W6D">
@@ -754,9 +754,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="345"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-Ks-5sM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="j" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH3-Ks-5sM">
                                                     <rect key="frame" x="82" y="68" width="209" height="209"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="80"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
                                                     <color key="textColor" red="0.062745098040000002" green="0.086274509799999996" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -799,13 +799,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-D5-ZoK">
-                                <rect key="frame" x="324" y="28" width="376" height="370"/>
+                                <rect key="frame" x="324" y="28" width="376" height="398"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="376" id="T2l-bq-7Dq"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AD8-gR-gnX">
-                                <rect key="frame" x="120" y="469" width="773" height="231"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AD8-gR-gnX">
+                                <rect key="frame" x="120" y="497" width="788" height="231"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="231" id="Z8C-9o-4Ri"/>
@@ -856,9 +856,22 @@
                             <constraint firstItem="AD8-gR-gnX" firstAttribute="top" secondItem="EYg-D5-ZoK" secondAttribute="bottom" constant="71" id="7U5-eb-94B"/>
                             <constraint firstItem="AD8-gR-gnX" firstAttribute="leading" secondItem="h5J-OX-8Qf" secondAttribute="leadingMargin" constant="45" id="7tB-6G-1MV"/>
                             <constraint firstItem="EYg-D5-ZoK" firstAttribute="centerX" secondItem="h5J-OX-8Qf" secondAttribute="centerX" id="HC9-Oe-o13"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AD8-gR-gnX" secondAttribute="trailing" constant="100" id="MVa-HQ-ZDw"/>
+                            <constraint firstItem="AD8-gR-gnX" firstAttribute="leading" secondItem="h5J-OX-8Qf" secondAttribute="leadingMargin" constant="104" id="ZYO-Bm-Qin"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AD8-gR-gnX" secondAttribute="trailing" constant="104" id="c2d-yl-R5V"/>
+                            <constraint firstItem="AJG-UL-aJk" firstAttribute="top" secondItem="AD8-gR-gnX" secondAttribute="bottom" constant="40" id="eb1-m4-Qyd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AD8-gR-gnX" secondAttribute="trailing" constant="174" id="qzD-CL-BsI"/>
+                            <constraint firstItem="AD8-gR-gnX" firstAttribute="leading" secondItem="h5J-OX-8Qf" secondAttribute="leadingMargin" constant="104" id="wcw-14-zwW"/>
                             <constraint firstItem="AJG-UL-aJk" firstAttribute="top" secondItem="AD8-gR-gnX" secondAttribute="bottom" constant="68" id="wqW-Of-IQD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7tB-6G-1MV"/>
+                                <exclude reference="c2d-yl-R5V"/>
+                                <exclude reference="qzD-CL-BsI"/>
+                                <exclude reference="wqW-Of-IQD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>

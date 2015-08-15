@@ -94,7 +94,6 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         
         if(counter >= task!.items.count){
             
-
             audioPlayer.stop()
             
             let cont = {()-> Void in
@@ -245,7 +244,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             self.audioManager.playAudioFrom(self.task!.items[counter].outro!, completionBlock: cont)
             
         }else{
-            cont()
+            
+            self.audioManager.playComplimentThenContinue(cont)
         }
     }
 }

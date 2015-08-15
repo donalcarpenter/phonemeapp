@@ -26,6 +26,7 @@ class LetterNameRecognitionViewController: TaskViewController {
         if let lbl = view as? UILabel
         {
             lbl.text = task.images[index]
+            lbl.font = UIFont(name: "DidactGothic", size: 80)
         }
     }
     

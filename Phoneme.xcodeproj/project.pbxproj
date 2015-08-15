@@ -54,8 +54,6 @@
 		4621E25E1B72A34D00446739 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4621E25D1B72A34D00446739 /* AVFoundation.framework */; };
 		464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04A01B639F2B000312CC /* SingleRowImageTask.swift */; };
 		464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A21B63BC39000312CC /* Rhyme1.mp4 */; };
-		464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A31B63BC39000312CC /* Rhyme2.mp4 */; };
-		464B04B21B63BC39000312CC /* Rhyme3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A41B63BC39000312CC /* Rhyme3.mp4 */; };
 		464B04B31B63BC39000312CC /* Rhyme4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A51B63BC39000312CC /* Rhyme4.mp4 */; };
 		464B04B51B63BC39000312CC /* Rhyme6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A71B63BC39000312CC /* Rhyme6.mp4 */; };
 		464B04B71B63BC39000312CC /* Rhyme8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A91B63BC39000312CC /* Rhyme8.mp4 */; };
@@ -151,6 +149,20 @@
 		46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1561B76812300D74B15 /* Rhyme13.mp4 */; };
 		46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */; };
 		46B8B15F1B76989900D74B15 /* FamiliarisationError.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B15E1B76989900D74B15 /* FamiliarisationError.mp4 */; };
+		46B8B1661B775D0B00D74B15 /* Comp1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1601B775D0B00D74B15 /* Comp1.mp4 */; };
+		46B8B1671B775D0B00D74B15 /* Comp2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1611B775D0B00D74B15 /* Comp2.mp4 */; };
+		46B8B1681B775D0B00D74B15 /* Comp3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1621B775D0B00D74B15 /* Comp3.mp4 */; };
+		46B8B1691B775D0B00D74B15 /* Comp4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1631B775D0B00D74B15 /* Comp4.mp4 */; };
+		46B8B16A1B775D0B00D74B15 /* Comp5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1641B775D0B00D74B15 /* Comp5.mp4 */; };
+		46B8B16B1B775D0B00D74B15 /* Comp6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1651B775D0B00D74B15 /* Comp6.mp4 */; };
+		46B8B16F1B79012100D74B15 /* DidactGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B16D1B79012000D74B15 /* DidactGothic.ttf */; };
+		46B8B1701B79012100D74B15 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B16E1B79012100D74B15 /* OFL.txt */; };
+		46B8B1721B7947EC00D74B15 /* RhymeCatHat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1711B7947EC00D74B15 /* RhymeCatHat.mp4 */; };
+		46B8B1741B79484100D74B15 /* RhymeBoatGoat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1731B79484100D74B15 /* RhymeBoatGoat.mp4 */; };
+		46B8B1791B794A8700D74B15 /* RhymeBall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1771B794A8700D74B15 /* RhymeBall.mp4 */; };
+		46B8B17A1B794A8700D74B15 /* RhymeFishDish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B1781B794A8700D74B15 /* RhymeFishDish.mp4 */; };
+		46B8B17D1B794ACF00D74B15 /* RhymeHatBat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B17B1B794ACF00D74B15 /* RhymeHatBat.mp4 */; };
+		46B8B17E1B794ACF00D74B15 /* RhymePig.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B17C1B794ACF00D74B15 /* RhymePig.mp4 */; };
 		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
 		46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1761B6C17D2007E8E15 /* Bolts.framework */; };
 		46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1771B6C17D2007E8E15 /* Parse.framework */; };
@@ -232,8 +244,6 @@
 		4621E25D1B72A34D00446739 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		464B04A01B639F2B000312CC /* SingleRowImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowImageTask.swift; sourceTree = "<group>"; };
 		464B04A21B63BC39000312CC /* Rhyme1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme1.mp4; sourceTree = "<group>"; };
-		464B04A31B63BC39000312CC /* Rhyme2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme2.mp4; sourceTree = "<group>"; };
-		464B04A41B63BC39000312CC /* Rhyme3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme3.mp4; sourceTree = "<group>"; };
 		464B04A51B63BC39000312CC /* Rhyme4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme4.mp4; sourceTree = "<group>"; };
 		464B04A71B63BC39000312CC /* Rhyme6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme6.mp4; sourceTree = "<group>"; };
 		464B04A91B63BC39000312CC /* Rhyme8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme8.mp4; sourceTree = "<group>"; };
@@ -333,6 +343,20 @@
 		46B8B1561B76812300D74B15 /* Rhyme13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme13.mp4; sourceTree = "<group>"; };
 		46B8B15C1B76814100D74B15 /* RhymeEnding.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeEnding.mp4; sourceTree = "<group>"; };
 		46B8B15E1B76989900D74B15 /* FamiliarisationError.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FamiliarisationError.mp4; sourceTree = "<group>"; };
+		46B8B1601B775D0B00D74B15 /* Comp1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp1.mp4; sourceTree = "<group>"; };
+		46B8B1611B775D0B00D74B15 /* Comp2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp2.mp4; sourceTree = "<group>"; };
+		46B8B1621B775D0B00D74B15 /* Comp3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp3.mp4; sourceTree = "<group>"; };
+		46B8B1631B775D0B00D74B15 /* Comp4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp4.mp4; sourceTree = "<group>"; };
+		46B8B1641B775D0B00D74B15 /* Comp5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp5.mp4; sourceTree = "<group>"; };
+		46B8B1651B775D0B00D74B15 /* Comp6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comp6.mp4; sourceTree = "<group>"; };
+		46B8B16D1B79012000D74B15 /* DidactGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DidactGothic.ttf; sourceTree = "<group>"; };
+		46B8B16E1B79012100D74B15 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		46B8B1711B7947EC00D74B15 /* RhymeCatHat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeCatHat.mp4; sourceTree = "<group>"; };
+		46B8B1731B79484100D74B15 /* RhymeBoatGoat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeBoatGoat.mp4; sourceTree = "<group>"; };
+		46B8B1771B794A8700D74B15 /* RhymeBall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeBall.mp4; sourceTree = "<group>"; };
+		46B8B1781B794A8700D74B15 /* RhymeFishDish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeFishDish.mp4; sourceTree = "<group>"; };
+		46B8B17B1B794ACF00D74B15 /* RhymeHatBat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeHatBat.mp4; sourceTree = "<group>"; };
+		46B8B17C1B794ACF00D74B15 /* RhymePig.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymePig.mp4; sourceTree = "<group>"; };
 		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		46BED1761B6C17D2007E8E15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Audio/Bolts.framework; sourceTree = "<group>"; };
 		46BED1771B6C17D2007E8E15 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Audio/Parse.framework; sourceTree = "<group>"; };
@@ -422,9 +446,10 @@
 				46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */,
 				464B04C01B640A2E000312CC /* AudioManager.swift */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
-				465742241B616ADD00FE3E58 /* Supporting Files */,
-				46BED1821B6C17EF007E8E15 /* Frameworks */,
 				465B4F311B7615460001EA66 /* CustomLetterCell.swift */,
+				46BED1821B6C17EF007E8E15 /* Frameworks */,
+				465742241B616ADD00FE3E58 /* Supporting Files */,
+				46B8B16C1B7900D800D74B15 /* Resources */,
 			);
 			path = Phoneme;
 			sourceTree = "<group>";
@@ -458,6 +483,12 @@
 		465742481B616C2600FE3E58 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				46B8B1601B775D0B00D74B15 /* Comp1.mp4 */,
+				46B8B1611B775D0B00D74B15 /* Comp2.mp4 */,
+				46B8B1621B775D0B00D74B15 /* Comp3.mp4 */,
+				46B8B1631B775D0B00D74B15 /* Comp4.mp4 */,
+				46B8B1641B775D0B00D74B15 /* Comp5.mp4 */,
+				46B8B1651B775D0B00D74B15 /* Comp6.mp4 */,
 				460506071B765B180053EB1C /* WordRead1.mp4 */,
 				460506081B765B180053EB1C /* WordRead2.mp4 */,
 				460506091B765B180053EB1C /* WordRead3.mp4 */,
@@ -555,9 +586,13 @@
 				464B04F31B6ABB18000312CC /* FinalPhoneme14.mp4 */,
 				464B04F41B6ABB18000312CC /* FinalPhonemeIntro.mp4 */,
 				46B8B1421B767F2D00D74B15 /* FinalPhonEnding.mp4 */,
+				46B8B1711B7947EC00D74B15 /* RhymeCatHat.mp4 */,
+				46B8B1731B79484100D74B15 /* RhymeBoatGoat.mp4 */,
 				464B04A21B63BC39000312CC /* Rhyme1.mp4 */,
-				464B04A31B63BC39000312CC /* Rhyme2.mp4 */,
-				464B04A41B63BC39000312CC /* Rhyme3.mp4 */,
+				46B8B1781B794A8700D74B15 /* RhymeFishDish.mp4 */,
+				46B8B1771B794A8700D74B15 /* RhymeBall.mp4 */,
+				46B8B17B1B794ACF00D74B15 /* RhymeHatBat.mp4 */,
+				46B8B17C1B794ACF00D74B15 /* RhymePig.mp4 */,
 				464B04A51B63BC39000312CC /* Rhyme4.mp4 */,
 				46B8B1521B76812300D74B15 /* Rhyme5.mp4 */,
 				464B04A71B63BC39000312CC /* Rhyme6.mp4 */,
@@ -609,6 +644,15 @@
 			);
 			name = DataLayer;
 			path = Datalayer;
+			sourceTree = "<group>";
+		};
+		46B8B16C1B7900D800D74B15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46B8B16D1B79012000D74B15 /* DidactGothic.ttf */,
+				46B8B16E1B79012100D74B15 /* OFL.txt */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		46BED1821B6C17EF007E8E15 /* Frameworks */ = {
@@ -732,7 +776,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				464B04B11B63BC39000312CC /* Rhyme2.mp4 in Resources */,
+				46B8B1791B794A8700D74B15 /* RhymeBall.mp4 in Resources */,
+				46B8B1721B7947EC00D74B15 /* RhymeCatHat.mp4 in Resources */,
 				464B04D41B642783000312CC /* InitialPhoneme4.mp4 in Resources */,
 				464B04BD1B63BC39000312CC /* RhymeIntro.mp4 in Resources */,
 				460506251B765B190053EB1C /* WordRead15.mp4 in Resources */,
@@ -741,12 +786,14 @@
 				460506021B7633960053EB1C /* LSRec20.mp4 in Resources */,
 				460506001B7633960053EB1C /* LSRec18.mp4 in Resources */,
 				460505FA1B7633960053EB1C /* LSRec12.mp4 in Resources */,
+				46B8B1671B775D0B00D74B15 /* Comp2.mp4 in Resources */,
 				464B04B91B63BC39000312CC /* Rhyme10.mp4 in Resources */,
 				465B4F171B7604940001EA66 /* LNRec5.mp4 in Resources */,
 				465B4F251B7604940001EA66 /* LNRec20.mp4 in Resources */,
 				464B05031B6ABB18000312CC /* FinalPhonemeIntro.mp4 in Resources */,
 				465B4F211B7604940001EA66 /* LNRec15.mp4 in Resources */,
 				46B8B1581B76812300D74B15 /* Rhyme7.mp4 in Resources */,
+				46B8B1701B79012100D74B15 /* OFL.txt in Resources */,
 				465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */,
 				464B04FA1B6ABB18000312CC /* FinalPhoneme6.mp4 in Resources */,
 				460505F81B7633960053EB1C /* LSRec10.mp4 in Resources */,
@@ -764,13 +811,13 @@
 				465B4F2A1B7604940001EA66 /* LNRec25.mp4 in Resources */,
 				464B04B31B63BC39000312CC /* Rhyme4.mp4 in Resources */,
 				465B4F141B7604940001EA66 /* LNRec2.mp4 in Resources */,
+				46B8B16A1B775D0B00D74B15 /* Comp5.mp4 in Resources */,
 				4605061F1B765B190053EB1C /* WordRead9.mp4 in Resources */,
 				464B04B51B63BC39000312CC /* Rhyme6.mp4 in Resources */,
 				460506191B765B190053EB1C /* WordRead3.mp4 in Resources */,
 				460505F71B7633960053EB1C /* LSRec9.mp4 in Resources */,
 				460505F41B7633960053EB1C /* LSRec6.mp4 in Resources */,
 				465B4F1B1B7604940001EA66 /* LNRec9.mp4 in Resources */,
-				464B04B21B63BC39000312CC /* Rhyme3.mp4 in Resources */,
 				464B04D31B642783000312CC /* InitialPhoneme3.mp4 in Resources */,
 				464B04F61B6ABB18000312CC /* FinalPhoneme2.mp4 in Resources */,
 				464B04DF1B642783000312CC /* InitialPhonemeIntro.mp4 in Resources */,
@@ -789,7 +836,9 @@
 				464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */,
 				460505F01B7633960053EB1C /* LSRec2.mp4 in Resources */,
 				465B4F191B7604940001EA66 /* LNRec7.mp4 in Resources */,
+				46B8B17D1B794ACF00D74B15 /* RhymeHatBat.mp4 in Resources */,
 				4621E25C1B7030EC00446739 /* key2.plist in Resources */,
+				46B8B16F1B79012100D74B15 /* DidactGothic.ttf in Resources */,
 				460505FF1B7633960053EB1C /* LSRec17.mp4 in Resources */,
 				460505F31B7633960053EB1C /* LSRec5.mp4 in Resources */,
 				46B8B1411B767E9000D74B15 /* FamiliarisationEnding.mp4 in Resources */,
@@ -801,6 +850,8 @@
 				460506211B765B190053EB1C /* WordRead11.mp4 in Resources */,
 				460505F51B7633960053EB1C /* LSRec7.mp4 in Resources */,
 				460506221B765B190053EB1C /* WordRead12.mp4 in Resources */,
+				46B8B1681B775D0B00D74B15 /* Comp3.mp4 in Resources */,
+				46B8B1691B775D0B00D74B15 /* Comp4.mp4 in Resources */,
 				46B8B1471B76801300D74B15 /* InitialPhoneme9.mp4 in Resources */,
 				465B4F291B7604940001EA66 /* LNRec24.mp4 in Resources */,
 				46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */,
@@ -809,11 +860,13 @@
 				460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */,
 				46B8B15F1B76989900D74B15 /* FamiliarisationError.mp4 in Resources */,
 				46B8B1431B767F2D00D74B15 /* FinalPhonEnding.mp4 in Resources */,
+				46B8B17A1B794A8700D74B15 /* RhymeFishDish.mp4 in Resources */,
 				465B4F281B7604940001EA66 /* LNRec23.mp4 in Resources */,
 				460506051B7633960053EB1C /* LSRec23.mp4 in Resources */,
 				465B4F161B7604940001EA66 /* LNRec4.mp4 in Resources */,
 				46B8B15A1B76812300D74B15 /* Rhyme11.mp4 in Resources */,
 				460506031B7633960053EB1C /* LSRec21.mp4 in Resources */,
+				46B8B1661B775D0B00D74B15 /* Comp1.mp4 in Resources */,
 				464B04DB1B642783000312CC /* InitialPhoneme11.mp4 in Resources */,
 				460505FC1B7633960053EB1C /* LSRec14.mp4 in Resources */,
 				464B05001B6ABB18000312CC /* FinalPhoneme12.mp4 in Resources */,
@@ -824,6 +877,7 @@
 				465B4F201B7604940001EA66 /* LNRec14.mp4 in Resources */,
 				465B4F181B7604940001EA66 /* LNRec6.mp4 in Resources */,
 				460505F21B7633960053EB1C /* LSRec4.mp4 in Resources */,
+				46B8B16B1B775D0B00D74B15 /* Comp6.mp4 in Resources */,
 				465B4F241B7604940001EA66 /* LNRec18.mp4 in Resources */,
 				464B04F51B6ABB18000312CC /* FinalPhoneme1.mp4 in Resources */,
 				460505FD1B7633960053EB1C /* LSRec15.mp4 in Resources */,
@@ -849,8 +903,10 @@
 				4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */,
 				46B8B1591B76812300D74B15 /* Rhyme9.mp4 in Resources */,
 				465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */,
+				46B8B1741B79484100D74B15 /* RhymeBoatGoat.mp4 in Resources */,
 				464B04F91B6ABB18000312CC /* FinalPhoneme5.mp4 in Resources */,
 				4605061B1B765B190053EB1C /* WordRead5.mp4 in Resources */,
+				46B8B17E1B794ACF00D74B15 /* RhymePig.mp4 in Resources */,
 				46B8B14B1B76809400D74B15 /* InitialPhoneme10.mp4 in Resources */,
 				465B4F271B7604940001EA66 /* LNRec22.mp4 in Resources */,
 				460505EF1B7633960053EB1C /* LSRec1.mp4 in Resources */,

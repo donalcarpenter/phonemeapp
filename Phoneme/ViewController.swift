@@ -44,7 +44,7 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
             bgimgOw.alpha = 0
         }
         
-        setEnableStateOnNonFamiliarisationButtons(true)
+        setEnableStateOnNonFamiliarisationButtons(false)
         
         if(delegate == nil){
             showErrorMessage("woops, something has gone badly wrong and results will not be saved.  If i were you i'd kill the app and start again...", userError: false)
