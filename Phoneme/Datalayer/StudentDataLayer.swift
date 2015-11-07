@@ -109,13 +109,16 @@ class StudentDataLayer: NSObject {
                 data.saveInBackgroundWithBlock(nil)
                 
             }else{
-                var data = PFObject(className: "rawResults")
+                let data = PFObject(className: "rawResults")
                 data["task"] = key
                 data["student"] = student
                 data["results"] = rawData
                 data.saveInBackgroundWithBlock(nil)
             }
         }
+    }
+    
+    func loadTasks(){
     }
     
     func save(completionBlock: (success: Bool, error: String) -> Void){

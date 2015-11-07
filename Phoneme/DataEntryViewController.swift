@@ -143,7 +143,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         sender.resignFirstResponder()
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
     }
@@ -151,7 +151,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
     @IBAction func saveNewSchool(sender: UIButton) {
         let name = newSchoolName.text
         
-        SchoolsDataLayer.saveNewSchool(name) { (success, error) -> Void in
+        SchoolsDataLayer.saveNewSchool(name!) { (success, error) -> Void in
             if(!success){
                 self.showErrorMessage(error, userError: true)
                 return
@@ -171,7 +171,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         let className = newClassName.text
         let teacherName = addTeacherName.text
         
-        let newClass = ClassDataLayer.new(schoolId, className: className, teacherName: teacherName)
+        let newClass = ClassDataLayer.new(schoolId, className: className!, teacherName: teacherName!)
         
         newClass.save { (success, error) -> Void in
             if(!success){
@@ -188,11 +188,11 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
 
     @IBAction func saveStudent(sender: AnyObject) {
         
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
         let date = dateFormatter.stringFromDate(studentDateOfBirth.date)
         
-        let student = StudentDataLayer.new(self.selectedClass!.objectId, identifier: self.studentIdentifier.text, dateOfBirth: date, gender: studentGender.selectedSegmentIndex == 0 ? "M" : "F")
+        let student = StudentDataLayer.new(self.selectedClass!.objectId, identifier: self.studentIdentifier.text!, dateOfBirth: date, gender: studentGender.selectedSegmentIndex == 0 ? "M" : "F")
         
         student.save { (success, error) -> Void in
             
@@ -210,7 +210,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         container.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
         container.layer.borderWidth = 0;
         for object in container.subviews{
-                let view = object as! UIView
+                let view = object 
             view.userInteractionEnabled = false
             view.alpha = 0.4
         }
@@ -222,7 +222,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         container.layer.borderWidth = 2
         container.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor
         for object in container.subviews{
-            let view = object as! UIView
+            let view = object 
             view.userInteractionEnabled = true
             view.alpha = 1
         }
@@ -234,20 +234,20 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         container.alpha = 1
         container.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor
         for object in container.subviews{
-            let view = object as! UIView
+            let view = object 
             view.userInteractionEnabled = true
             view.alpha = 0.8
         }
     }
     
     @IBAction func genderChanged(sender: UISegmentedControl) {
-            startTasksForStudent.enabled = (!studentIdentifier.text.isEmpty && studentGender.selectedSegmentIndex > -1)
+            startTasksForStudent.enabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
     }
     
     func handleButtonEnabledStates(){
-        addNewSchool.enabled = !newSchoolName.text.isEmpty
-        addNewClass.enabled = !(newClassName.text.isEmpty || addTeacherName.text.isEmpty)
-        startTasksForStudent.enabled = (!studentIdentifier.text.isEmpty && studentGender.selectedSegmentIndex > -1)
+        addNewSchool.enabled = !newSchoolName.text!.isEmpty
+        addNewClass.enabled = !(newClassName.text!.isEmpty || addTeacherName.text!.isEmpty)
+        startTasksForStudent.enabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -283,7 +283,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         }
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
             cell.textLabel?.text = parent.schools?[indexPath.row].schoolName
             cell.backgroundColor = UIColor.blackColor().colorWithAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
             
@@ -329,7 +329,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         }
         
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
             cell.textLabel?.text = parent.classes![indexPath.row].className
             cell.detailTextLabel?.text = parent.classes![indexPath.row].teacherName
             

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>574587F0-CFD9-4FF4-9807-C29C0F70A8E1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Phoneme</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2BB611B1CAE5E7C71A96FB81D63875D97636176F</key>
 		<string>https://github.com/donalcarpenter/phonemeapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Phoneme.xcodeproj</string>
+	<string>Phoneme.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2BB611B1CAE5E7C71A96FB81D63875D97636176F</key>

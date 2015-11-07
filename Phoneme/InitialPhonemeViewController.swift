@@ -15,7 +15,7 @@ class InitialPhonemeViewController: TaskViewController{
     
     override func loadTaskItems() {
     
-        var initPhonemeTask = task?.items[counter] as! InitialPhonemeTaskItem
+        let initPhonemeTask = task?.items[counter] as! InitialPhonemeTaskItem
         
         collectionView.hidden = true;
 

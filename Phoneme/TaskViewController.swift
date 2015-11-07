@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
@@ -15,6 +16,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     var answers : [String]?
     let audioManager = AudioManager()
     var taskResults = [TaskResultRawItem]()
+    var userInteractionBlocked = false;
     let bgimgO = UIImage(named: "background")
     
     var delegate: ImageCollectionViewControllerDelegate?
@@ -22,6 +24,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     var rows = 1
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var replayButton: UIButton!
     
     var bgimgOw: UIImageView?
     
@@ -43,6 +47,8 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         self.navigationController?.navigationBarHidden = true
         
         self.collectionView.hidden = true
+        
+        replayButton.hidden = true
     }
     
     func loadTaskItems(){
@@ -122,9 +128,10 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     }
     
     func presentTask(counterIndex: Int){
+        self.replayButton.hidden = true
         if(!self.task!.items[counterIndex].requireResponse){
             
-            var c = counterIndex
+            let c = counterIndex
             
             audioManager.playAudioFrom(task!.items[c].audio, completionBlock: { () -> Void in
                 
@@ -147,13 +154,17 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             
             if(task!.blocking)
             {
-                collectionView.userInteractionEnabled = false
+                //collectionView.userInteractionEnabled = false
+                userInteractionBlocked = true;
                 audioManager.playAudioFrom(sound, completionBlock: { () -> Void in
-                    self.collectionView.userInteractionEnabled = true
+                    //self.collectionView.userInteractionEnabled = true
+                    self.userInteractionBlocked = false;
+                    self.replayButton.hidden = false
                 })
             }
             else{
                 audioManager.playAudioFrom(sound)
+                self.replayButton.hidden = false
             }
         }
     }
@@ -164,7 +175,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) 
         
         cell.selected = false
         cell.userInteractionEnabled = true
@@ -210,14 +221,26 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         return CGSize(width: width, height: height)
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         
         if(!self.task!.items[counter].requireResponse){
-            return
+            return false
         }
         
+        if(userInteractionBlocked){
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            return false
+        }
+        
+        return true
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+
+        
         // disable further taps
-        for c in collectionView.visibleCells() as! [UICollectionViewCell]{
+        for c in collectionView.visibleCells() {
             c.userInteractionEnabled = false
         }
         
@@ -225,7 +248,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! TaskItemOptionCell
         answers?[counter] = cell.name!
         
-        var result = TaskResultRawItem(index: counter, correctAnswer: task!.items[counter].correctImage, givenAnswer: cell.name!)
+        let result = TaskResultRawItem(index: counter, correctAnswer: task!.items[counter].correctImage, givenAnswer: cell.name!)
         
         taskResults.append(result)
         
@@ -247,5 +270,10 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             
             self.audioManager.playComplimentThenContinue(cont)
         }
+    }
+    @IBAction func replayCurrentAudio(sender: AnyObject) {
+        loadTaskItems()
+        
+        presentTask(counter)
     }
 }

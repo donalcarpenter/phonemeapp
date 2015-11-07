@@ -17,7 +17,7 @@ class _QueueItem<T> {
 
 public class Queue<T> {
     
-    typealias Element = T
+    public typealias Element = T
     
     var _front: _QueueItem<Element>
     var _back: _QueueItem<Element>

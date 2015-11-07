@@ -31,7 +31,7 @@ class LetterNameRecognitionViewController: TaskViewController {
     }
     
     override func itemWasSelected(view: UIView, task: TaskItem, index: Int) {
-        if let lbl = view as? UILabel
+        if let _ = view as? UILabel
         {
             //lbl.textColor = UIColor.greenColor()
             

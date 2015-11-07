@@ -32,16 +32,19 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
         }
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         while(!postSynchronousPlaybackQueue.isEmpty()){
             NSOperationQueue.mainQueue().addOperation(postSynchronousPlaybackQueue.dequeue()!)
         }
     }
     
     func playAudioFrom(source: String){
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
         let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
-        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: soundURL!)
         audioPlayer.delegate = nil
         audioPlayer.play()
     }
@@ -49,8 +52,11 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     func playAudioFrom(source: String, completionBlock: () -> Void){    
         let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
         postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: completionBlock))
-        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        audioPlayer = try! AVAudioPlayer(contentsOfURL: soundURL!)
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
         audioPlayer.delegate = self
         audioPlayer.play()
     }

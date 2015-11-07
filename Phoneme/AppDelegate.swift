@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId(appId,
                 clientKey: clientId)
 
-        for family in UIFont.familyNames() as! [String]{
+        for family in UIFont.familyNames() {
             NSLog("\(family)")
             for name in UIFont.fontNamesForFamilyName(family){
                 NSLog("    \(name)")

@@ -30,12 +30,12 @@ class AuthenticationViewController: BaseUIViewController {
     }
     
     func handleButtonsEnableState(){
-        let enabled:Bool = !(email.text.isEmpty || password.text.isEmpty)
+        let enabled:Bool = !(email.text!.isEmpty || password.text!.isEmpty)
         
         loginButton.enabled = enabled
         signUpButton.enabled = enabled
         
-        forgotPAssword.enabled = !email.text.isEmpty
+        forgotPAssword.enabled = !email.text!.isEmpty
     }
     
     func isValidEmail(testStr:String) -> Bool {
@@ -48,12 +48,12 @@ class AuthenticationViewController: BaseUIViewController {
     
     @IBAction func loginUser(sender: UIButton) {
         
-        if(!isValidEmail(email.text)){
+        if(!isValidEmail(email.text!)){
             showErrorMessage("\(email.text) is not a valid email address", userError: true)
             return
         }
         
-        PFUser.logInWithUsernameInBackground(email.text, password: password.text) { (user:PFUser?, error:NSError?) -> Void in
+        PFUser.logInWithUsernameInBackground(email.text!, password: password.text!) { (user:PFUser?, error:NSError?) -> Void in
         
             if((user) != nil){
                 
@@ -80,7 +80,7 @@ class AuthenticationViewController: BaseUIViewController {
     
     @IBAction func signUpUser(sender: UIButton) {
         
-        if(!isValidEmail(email.text)){
+        if(!isValidEmail(email.text!)){
             showErrorMessage("\(email.text) is not a valid email address", userError: true)
             return
         }
@@ -116,12 +116,12 @@ class AuthenticationViewController: BaseUIViewController {
     }
     
     @IBAction func userForgotPassword(sender: AnyObject) {
-        if(!isValidEmail(email.text)){
+        if(!isValidEmail(email.text!)){
             showErrorMessage("\(email.text) is not a valid email address", userError: true)
             return
         }
         
-        PFUser.requestPasswordResetForEmailInBackground(email.text, block: { (success:Bool, err:NSError?) -> Void in
+        PFUser.requestPasswordResetForEmailInBackground(email.text!, block: { (success:Bool, err:NSError?) -> Void in
             if(success){
                 self.successMessage.text = "Please check your email, you shuld receive instructions on how to reset your password"
                 

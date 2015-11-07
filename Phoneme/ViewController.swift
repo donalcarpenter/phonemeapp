@@ -44,7 +44,7 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
             bgimgOw.alpha = 0
         }
         
-        setEnableStateOnNonFamiliarisationButtons(false)
+        setEnableStateOnNonFamiliarisationButtons(true)
         
         if(delegate == nil){
             showErrorMessage("woops, something has gone badly wrong and results will not be saved.  If i were you i'd kill the app and start again...", userError: false)
@@ -79,7 +79,7 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         }
         
         if let studentId : String = delegate?.selectedStudent.studentId{
-            var result = TaskResult(studentId: studentId, title: self.task.taskTitle, count: results.count, correct: correct)
+            let result = TaskResult(studentId: studentId, title: self.task.taskTitle, count: results.count, correct: correct)
             
             result.rawData = results
             
@@ -126,7 +126,7 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                                 self.delegate!.refreshStudentState()
                                     self.navigationController?.popViewControllerAnimated(true)
                             }else{
-                                self.showErrorMessage("The student it complete and all task results have been saved, but something went wrong. Check to see if the student isComplete attribute is true for \(result.studentId)", userError: false)
+                                self.showErrorMessage("The student is complete and all task results have been saved, but something went wrong. Check to see if the student isComplete attribute is true for \(result.studentId)", userError: false)
                             }
                         })
                     }
