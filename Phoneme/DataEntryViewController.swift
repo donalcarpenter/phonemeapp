@@ -410,8 +410,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             
             self.parent.selectedStudent = parent.students![indexPath.row];
             
-            if(!self.parent.selectedStudent.isCompleted)
-            {
+            self.parent.selectedStudent.loadTasks { (success, error) -> Void in
                 self.parent.performSegueWithIdentifier("dophonemes", sender: self.parent)
             }
         }

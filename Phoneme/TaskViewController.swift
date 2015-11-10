@@ -120,7 +120,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             }
         }
         else{
-
+            
             loadTaskItems()
             
             presentTask(counter)
@@ -228,7 +228,22 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         }
         
         if(userInteractionBlocked){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            let cell = collectionView.cellForItemAtIndexPath(indexPath) as! TaskItemOptionCell
+            let view = cell.presentationView()
+            
+            UIView.animateKeyframesWithDuration(0.32, delay: 0.0, options: UIViewKeyframeAnimationOptions.CalculationModePaced, animations: { () -> Void in
+                
+                UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.25, animations: {() -> Void in view.alpha = 0.35;})
+
+                UIView.addKeyframeWithRelativeStartTime(0.25, relativeDuration: 0.25, animations: {() -> Void in view.alpha = 0.6;})
+                
+                UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.25, animations: {() -> Void in view.alpha = 0.4;})
+                
+                UIView.addKeyframeWithRelativeStartTime(0.75, relativeDuration: 0.25, animations: {() -> Void in view.alpha = 1.0;})
+                
+                }, completion: nil)
+            
             return false
         }
         
@@ -236,9 +251,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
 
-        
         // disable further taps
         for c in collectionView.visibleCells() {
             c.userInteractionEnabled = false
@@ -255,7 +268,6 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
         NSLog("expected \(task!.items[counter].correctImage), got \(cell.name!)")
         
         itemWasSelected(cell.presentationView(), task: task!.items[counter], index: indexPath.row)
-        
         
         let cont = {()-> Void in
             self.moveToNextTaskItem()}

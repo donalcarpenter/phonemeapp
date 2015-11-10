@@ -23,7 +23,6 @@ class TaskFactory: NSObject {
             [TaskItem(audio: "RhymeCatHat", images:["cat", "hat"], cascade: [0,0], correctImage:"cat", requireResponse:false),
             TaskItem(audio: "RhymeBoatGoat", images:["boat", "goat"], cascade: [0,0], correctImage:"cat", requireResponse:false),
                 TaskItem(audio:"RhymeFishDish", outro:"RhymeBall", images: ["fish", "dish", "ball"], cascade: [6, 7, 9], correctImage:"ball", requireResponse:false),
-                TaskItem(audio:"RhymeHatBat", outro:"RhymePig", images:["pig", "hat", "bat"], cascade: [3, 5, 6], correctImage: "pig", requireResponse:false),
             TaskItem(audio:"Rhyme4", images:["cat", "mat", "bus"], cascade: [4, 5, 6], correctImage: "bus"),
             TaskItem(audio:"Rhyme5", images:["peg", "doll", "leg"], cascade: [4, 5, 6], correctImage: "doll"),
             TaskItem(audio:"Rhyme6", images:["saw", "toe", "bow"], cascade: [3, 5, 6], correctImage: "saw"),

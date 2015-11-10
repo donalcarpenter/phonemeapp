@@ -10,52 +10,54 @@ import UIKit
 import Parse
 
 class StudentDataLayer: NSObject {
+    let entity: PFObject
     let studentId: String
     let classId: String
     let identifier: String
     let dateOfBirth: String
     let gender: String
     var isCompleted = false
+    var results = Set<String>()
     
-    static var emptyStudent: StudentDataLayer = StudentDataLayer(studentId: "", classId: "", identifier: "", dateOfBirth: "", gender: "")
+    static var emptyStudent: StudentDataLayer = StudentDataLayer.new("", identifier: "", dateOfBirth: "", gender: "")
     
-    init (studentId: String, classId: String, identifier: String, dateOfBirth: String, gender: String){
-        self.studentId = studentId
-        self.classId = classId
-        self.identifier = identifier
-        self.dateOfBirth = dateOfBirth
-        self.gender = gender
+    init (entity: PFObject){
+        self.studentId = entity.objectId ?? ""
+        self.classId = entity["classId"] as! String
+        self.identifier = entity["identifier"] as! String
+        self.dateOfBirth = entity["dateOfBirth"] as! String
+        self.gender = entity["gender"] as! String
+        
+        self.entity = entity;
     }
     
     class func new(classId: String, identifier: String, dateOfBirth: String, gender: String) -> StudentDataLayer {
-        return StudentDataLayer(studentId: "", classId: classId, identifier: identifier, dateOfBirth: dateOfBirth, gender: gender)
+        let entity = PFObject(className: "student")
+        entity["classId"] = classId
+        entity["identifier"] = identifier
+        entity["dateOfBirth"] = dateOfBirth
+        entity["gender"] = gender
+        
+        return StudentDataLayer(entity: entity)
     }
     
-    static func saveTaskResult(result: TaskResult, completionBlock: (success: Bool, error: String) -> Void){
+    func saveTaskResult(result: TaskResult, completionBlock: (success: Bool, error: String) -> Void){
         
-        let query = PFQuery(className: "student")
+        let student = entity
         
-        query.getObjectInBackgroundWithId(result.studentId, block: { (student: PFObject?, err: NSError?) -> Void in
-            if(err != nil){
+        let key = result.taskTitle.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        student[key] = result.correctAnswers
+        
+        student.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
+            if(!success)
+            {
                 completionBlock(success: false, error: "\(err)")
-                return
             }
-            
-            let key = result.taskTitle.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            
-            student![key] = result.correctAnswers
-        
-            
-            student?.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
-                if(!success)
-                {
-                    completionBlock(success: false, error: "\(err)")
-                }
-                else{
-                    completionBlock(success: true, error: "")
-                    self.saveRawData(student!, key:key, rawResults:result.rawData)
-                }
-            })
+            else{
+                completionBlock(success: true, error: "")
+                self.saveRawData(student, key:key, rawResults:result.rawData)
+            }
         })
     }
 
@@ -83,7 +85,7 @@ class StudentDataLayer: NSObject {
         })
     }
     
-    static func saveRawData(student: PFObject, key: String, rawResults: [TaskResultRawItem]?){
+    func saveRawData(student: PFObject, key: String, rawResults: [TaskResultRawItem]?){
         
         if(rawResults == nil){
             return
@@ -118,7 +120,27 @@ class StudentDataLayer: NSObject {
         }
     }
     
-    func loadTasks(){
+    func loadTasks(completionBlock: (success: Bool, error: String) -> Void){
+        let query = PFQuery(className: "rawResults")
+        query.whereKey("student", equalTo: self.entity)
+        
+        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, err:NSError?) -> Void in
+            
+            if(err != nil){
+                completionBlock(success: false, error: "\(err)")
+                return
+            }
+            
+            for pfobj in objects! as! [PFObject]{
+                if let task = pfobj["task"] as? String{
+                    if(!self.results.contains(task)){
+                        self.results.insert(task)
+                    }
+                }
+            }
+            
+            completionBlock(success: true, error: nil)
+        }
     }
     
     func save(completionBlock: (success: Bool, error: String) -> Void){
@@ -140,11 +162,7 @@ class StudentDataLayer: NSObject {
                 return
             }
             
-            let save = PFObject(className: "student")
-            save["classId"] = self.classId
-            save["identifier"] = self.identifier
-            save["dateOfBirth"] = self.dateOfBirth
-            save["gender"] = self.gender
+            let save = self.entity
             save["isCompleted"] = self.isCompleted
             
             save.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
@@ -174,7 +192,7 @@ class StudentDataLayer: NSObject {
             }
             
             for pfobj in objects! as! [PFObject]{
-                let student = StudentDataLayer(studentId: pfobj.objectId!, classId: pfobj["classId"] as! String, identifier: pfobj["identifier"] as! String, dateOfBirth: pfobj["dateOfBirth"] as! String, gender: pfobj["gender"] as! String)
+                let student = StudentDataLayer(entity: pfobj)
                 
                 if let completed = pfobj["isCompleted"] as? Bool{
                     student.isCompleted = completed

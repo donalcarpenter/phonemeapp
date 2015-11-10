@@ -77,13 +77,12 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                 correct++
             }
         }
-        
-        if let studentId : String = delegate?.selectedStudent.studentId{
-            let result = TaskResult(studentId: studentId, title: self.task.taskTitle, count: results.count, correct: correct)
+
+            let result = TaskResult(studentId: delegate!.selectedStudent.studentId, title: self.task.taskTitle, count: results.count, correct: correct)
             
             result.rawData = results
             
-            StudentDataLayer.saveTaskResult(result, completionBlock: { (success, error) -> Void in
+            delegate!.selectedStudent.saveTaskResult(result, completionBlock: { (success, error) -> Void in
                 if(!success){
                     self.showErrorMessage("well this is embarassing. we could not send the results to the remote server. Please take note on task \(self.task.taskTitle) this participant got \(correct) answers right. the error received is \(error)", userError: false)
                     
@@ -119,24 +118,21 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                         self.outstandingTasks--;
                     }
                     
+                    /*
                     if(self.outstandingTasks == 0){
                         StudentDataLayer.setStudentCompleted(result.studentId, completionBlock: { (success, error) -> Void in
                             if(success){
                                 // we need to do something here...
                                 self.delegate!.refreshStudentState()
-                                    self.navigationController?.popViewControllerAnimated(true)
+                                    self.navigationController?. popViewControllerAnimated(true)
                             }else{
                                 self.showErrorMessage("The student is complete and all task results have been saved, but something went wrong. Check to see if the student isComplete attribute is true for \(result.studentId)", userError: false)
                             }
                         })
                     }
+                    */
                 }
             })
-            
-        }else{
-            
-            showErrorMessage("well this is embarassing. we can't tell who the student is. Please take note on task \(self.task.taskTitle) this participant got \(correct) answers right", userError: false)
-        }
     }
     
     override func didReceiveMemoryWarning() {
