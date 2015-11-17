@@ -159,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="521"/>
+            <point key="canvasLocation" x="936" y="-403"/>
         </scene>
         <!--Authentication View Controller-->
         <scene sceneID="ukx-Ko-ytz">
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2Z-xM-GK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-264" y="618"/>
+            <point key="canvasLocation" x="-504" y="494"/>
         </scene>
         <!--Data Entry View Controller-->
         <scene sceneID="sH9-Kh-1VY">
@@ -587,11 +587,98 @@
                         <outlet property="studentIdentifier" destination="Po7-hv-G1a" id="wGc-4Q-CXi"/>
                         <outlet property="studentsTableview" destination="hIc-8h-YQh" id="e8S-qb-YA0"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="dophonemes" id="MDf-dY-U1h"/>
+                        <segue destination="UXQ-rh-oeA" kind="show" identifier="taskSelection" id="aTg-w8-aH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pC6-qX-DUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="1517"/>
+            <point key="canvasLocation" x="755" y="489"/>
+        </scene>
+        <!--Task Selection View Controller-->
+        <scene sceneID="NvP-TO-1lu">
+            <objects>
+                <viewController id="UXQ-rh-oeA" customClass="TaskSelectionViewController" customModule="Phoneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="baz-Rl-HaW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjG-93-jhn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y7r-hL-VVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aiZ-pN-C14">
+                                <rect key="frame" x="94" y="87" width="834" height="617"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskbutton" textLabel="7ZL-JT-6BJ" style="IBUITableViewCellStyleDefault" id="dG6-TW-c1c">
+                                        <rect key="frame" x="0.0" y="92" width="834" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dG6-TW-c1c" id="jW2-W2-OMv">
+                                            <rect key="frame" x="0.0" y="0.0" width="834" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ZL-JT-6BJ">
+                                                    <rect key="frame" x="101" y="0.0" width="632" height="108"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.0" green="0.76862752440000004" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.0" green="0.76862752440000004" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UXQ-rh-oeA" id="3b3-SN-8EK"/>
+                                    <outlet property="delegate" destination="UXQ-rh-oeA" id="Prm-aH-NeR"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRN-z1-ke8">
+                                <rect key="frame" x="20" y="718" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="back:" destination="UXQ-rh-oeA" eventType="touchUpInside" id="wRT-C8-Vsd"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YZm-05-I7p">
+                                <rect key="frame" x="955" y="729" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="showCompletedChanged:" destination="UXQ-rh-oeA" eventType="valueChanged" id="yCQ-mI-hlm"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="show completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6e-Sc-KZC">
+                                <rect key="frame" x="820" y="734" width="127" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="showCompleted" destination="YZm-05-I7p" id="U8G-FG-EYK"/>
+                        <outlet property="tasks" destination="aiZ-pN-C14" id="5qj-Ev-RtE"/>
+                        <segue destination="iyH-QT-ihW" kind="show" identifier="singlerowimage" id="32S-bf-m2z"/>
+                        <segue destination="UJk-kA-t4i" kind="show" identifier="initialphoneme" id="jtG-XN-xLx"/>
+                        <segue destination="7SV-Gi-vhg" kind="show" identifier="letterrecognition" id="B9q-nI-Orw"/>
+                        <segue destination="2L1-px-jYX" kind="show" identifier="wordrecognition" id="5ej-rP-WMo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMx-bK-64I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="530"/>
         </scene>
         <!--Single Row Image Task-->
         <scene sceneID="Z6C-Pv-K9c">
@@ -725,7 +812,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLV-sU-pEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="354"/>
+            <point key="canvasLocation" x="3628" y="-530"/>
         </scene>
         <!--Initial Phoneme View Controller-->
         <scene sceneID="9DT-Lj-qNS">
@@ -815,7 +902,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eZ-Yz-uLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="1216"/>
+            <point key="canvasLocation" x="3628" y="332"/>
         </scene>
         <!--Letter Name Recognition View Controller-->
         <scene sceneID="I4I-Dc-DcI">
@@ -905,7 +992,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Yt-KQ-TF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="2071"/>
+            <point key="canvasLocation" x="3628" y="1187"/>
         </scene>
         <!--Word Reading Task View Controller-->
         <scene sceneID="hnI-Bm-pz0">
@@ -1020,7 +1107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drx-he-D8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="2933"/>
+            <point key="canvasLocation" x="3628" y="2049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fne-do-96O">
@@ -1039,15 +1126,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21l-h7-dKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-256"/>
+            <point key="canvasLocation" x="-1838" y="500"/>
         </scene>
     </scenes>
     <resources>
         <image name="repeat" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tog-Lo-3h2"/>
-        <segue reference="bJO-17-9Nk"/>
+        <segue reference="B9q-nI-Orw"/>
+        <segue reference="5ej-rP-WMo"/>
+        <segue reference="jtG-XN-xLx"/>
+        <segue reference="32S-bf-m2z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.34509803921568627" green="0.5725490196078431" blue="0.3843137254901961" alpha="1" colorSpace="calibratedRGB"/>
 </document>

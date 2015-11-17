@@ -90,6 +90,8 @@
 		464B05021B6ABB18000312CC /* FinalPhoneme14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04F31B6ABB18000312CC /* FinalPhoneme14.mp4 */; };
 		464B05031B6ABB18000312CC /* FinalPhonemeIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04F41B6ABB18000312CC /* FinalPhonemeIntro.mp4 */; };
 		464B05051B6ABBEE000312CC /* TaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B05041B6ABBEE000312CC /* TaskFactory.swift */; };
+		4652EF771BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652EF761BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift */; };
+		4652EF791BFA7E6D0001B9AB /* TaskSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652EF781BFA7E6D0001B9AB /* TaskSelectionViewController.swift */; };
 		465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742261B616ADD00FE3E58 /* AppDelegate.swift */; };
 		465742291B616ADD00FE3E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465742281B616ADD00FE3E58 /* ViewController.swift */; };
 		4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4657422A1B616ADD00FE3E58 /* Main.storyboard */; };
@@ -280,6 +282,8 @@
 		464B04F31B6ABB18000312CC /* FinalPhoneme14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhoneme14.mp4; sourceTree = "<group>"; };
 		464B04F41B6ABB18000312CC /* FinalPhonemeIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinalPhonemeIntro.mp4; sourceTree = "<group>"; };
 		464B05041B6ABBEE000312CC /* TaskFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskFactory.swift; sourceTree = "<group>"; };
+		4652EF761BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		4652EF781BFA7E6D0001B9AB /* TaskSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSelectionViewController.swift; sourceTree = "<group>"; };
 		465742211B616ADD00FE3E58 /* Phoneme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phoneme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465742251B616ADD00FE3E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		465742261B616ADD00FE3E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -414,6 +418,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4652EF751BFA7C500001B9AB /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
+				46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */,
+				465B4F311B7615460001EA66 /* CustomLetterCell.swift */,
+				4652EF761BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift */,
+			);
+			name = UIComponents;
+			sourceTree = "<group>";
+		};
 		465742181B616ADD00FE3E58 = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +450,7 @@
 		465742231B616ADD00FE3E58 /* Phoneme */ = {
 			isa = PBXGroup;
 			children = (
+				4652EF751BFA7C500001B9AB /* UIComponents */,
 				465B4F2E1B7613980001EA66 /* ViewControllers */,
 				46F154F51B6D5D0300C203F6 /* Model */,
 				4672DC891B6CBEFA00DED51D /* DataLayer */,
@@ -442,11 +458,8 @@
 				465742261B616ADD00FE3E58 /* AppDelegate.swift */,
 				4657422A1B616ADD00FE3E58 /* Main.storyboard */,
 				4657422D1B616ADD00FE3E58 /* Images.xcassets */,
-				465742511B6170D000FE3E58 /* CustomImageCell.swift */,
-				46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */,
 				464B04C01B640A2E000312CC /* AudioManager.swift */,
 				4657422F1B616ADD00FE3E58 /* LaunchScreen.xib */,
-				465B4F311B7615460001EA66 /* CustomLetterCell.swift */,
 				46BED1821B6C17EF007E8E15 /* Frameworks */,
 				465742241B616ADD00FE3E58 /* Supporting Files */,
 				46B8B16C1B7900D800D74B15 /* Resources */,
@@ -631,6 +644,7 @@
 				464B04E41B64347B000312CC /* TaskViewController.swift */,
 				465B4F2C1B7612070001EA66 /* LetterNameRecognitionViewController.swift */,
 				4621E2591B6E2E1600446739 /* BaseUIViewController.swift */,
+				4652EF781BFA7E6D0001B9AB /* TaskSelectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -945,6 +959,7 @@
 				46F154F71B6D5D2000C203F6 /* TaskResult.swift in Sources */,
 				465B4F2D1B7612070001EA66 /* LetterNameRecognitionViewController.swift in Sources */,
 				464B04BF1B63F413000312CC /* Queue.swift in Sources */,
+				4652EF791BFA7E6D0001B9AB /* TaskSelectionViewController.swift in Sources */,
 				4621E25A1B6E2E1600446739 /* BaseUIViewController.swift in Sources */,
 				46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */,
 				46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */,
@@ -953,6 +968,7 @@
 				46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */,
 				464B04E51B64347B000312CC /* TaskViewController.swift in Sources */,
 				46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */,
+				4652EF771BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift in Sources */,
 				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,
 				465742271B616ADD00FE3E58 /* AppDelegate.swift in Sources */,
 			);

@@ -251,9 +251,9 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "dophonemes")
+        if(segue.identifier == "taskSelection")
         {
-            if let dest = segue.destinationViewController as? ViewController{
+            if let dest = segue.destinationViewController as? TaskSelectionViewController {
                 dest.delegate = self
             }
         }
@@ -411,7 +411,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             self.parent.selectedStudent = parent.students![indexPath.row];
             
             self.parent.selectedStudent.loadTasks { (success, error) -> Void in
-                self.parent.performSegueWithIdentifier("dophonemes", sender: self.parent)
+                self.parent.performSegueWithIdentifier("taskSelection", sender: self.parent)
             }
         }
     }

@@ -91,6 +91,8 @@ class StudentDataLayer: NSObject {
             return
         }
         
+        results.insert(key)
+        
         var rawData = [NSDictionary]()
         
         for data in rawResults!{
@@ -139,7 +141,7 @@ class StudentDataLayer: NSObject {
                 }
             }
             
-            completionBlock(success: true, error: nil)
+            completionBlock(success: true, error: "")
         }
     }
     

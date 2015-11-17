@@ -327,11 +327,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882305.181542"
+            timestampString = "469486188.187734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "LoadStudentsInClass(_:completionBlock:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -349,22 +349,6 @@
             startingLineNumber = "136"
             endingLineNumber = "136"
             landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Phoneme/DataEntryViewController.swift"
-            timestampString = "460214438.972188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -407,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882305.181542"
+            timestampString = "469486188.187734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "LoadStudentsInClass(_:completionBlock:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -455,11 +439,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882048.563752"
+            timestampString = "469486188.187734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "saveRawData(_:key:rawResults:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -471,11 +455,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882048.563752"
+            timestampString = "469486188.187734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "saveRawData(_:key:rawResults:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -803,16 +787,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882305.181542"
+            filePath = "Phoneme/TaskSelectionViewController.swift"
+            timestampString = "469492559.257104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "loadTasks(_:)"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "repopulateTableView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Phoneme/TaskSelectionViewController.swift"
+            timestampString = "469492559.257104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "addTaskToDatasourceIfNotCompleted(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Phoneme/TaskSelectionViewController.swift"
+            timestampString = "469492559.257104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "addTaskToDatasourceIfNotCompleted(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -822,13 +838,91 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Phoneme/Datalayer/StudentDataLayer.swift"
-            timestampString = "468882305.181542"
+            filePath = "Phoneme/TaskSelectionTableViewCell.swift"
+            timestampString = "469485690.852183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "loadTasks(_:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "TaskSelectionTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phoneme.TaskSelectionTableViewCell.seguetoperform.setter : Swift.String"
+                  moduleName = "Phoneme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/donal/Desktop/phoneme/App/Phoneme/Phoneme/TaskSelectionTableViewCell.swift"
+                  timestampString = "469492638.171264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phoneme.TaskSelectionTableViewCell.seguetoperform.materializeForSet : Swift.String"
+                  moduleName = "Phoneme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/donal/Desktop/phoneme/App/Phoneme/Phoneme/TaskSelectionTableViewCell.swift"
+                  timestampString = "469492638.171549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phoneme.TaskSelectionTableViewCell.init (Phoneme.TaskSelectionTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Phoneme.TaskSelectionTableViewCell"
+                  moduleName = "Phoneme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/donal/Desktop/phoneme/App/Phoneme/Phoneme/TaskSelectionTableViewCell.swift"
+                  timestampString = "469492638.172015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Phoneme.TaskSelectionTableViewCell.init (Phoneme.TaskSelectionTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Phoneme.TaskSelectionTableViewCell&gt;"
+                  moduleName = "Phoneme"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/donal/Desktop/phoneme/App/Phoneme/Phoneme/TaskSelectionTableViewCell.swift"
+                  timestampString = "469492638.172509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "91">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Phoneme/TaskSelectionViewController.swift"
+            timestampString = "469492854.273802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "uploadResults(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
