@@ -49,10 +49,13 @@ class StudentDataLayer: NSObject {
         
         student[key] = result.correctAnswers
         
+        results.insert(key)
+        
         student.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
             if(!success)
             {
                 completionBlock(success: false, error: "\(err)")
+                self.results.remove(key)
             }
             else{
                 completionBlock(success: true, error: "")
@@ -90,8 +93,6 @@ class StudentDataLayer: NSObject {
         if(rawResults == nil){
             return
         }
-        
-        results.insert(key)
         
         var rawData = [NSDictionary]()
         

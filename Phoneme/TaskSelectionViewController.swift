@@ -23,6 +23,7 @@ class TaskSelectionViewController: BaseUIViewController, UITableViewDataSource, 
         TaskFactory.letterNameTask.taskTitle: "letterrecognition",
         TaskFactory.letterSoundTask.taskTitle: "letterrecognition",
         TaskFactory.singleWordTask.taskTitle: "wordrecognition",
+        TaskFactory.blendingTask.taskTitle: "singlerowimage",
     ]
     
     @IBOutlet weak var tasks: UITableView!
@@ -139,7 +140,7 @@ class TaskSelectionViewController: BaseUIViewController, UITableViewDataSource, 
         addTaskToDatasourceIfNotCompleted(TaskFactory.letterNameTask)
         addTaskToDatasourceIfNotCompleted(TaskFactory.letterSoundTask)
         addTaskToDatasourceIfNotCompleted(TaskFactory.singleWordTask)
-        
+        addTaskToDatasourceIfNotCompleted(TaskFactory.blendingTask)
         
         self.tasks.reloadData()
     }

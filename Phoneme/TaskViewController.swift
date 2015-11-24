@@ -102,8 +102,9 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             
             audioPlayer.stop()
             
+            self.processResults()
+            
             let cont = {()-> Void in
-                self.processResults()
                 self.navigationController?.popViewControllerAnimated(true)
             }
             
@@ -154,17 +155,16 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             
             if(task!.blocking)
             {
-                //collectionView.userInteractionEnabled = false
                 userInteractionBlocked = true;
                 audioManager.playAudioFrom(sound, completionBlock: { () -> Void in
-                    //self.collectionView.userInteractionEnabled = true
                     self.userInteractionBlocked = false;
                     self.replayButton.hidden = false
                 })
             }
             else{
-                audioManager.playAudioFrom(sound)
-                self.replayButton.hidden = false
+                audioManager.playAudioFrom(sound, completionBlock: { () -> Void in
+                    self.replayButton.hidden = false
+                })
             }
         }
     }
