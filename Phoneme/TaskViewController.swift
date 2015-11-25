@@ -283,6 +283,7 @@ class TaskViewController: BaseUIViewController, UICollectionViewDataSource, UICo
             self.audioManager.playComplimentThenContinue(cont)
         }
     }
+    
     @IBAction func replayCurrentAudio(sender: AnyObject) {
         loadTaskItems()
         

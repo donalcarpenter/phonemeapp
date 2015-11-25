@@ -152,36 +152,60 @@ class TaskFactory: NSObject {
         ])
     
     static let deletionTask = Task(intro:"Phondelintro", outro:"Phondelfinal", title: "Phoneme Deletion", items:
-        [   InitialPhonemeTaskItem(firstImage: "pie", delay:12, audio: "Phondel1", images: ["eye", "moon", "hen"], cascade: [2, 4, 5], correctImage: "eye", requireResponse: false, outro:"Phondel3"),
+        [   InitialPhonemeTaskItem(firstImage: "pie", delay:11, audio: "Phondel1", images: ["eye", "moon", "hen"], cascade: [2, 4, 5], correctImage: "eye", requireResponse: false, outro:"Phondel3"),
             
-            InitialPhonemeTaskItem(firstImage: "cup", delay:12,  audio: "Phondel4", images: ["pup", "egg", "up"], cascade: [3, 4, 7], correctImage: "up"),
+            InitialPhonemeTaskItem(firstImage: "cup", delay:12,  audio: "Phondel4", images: ["pup", "egg", "up"], cascade: [3, 4, 6], correctImage: "up"),
             
-            InitialPhonemeTaskItem(firstImage: "door", delay:12, audio: "Phondel6", images: ["oar", "snore", "sew"], cascade: [2, 4, 7], correctImage: "oar"),
+            InitialPhonemeTaskItem(firstImage: "door", delay:12, audio: "Phondel6", images: ["oar", "snore", "sew"], cascade: [2, 3.5, 6], correctImage: "oar"),
             
-            InitialPhonemeTaskItem(firstImage: "farm", delay:12,  audio: "Phondel8", images: ["bow", "arm", "art"], cascade: [3, 4, 7], correctImage: "arm"),
+            InitialPhonemeTaskItem(firstImage: "farm", delay:12,  audio: "Phondel8", images: ["bow", "arm", "art"], cascade: [2.5, 4, 6], correctImage: "arm"),
             
-            InitialPhonemeTaskItem(firstImage: "bake", delay:12, audio: "Phondel10", images: ["ape", "sun", "ache"], cascade: [3, 4, 7], correctImage: "ache"),
+            InitialPhonemeTaskItem(firstImage: "bake", delay:12, audio: "Phondel10", images: ["ape", "sun", "ache"], cascade: [2.2, 4, 5.4], correctImage: "ache"),
             
-            InitialPhonemeTaskItem(firstImage: "deer", delay:12,  audio: "Phondel12", images: ["ear", "tear", "bye"], cascade: [3, 4, 6], correctImage: "ear", outro: "Phondel14"),
+            InitialPhonemeTaskItem(firstImage: "deer", delay:12,  audio: "Phondel12", images: ["ear", "tear", "bye"], cascade: [2.4, 4, 6], correctImage: "ear", outro: "Phondel14"),
             
             InitialPhonemeTaskItem(firstImage: "price", delay:12, audio: "Phondel15", images: ["rice", "ice", "moon"], cascade: [2, 4, 6], correctImage: "rice"),
             
-            InitialPhonemeTaskItem(firstImage: "break", delay:12,  audio: "Phondel17", images: ["ache", "horse", "rake"], cascade: [3, 4, 6], correctImage: "rake"),
+            InitialPhonemeTaskItem(firstImage: "break", delay:12,  audio: "Phondel17", images: ["ache", "horse", "rake"], cascade: [2.2, 3.8, 6], correctImage: "rake"),
             
-            InitialPhonemeTaskItem(firstImage: "spin", delay:12,  audio: "Phondel19", images: ["pin", "in", "lock"], cascade: [3, 5, 6], correctImage: "pin"),
+            InitialPhonemeTaskItem(firstImage: "spin", delay:12,  audio: "Phondel19", images: ["pin", "in", "lock"], cascade: [2.2, 3.9, 6], correctImage: "pin"),
             
             InitialPhonemeTaskItem(firstImage: "train", delay:12, audio: "Phondel21", images: ["sun", "rain", "aim"], cascade: [2, 4, 6], correctImage: "rain"),
             
-            InitialPhonemeTaskItem(firstImage: "fork", delay:22,  audio: "Phondel23", images: ["fort", "pen", "four"], cascade: [3, 5, 7], correctImage: "boat", requireResponse: false, outro: "Phondel26"),
+            InitialPhonemeTaskItem(firstImage: "fork", delay:22,  audio: "Phondel23", images: ["fort", "pen", "four"], cascade: [2.4, 4.2, 6.7], correctImage: "boat", requireResponse: false, outro: "Phondel26"),
             
             InitialPhonemeTaskItem(firstImage: "beach", delay:12,  audio: "Phondel27", images: ["bee", "beak", "cat"], cascade: [2, 3, 6], correctImage: "bee"),
             
-            InitialPhonemeTaskItem(firstImage: "seed", delay:12,  audio: "Phondel29", images: ["mouse", "sea", "seat"], cascade: [2, 4, 6], correctImage: "sea"),
+            InitialPhonemeTaskItem(firstImage: "seed", delay:12,  audio: "Phondel29", images: ["mouse", "sea", "seat"], cascade: [2, 3.6, 6], correctImage: "sea"),
             
-            InitialPhonemeTaskItem(firstImage: "tooth", delay:12,  audio: "Phondel31", images: ["toot", "fan", "two"], cascade: [3, 5, 6], correctImage: "two"),
+            InitialPhonemeTaskItem(firstImage: "tooth", delay:12,  audio: "Phondel31", images: ["toot", "fan", "two"], cascade: [2.8, 4.6, 6], correctImage: "two"),
             
-            InitialPhonemeTaskItem(firstImage: "plate", delay:12,  audio: "Phondel33", images: ["play", "plum", "ring"], cascade: [3, 4, 6], correctImage: "play"),
+            InitialPhonemeTaskItem(firstImage: "plate", delay:12,  audio: "Phondel33", images: ["play", "plum", "ring"], cascade: [2, 3.6, 5.7], correctImage: "play"),
             
-            InitialPhonemeTaskItem(firstImage: "rose", delay:12,  audio: "Phondel35", images: ["dog", "row", "rope"], cascade: [3, 4, 6], correctImage: "row")
+            InitialPhonemeTaskItem(firstImage: "rose", delay:12,  audio: "Phondel35", images: ["dog", "row", "rope"], cascade: [2.1, 3.7, 6], correctImage: "row")
+        ])
+    
+    static let segmentationTask = Task(intro: "Phonesegintro", outro: "Phonesegfinal", title: "Segmentation", blocking: true, items: [
+        
+            SegmentationTaskItem(image: "sun", audio: "Phoneseg1", correctCount: 3, demo: true, demoDelay: [12, 13.8, 16]),
+            SegmentationTaskItem(image: "bee", audio: "Phoneseg2", correctCount: 2, demo: true, demoDelay: [9, 10.5]),
+            SegmentationTaskItem(image: "moon", audio: "Phoneseg3", correctCount: 3),
+            SegmentationTaskItem(image: "tooth", audio: "Phoneseg6", correctCount: 3),
+            SegmentationTaskItem(image: "cow", audio: "Phoneseg7", correctCount: 2),
+            SegmentationTaskItem(image: "cup", audio: "Phoneseg8", correctCount: 3),
+            SegmentationTaskItem(image: "soap", audio: "Phoneseg9", correctCount: 3),
+            SegmentationTaskItem(image: "saw", audio: "Phoneseg10", correctCount: 2),
+            SegmentationTaskItem(image: "fly", audio: "Phoneseg11", correctCount: 3, demo: true, demoDelay: [13, 15, 17]),
+            SegmentationTaskItem(image: "flush", audio: "Phoneseg12", correctCount: 4),
+            SegmentationTaskItem(image: "crab", audio: "Phoneseg13", correctCount: 4),
+            SegmentationTaskItem(image: "sew", audio: "Phoneseg14", correctCount: 2),
+            SegmentationTaskItem(image: "step", audio: "Phoneseg15", correctCount: 4),
+            SegmentationTaskItem(image: "star", audio: "Phoneseg16", correctCount: 3),
+            SegmentationTaskItem(image: "hand", audio: "Phoneseg17", correctCount: 4, outro: "Phoneseg18"),
+            SegmentationTaskItem(image: "bank", audio: "Phoneseg19", correctCount: 4),
+            SegmentationTaskItem(image: "lock", audio: "Phoneseg20", correctCount: 3),
+            SegmentationTaskItem(image: "jump", audio: "Phoneseg21", correctCount: 4),
+            SegmentationTaskItem(image: "pond", audio: "Phoneseg22", correctCount: 3),
+            SegmentationTaskItem(image: "bear", audio: "Phoneseg23", correctCount: 3),
         ])
 }

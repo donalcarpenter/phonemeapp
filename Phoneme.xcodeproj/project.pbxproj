@@ -238,6 +238,32 @@
 		46BED1941B6C189C007E8E15 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1931B6C189C007E8E15 /* libz.dylib */; };
 		46BED1961B6C18AD007E8E15 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */; };
 		46BED19A1B6CBC4A007E8E15 /* DataEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */; };
+		46E705631C06571A003866E9 /* SegmentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E705621C06571A003866E9 /* SegmentationViewController.swift */; };
+		46E705651C065F6A003866E9 /* SegmentationTaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E705641C065F6A003866E9 /* SegmentationTaskItem.swift */; };
+		46E7057E1C06688E003866E9 /* Phonseg1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705661C06688E003866E9 /* Phonseg1.mp4 */; };
+		46E7057F1C06688E003866E9 /* Phonseg2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705671C06688E003866E9 /* Phonseg2.mp4 */; };
+		46E705801C06688E003866E9 /* Phonseg3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705681C06688E003866E9 /* Phonseg3.mp4 */; };
+		46E705811C06688E003866E9 /* Phonseg6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705691C06688E003866E9 /* Phonseg6.mp4 */; };
+		46E705821C06688E003866E9 /* Phonseg7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056A1C06688E003866E9 /* Phonseg7.mp4 */; };
+		46E705831C06688E003866E9 /* Phonseg8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056B1C06688E003866E9 /* Phonseg8.mp4 */; };
+		46E705841C06688E003866E9 /* Phonseg9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056C1C06688E003866E9 /* Phonseg9.mp4 */; };
+		46E705851C06688E003866E9 /* Phonseg10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056D1C06688E003866E9 /* Phonseg10.mp4 */; };
+		46E705861C06688E003866E9 /* Phonseg11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056E1C06688E003866E9 /* Phonseg11.mp4 */; };
+		46E705871C06688E003866E9 /* Phonseg12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7056F1C06688E003866E9 /* Phonseg12.mp4 */; };
+		46E705881C06688E003866E9 /* Phonseg13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705701C06688E003866E9 /* Phonseg13.mp4 */; };
+		46E705891C06688E003866E9 /* Phonseg14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705711C06688E003866E9 /* Phonseg14.mp4 */; };
+		46E7058A1C06688E003866E9 /* Phonseg15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705721C06688E003866E9 /* Phonseg15.mp4 */; };
+		46E7058B1C06688E003866E9 /* Phonseg16.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705731C06688E003866E9 /* Phonseg16.mp4 */; };
+		46E7058C1C06688E003866E9 /* Phonseg17.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705741C06688E003866E9 /* Phonseg17.mp4 */; };
+		46E7058D1C06688E003866E9 /* Phonseg18.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705751C06688E003866E9 /* Phonseg18.mp4 */; };
+		46E7058E1C06688E003866E9 /* Phonseg19.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705761C06688E003866E9 /* Phonseg19.mp4 */; };
+		46E7058F1C06688E003866E9 /* Phonseg20.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705771C06688E003866E9 /* Phonseg20.mp4 */; };
+		46E705901C06688E003866E9 /* Phonseg21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705781C06688E003866E9 /* Phonseg21.mp4 */; };
+		46E705911C06688E003866E9 /* Phonseg22.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E705791C06688E003866E9 /* Phonseg22.mp4 */; };
+		46E705921C06688E003866E9 /* Phonseg23.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057A1C06688E003866E9 /* Phonseg23.mp4 */; };
+		46E705931C06688E003866E9 /* Phonseg24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057B1C06688E003866E9 /* Phonseg24.mp4 */; };
+		46E705941C06688E003866E9 /* Phonsegfinal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057C1C06688E003866E9 /* Phonsegfinal.mp4 */; };
+		46E705951C06688E003866E9 /* Phonsegintro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057D1C06688E003866E9 /* Phonsegintro.mp4 */; };
 		46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */; };
 		46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */; };
 		46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */; };
@@ -490,6 +516,32 @@
 		46BED1931B6C189C007E8E15 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		46BED1991B6CBC4A007E8E15 /* DataEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryViewController.swift; sourceTree = "<group>"; };
+		46E705621C06571A003866E9 /* SegmentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentationViewController.swift; sourceTree = "<group>"; };
+		46E705641C065F6A003866E9 /* SegmentationTaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentationTaskItem.swift; sourceTree = "<group>"; };
+		46E705661C06688E003866E9 /* Phonseg1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg1.mp4; sourceTree = "<group>"; };
+		46E705671C06688E003866E9 /* Phonseg2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg2.mp4; sourceTree = "<group>"; };
+		46E705681C06688E003866E9 /* Phonseg3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg3.mp4; sourceTree = "<group>"; };
+		46E705691C06688E003866E9 /* Phonseg6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg6.mp4; sourceTree = "<group>"; };
+		46E7056A1C06688E003866E9 /* Phonseg7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg7.mp4; sourceTree = "<group>"; };
+		46E7056B1C06688E003866E9 /* Phonseg8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg8.mp4; sourceTree = "<group>"; };
+		46E7056C1C06688E003866E9 /* Phonseg9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg9.mp4; sourceTree = "<group>"; };
+		46E7056D1C06688E003866E9 /* Phonseg10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg10.mp4; sourceTree = "<group>"; };
+		46E7056E1C06688E003866E9 /* Phonseg11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg11.mp4; sourceTree = "<group>"; };
+		46E7056F1C06688E003866E9 /* Phonseg12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg12.mp4; sourceTree = "<group>"; };
+		46E705701C06688E003866E9 /* Phonseg13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg13.mp4; sourceTree = "<group>"; };
+		46E705711C06688E003866E9 /* Phonseg14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg14.mp4; sourceTree = "<group>"; };
+		46E705721C06688E003866E9 /* Phonseg15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg15.mp4; sourceTree = "<group>"; };
+		46E705731C06688E003866E9 /* Phonseg16.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg16.mp4; sourceTree = "<group>"; };
+		46E705741C06688E003866E9 /* Phonseg17.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg17.mp4; sourceTree = "<group>"; };
+		46E705751C06688E003866E9 /* Phonseg18.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg18.mp4; sourceTree = "<group>"; };
+		46E705761C06688E003866E9 /* Phonseg19.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg19.mp4; sourceTree = "<group>"; };
+		46E705771C06688E003866E9 /* Phonseg20.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg20.mp4; sourceTree = "<group>"; };
+		46E705781C06688E003866E9 /* Phonseg21.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg21.mp4; sourceTree = "<group>"; };
+		46E705791C06688E003866E9 /* Phonseg22.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg22.mp4; sourceTree = "<group>"; };
+		46E7057A1C06688E003866E9 /* Phonseg23.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg23.mp4; sourceTree = "<group>"; };
+		46E7057B1C06688E003866E9 /* Phonseg24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg24.mp4; sourceTree = "<group>"; };
+		46E7057C1C06688E003866E9 /* Phonsegfinal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonsegfinal.mp4; sourceTree = "<group>"; };
+		46E7057D1C06688E003866E9 /* Phonsegintro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonsegintro.mp4; sourceTree = "<group>"; };
 		46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDataLayer.swift; sourceTree = "<group>"; };
 		46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataLayer.swift; sourceTree = "<group>"; };
 		46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
@@ -796,6 +848,30 @@
 				4652EFC11BFE76F70001B9AB /* Phondel36.mp4 */,
 				4652EFC31BFE76F70001B9AB /* Phondelfinal.mp4 */,
 				4652EFC41BFE76F70001B9AB /* Phondelintro.mp4 */,
+				46E705661C06688E003866E9 /* Phonseg1.mp4 */,
+				46E705671C06688E003866E9 /* Phonseg2.mp4 */,
+				46E705681C06688E003866E9 /* Phonseg3.mp4 */,
+				46E705691C06688E003866E9 /* Phonseg6.mp4 */,
+				46E7056A1C06688E003866E9 /* Phonseg7.mp4 */,
+				46E7056B1C06688E003866E9 /* Phonseg8.mp4 */,
+				46E7056C1C06688E003866E9 /* Phonseg9.mp4 */,
+				46E7056D1C06688E003866E9 /* Phonseg10.mp4 */,
+				46E7056E1C06688E003866E9 /* Phonseg11.mp4 */,
+				46E7056F1C06688E003866E9 /* Phonseg12.mp4 */,
+				46E705701C06688E003866E9 /* Phonseg13.mp4 */,
+				46E705711C06688E003866E9 /* Phonseg14.mp4 */,
+				46E705721C06688E003866E9 /* Phonseg15.mp4 */,
+				46E705731C06688E003866E9 /* Phonseg16.mp4 */,
+				46E705741C06688E003866E9 /* Phonseg17.mp4 */,
+				46E705751C06688E003866E9 /* Phonseg18.mp4 */,
+				46E705761C06688E003866E9 /* Phonseg19.mp4 */,
+				46E705771C06688E003866E9 /* Phonseg20.mp4 */,
+				46E705781C06688E003866E9 /* Phonseg21.mp4 */,
+				46E705791C06688E003866E9 /* Phonseg22.mp4 */,
+				46E7057A1C06688E003866E9 /* Phonseg23.mp4 */,
+				46E7057B1C06688E003866E9 /* Phonseg24.mp4 */,
+				46E7057C1C06688E003866E9 /* Phonsegfinal.mp4 */,
+				46E7057D1C06688E003866E9 /* Phonsegintro.mp4 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -813,6 +889,7 @@
 				465B4F2C1B7612070001EA66 /* LetterNameRecognitionViewController.swift */,
 				4621E2591B6E2E1600446739 /* BaseUIViewController.swift */,
 				4652EF781BFA7E6D0001B9AB /* TaskSelectionViewController.swift */,
+				46E705621C06571A003866E9 /* SegmentationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -868,6 +945,7 @@
 				464B04BE1B63F413000312CC /* Queue.swift */,
 				464B05041B6ABBEE000312CC /* TaskFactory.swift */,
 				46F154F61B6D5D2000C203F6 /* TaskResult.swift */,
+				46E705641C065F6A003866E9 /* SegmentationTaskItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -961,6 +1039,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4652EFC91BFE76F70001B9AB /* Phondel5.mp4 in Resources */,
+				46E7058E1C06688E003866E9 /* Phonseg19.mp4 in Resources */,
+				46E7058F1C06688E003866E9 /* Phonseg20.mp4 in Resources */,
 				46B8B1791B794A8700D74B15 /* RhymeBall.mp4 in Resources */,
 				46B8B1721B7947EC00D74B15 /* RhymeCatHat.mp4 in Resources */,
 				4652EFCA1BFE76F70001B9AB /* Phondel6.mp4 in Resources */,
@@ -974,6 +1054,7 @@
 				460506041B7633960053EB1C /* LSRec22.mp4 in Resources */,
 				460506021B7633960053EB1C /* LSRec20.mp4 in Resources */,
 				4652EFDF1BFE76F70001B9AB /* Phondel27.mp4 in Resources */,
+				46E7058C1C06688E003866E9 /* Phonseg17.mp4 in Resources */,
 				460506001B7633960053EB1C /* LSRec18.mp4 in Resources */,
 				460505FA1B7633960053EB1C /* LSRec12.mp4 in Resources */,
 				46B8B1671B775D0B00D74B15 /* Comp2.mp4 in Resources */,
@@ -983,7 +1064,9 @@
 				465B4F171B7604940001EA66 /* LNRec5.mp4 in Resources */,
 				465B4F251B7604940001EA66 /* LNRec20.mp4 in Resources */,
 				4652EFC61BFE76F70001B9AB /* Phondel2.mp4 in Resources */,
+				46E7058B1C06688E003866E9 /* Phonseg16.mp4 in Resources */,
 				464B05031B6ABB18000312CC /* FinalPhonemeIntro.mp4 in Resources */,
+				46E705941C06688E003866E9 /* Phonsegfinal.mp4 in Resources */,
 				465B4F211B7604940001EA66 /* LNRec15.mp4 in Resources */,
 				4652EFE31BFE76F70001B9AB /* Phondel31.mp4 in Resources */,
 				46B8B1581B76812300D74B15 /* Rhyme7.mp4 in Resources */,
@@ -992,7 +1075,9 @@
 				4652EFEA1BFE76F70001B9AB /* Phondelfinal.mp4 in Resources */,
 				4652EFCB1BFE76F70001B9AB /* Phondel7.mp4 in Resources */,
 				465742551B617B8400FE3E58 /* Fam1.mp4 in Resources */,
+				46E705911C06688E003866E9 /* Phonseg22.mp4 in Resources */,
 				464B04FA1B6ABB18000312CC /* FinalPhoneme6.mp4 in Resources */,
+				46E7058A1C06688E003866E9 /* Phonseg15.mp4 in Resources */,
 				460505F81B7633960053EB1C /* LSRec10.mp4 in Resources */,
 				464B04F71B6ABB18000312CC /* FinalPhoneme3.mp4 in Resources */,
 				460506011B7633960053EB1C /* LSRec19.mp4 in Resources */,
@@ -1014,6 +1099,7 @@
 				465B4F141B7604940001EA66 /* LNRec2.mp4 in Resources */,
 				4652EFDE1BFE76F70001B9AB /* Phondel26.mp4 in Resources */,
 				46B8B16A1B775D0B00D74B15 /* Comp5.mp4 in Resources */,
+				46E705951C06688E003866E9 /* Phonsegintro.mp4 in Resources */,
 				4605061F1B765B190053EB1C /* WordRead9.mp4 in Resources */,
 				464B04B51B63BC39000312CC /* Rhyme6.mp4 in Resources */,
 				460506191B765B190053EB1C /* WordRead3.mp4 in Resources */,
@@ -1025,16 +1111,19 @@
 				464B04D31B642783000312CC /* InitialPhoneme3.mp4 in Resources */,
 				464B04F61B6ABB18000312CC /* FinalPhoneme2.mp4 in Resources */,
 				464B04DF1B642783000312CC /* InitialPhonemeIntro.mp4 in Resources */,
+				46E705881C06688E003866E9 /* Phonseg13.mp4 in Resources */,
 				4652EFE81BFE76F70001B9AB /* Phondel36.mp4 in Resources */,
 				4652EFE51BFE76F70001B9AB /* Phondel33.mp4 in Resources */,
 				4652EFD51BFE76F70001B9AB /* Phondel17.mp4 in Resources */,
 				4652EFE61BFE76F70001B9AB /* Phondel34.mp4 in Resources */,
 				4652EF951BFD1C010001B9AB /* Phonblend10.mp4 in Resources */,
 				460506061B7633960053EB1C /* LSRecIntro.mp4 in Resources */,
+				46E7058D1C06688E003866E9 /* Phonseg18.mp4 in Resources */,
 				4605061A1B765B190053EB1C /* WordRead4.mp4 in Resources */,
 				460506261B765B190053EB1C /* WordReadIntro.mp4 in Resources */,
 				465742581B617B8A00FE3E58 /* Fam4.mp4 in Resources */,
 				4605061C1B765B190053EB1C /* WordRead6.mp4 in Resources */,
+				46E7057E1C06688E003866E9 /* Phonseg1.mp4 in Resources */,
 				465B4F231B7604940001EA66 /* LNRec17.mp4 in Resources */,
 				460505FB1B7633960053EB1C /* LSRec13.mp4 in Resources */,
 				460505F61B7633960053EB1C /* LSRec8.mp4 in Resources */,
@@ -1055,6 +1144,7 @@
 				4652EFC81BFE76F70001B9AB /* Phondel4.mp4 in Resources */,
 				465B4F1E1B7604940001EA66 /* LNRec12.mp4 in Resources */,
 				464B04DD1B642783000312CC /* InitialPhoneme13.mp4 in Resources */,
+				46E705841C06688E003866E9 /* Phonseg9.mp4 in Resources */,
 				464B04D21B642783000312CC /* InitialPhoneme2.mp4 in Resources */,
 				46B8B14D1B7680A100D74B15 /* InitPhonEnding.mp4 in Resources */,
 				4657425C1B617B8A00FE3E58 /* FamIntro.mp4 in Resources */,
@@ -1074,8 +1164,10 @@
 				46B8B15B1B76812300D74B15 /* Rhyme13.mp4 in Resources */,
 				46B8B15D1B76814100D74B15 /* RhymeEnding.mp4 in Resources */,
 				465B4F131B7604940001EA66 /* LNRec1.mp4 in Resources */,
+				46E705891C06688E003866E9 /* Phonseg14.mp4 in Resources */,
 				460505F11B7633960053EB1C /* LSRec3.mp4 in Resources */,
 				46B8B15F1B76989900D74B15 /* FamiliarisationError.mp4 in Resources */,
+				46E7057F1C06688E003866E9 /* Phonseg2.mp4 in Resources */,
 				4652EFC71BFE76F70001B9AB /* Phondel3.mp4 in Resources */,
 				46B8B1431B767F2D00D74B15 /* FinalPhonEnding.mp4 in Resources */,
 				46B8B17A1B794A8700D74B15 /* RhymeFishDish.mp4 in Resources */,
@@ -1093,8 +1185,10 @@
 				4652EFDC1BFE76F70001B9AB /* Phondel24.mp4 in Resources */,
 				464B04D11B642783000312CC /* InitialPhoneme1.mp4 in Resources */,
 				464B04F81B6ABB18000312CC /* FinalPhoneme4.mp4 in Resources */,
+				46E705831C06688E003866E9 /* Phonseg8.mp4 in Resources */,
 				4652EF901BFD1C010001B9AB /* Phonblend5.mp4 in Resources */,
 				4657422C1B616ADD00FE3E58 /* Main.storyboard in Resources */,
+				46E705901C06688E003866E9 /* Phonseg21.mp4 in Resources */,
 				46B8B1571B76812300D74B15 /* Rhyme5.mp4 in Resources */,
 				465B4F201B7604940001EA66 /* LNRec14.mp4 in Resources */,
 				465B4F181B7604940001EA66 /* LNRec6.mp4 in Resources */,
@@ -1106,6 +1200,7 @@
 				460505FD1B7633960053EB1C /* LSRec15.mp4 in Resources */,
 				4652EFCC1BFE76F70001B9AB /* Phondel8.mp4 in Resources */,
 				4652EFE01BFE76F70001B9AB /* Phondel28.mp4 in Resources */,
+				46E705921C06688E003866E9 /* Phonseg23.mp4 in Resources */,
 				464B04BB1B63BC39000312CC /* Rhyme12.mp4 in Resources */,
 				465B4F1C1B7604940001EA66 /* LNRec10.mp4 in Resources */,
 				460506231B765B190053EB1C /* WordRead13.mp4 in Resources */,
@@ -1119,20 +1214,25 @@
 				460506201B765B190053EB1C /* WordRead10.mp4 in Resources */,
 				46B8B1451B767FEF00D74B15 /* FinalPhoneme9.mp4 in Resources */,
 				4652EF991BFD1C010001B9AB /* Phonblend14.mp4 in Resources */,
+				46E705931C06688E003866E9 /* Phonseg24.mp4 in Resources */,
 				4652EF8C1BFD1C010001B9AB /* Phonblend1.mp4 in Resources */,
 				4652EFD41BFE76F70001B9AB /* Phondel16.mp4 in Resources */,
 				464B04DE1B642783000312CC /* InitialPhoneme14.mp4 in Resources */,
 				46B8B1491B76806500D74B15 /* InitialPhoneme12.mp4 in Resources */,
+				46E705851C06688E003866E9 /* Phonseg10.mp4 in Resources */,
 				4652EF921BFD1C010001B9AB /* Phonblend7.mp4 in Resources */,
 				464B04D51B642783000312CC /* InitialPhoneme5.mp4 in Resources */,
 				464B05021B6ABB18000312CC /* FinalPhoneme14.mp4 in Resources */,
 				4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */,
 				460505F91B7633960053EB1C /* LSRec11.mp4 in Resources */,
 				4652EF9D1BFD1C010001B9AB /* Phonblendintro.mp4 in Resources */,
+				46E705811C06688E003866E9 /* Phonseg6.mp4 in Resources */,
 				465742311B616ADD00FE3E58 /* LaunchScreen.xib in Resources */,
 				4657422E1B616ADD00FE3E58 /* Images.xcassets in Resources */,
 				46B8B1591B76812300D74B15 /* Rhyme9.mp4 in Resources */,
+				46E705801C06688E003866E9 /* Phonseg3.mp4 in Resources */,
 				4652EF971BFD1C010001B9AB /* Phonblend12.mp4 in Resources */,
+				46E705861C06688E003866E9 /* Phonseg11.mp4 in Resources */,
 				4652EF9A1BFD1C010001B9AB /* Phonblend15.mp4 in Resources */,
 				465742561B617B8600FE3E58 /* Fam2.mp4 in Resources */,
 				4652EF9C1BFD1C010001B9AB /* Phonblendfinal.mp4 in Resources */,
@@ -1144,8 +1244,10 @@
 				46B8B17E1B794ACF00D74B15 /* RhymePig.mp4 in Resources */,
 				46B8B14B1B76809400D74B15 /* InitialPhoneme10.mp4 in Resources */,
 				4652EF8D1BFD1C010001B9AB /* Phonblend2.mp4 in Resources */,
+				46E705821C06688E003866E9 /* Phonseg7.mp4 in Resources */,
 				4652EFD11BFE76F70001B9AB /* Phondel13.mp4 in Resources */,
 				4652EFE21BFE76F70001B9AB /* Phondel30.mp4 in Resources */,
+				46E705871C06688E003866E9 /* Phonseg12.mp4 in Resources */,
 				465B4F271B7604940001EA66 /* LNRec22.mp4 in Resources */,
 				4652EFDB1BFE76F70001B9AB /* Phondel23.mp4 in Resources */,
 				460505EF1B7633960053EB1C /* LSRec1.mp4 in Resources */,
@@ -1191,6 +1293,8 @@
 				465B4F321B7615460001EA66 /* CustomLetterCell.swift in Sources */,
 				46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */,
 				464B04E51B64347B000312CC /* TaskViewController.swift in Sources */,
+				46E705631C06571A003866E9 /* SegmentationViewController.swift in Sources */,
+				46E705651C065F6A003866E9 /* SegmentationTaskItem.swift in Sources */,
 				46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */,
 				4652EF771BFA7CAB0001B9AB /* TaskSelectionTableViewCell.swift in Sources */,
 				465742521B6170D000FE3E58 /* CustomImageCell.swift in Sources */,

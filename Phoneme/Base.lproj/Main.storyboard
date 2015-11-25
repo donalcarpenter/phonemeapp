@@ -658,7 +658,7 @@
                                 <rect key="frame" x="820" y="734" width="127" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -994,6 +994,91 @@
             </objects>
             <point key="canvasLocation" x="3628" y="1187"/>
         </scene>
+        <!--Segmentation View Controller-->
+        <scene sceneID="WMb-cl-X2B">
+            <objects>
+                <viewController id="sUd-ck-0DP" customClass="SegmentationViewController" customModule="Phoneme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GRU-Bi-YNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bdx-Kl-Nls"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bGu-es-bMd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-2s-v11">
+                                <rect key="frame" x="980" y="724" width="24" height="24"/>
+                                <animations/>
+                                <state key="normal" image="repeat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="replayCurrentAudio:" destination="2L1-px-jYX" eventType="touchUpInside" id="PCh-0X-Oky"/>
+                                    <action selector="replayCurrentAudio:" destination="sUd-ck-0DP" eventType="touchUpInside" id="z8B-zN-1MX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-gi-PIl">
+                                <rect key="frame" x="288" y="28" width="449" height="460"/>
+                                <animations/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rj7-SD-Lvg">
+                                <rect key="frame" x="20" y="529" width="984" height="128"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vYV-yU-ChA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cPT-mV-gjv" customClass="CustomImageCell" customModule="Phoneme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xav-Ed-XkX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xav-Ed-XkX" secondAttribute="bottom" constant="-8" id="2X0-rW-1xQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="xav-Ed-XkX" secondAttribute="trailing" id="7dv-ph-Uop"/>
+                                            <constraint firstItem="xav-Ed-XkX" firstAttribute="top" secondItem="cPT-mV-gjv" secondAttribute="top" id="bkA-r6-YAU"/>
+                                            <constraint firstItem="xav-Ed-XkX" firstAttribute="leading" secondItem="cPT-mV-gjv" secondAttribute="leading" id="csz-LL-qtm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="xav-Ed-XkX" id="cKM-Va-Cmt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="sUd-ck-0DP" id="5Ou-KB-SOB"/>
+                                    <outlet property="delegate" destination="sUd-ck-0DP" id="dpK-fy-xUQ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Rj7-SD-Lvg" id="PID-PP-eQF"/>
+                        <outlet property="replayButton" destination="AXW-2s-v11" id="3C7-1O-ZLh"/>
+                        <outlet property="topImage" destination="dA5-gi-PIl" id="AWY-7p-inW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gs2-J0-KXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3628" y="2955"/>
+        </scene>
         <!--Word Reading Task View Controller-->
         <scene sceneID="hnI-Bm-pz0">
             <objects>
@@ -1107,7 +1192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Drx-he-D8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3628" y="2049"/>
+            <point key="canvasLocation" x="3628" y="2019"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fne-do-96O">
