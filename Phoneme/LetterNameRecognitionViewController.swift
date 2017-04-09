@@ -14,7 +14,7 @@ class LetterNameRecognitionViewController: TaskViewController {
         super.collectionView.reloadData()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         rows = 2
         
@@ -22,7 +22,7 @@ class LetterNameRecognitionViewController: TaskViewController {
         
     }
     
-    override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
+    override func setTaskItemOptionView(_ view: UIView, task: TaskItem, index: Int) {
         if let lbl = view as? UILabel
         {
             lbl.text = task.images[index]
@@ -30,7 +30,7 @@ class LetterNameRecognitionViewController: TaskViewController {
         }
     }
     
-    override func itemWasSelected(view: UIView, task: TaskItem, index: Int) {
+    override func itemWasSelected(_ view: UIView, task: TaskItem, index: Int) {
         if let _ = view as? UILabel
         {
             //lbl.textColor = UIColor.greenColor()

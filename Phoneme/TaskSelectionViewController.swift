@@ -38,37 +38,37 @@ class TaskSelectionViewController: BaseUIViewController, UITableViewDataSource, 
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         repopulateTableView()
     }
     
     
-    @IBAction func back(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func back(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("taskbutton")!;
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskbutton")!;
         let title = tasksDatasource[indexPath.row].taskTitle
         cell.textLabel?.text = title;
         
         if(shouldIndexPathBeSelectable(indexPath)){
-            cell.selectionStyle = .Default
-            cell.textLabel?.enabled = true;
+            cell.selectionStyle = .default
+            cell.textLabel?.isEnabled = true;
         }else{
-            cell.selectionStyle = .Gray
-            cell.textLabel?.enabled = false;
+            cell.selectionStyle = .gray
+            cell.textLabel?.isEnabled = false;
         }
         
         return cell
     }
     
-    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         
         return shouldIndexPathBeSelectable(indexPath) ? indexPath : nil;
     }
     
-    func shouldIndexPathBeSelectable(indexPath: NSIndexPath) -> Bool{
+    func shouldIndexPathBeSelectable(_ indexPath: IndexPath) -> Bool{
         let title = tasksDatasource[indexPath.row].taskTitle
         if(self.delegate.selectedStudent.results.contains(taskKeyFromTitle(title))){
             return false;
@@ -81,26 +81,26 @@ class TaskSelectionViewController: BaseUIViewController, UITableViewDataSource, 
         return true
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.task = tasksDatasource[indexPath.row];
         
         let segue = self.configuredSegues[task.taskTitle]!
         
-        performSegueWithIdentifier(segue, sender: tableView)
+        performSegue(withIdentifier: segue, sender: tableView)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasksDatasource.count
     }
 
-    func uploadResults(results: [TaskResultRawItem]){
+    func uploadResults(_ results: [TaskResultRawItem]){
         
         var correct = 0;
         
         for t in results{
             if t.correctAnswer == t.givenAnswer{
-                correct++
+                correct += 1
             }
         }
         
@@ -147,27 +147,27 @@ class TaskSelectionViewController: BaseUIViewController, UITableViewDataSource, 
         self.tasks.reloadData()
     }
     
-    func addTaskToDatasourceIfNotCompleted(t: Task){
+    func addTaskToDatasourceIfNotCompleted(_ t: Task){
         
         let key = taskKeyFromTitle(t.taskTitle)
         
-        if(!showCompleted.on && delegate.selectedStudent.results.contains(key)){
+        if(!showCompleted.isOn && delegate.selectedStudent.results.contains(key)){
            return
         }
         
         tasksDatasource.append(t)
     }
     
-    @IBAction func showCompletedChanged(sender: AnyObject) {
+    @IBAction func showCompletedChanged(_ sender: AnyObject) {
         repopulateTableView()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let dest = segue.destinationViewController as! TaskViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! TaskViewController
         dest.delegate = self;
     }
     
-    func taskKeyFromTitle(title: String) -> String{
-        return title.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil);
+    func taskKeyFromTitle(_ title: String) -> String{
+        return title.replacingOccurrences(of: " ", with: "_", options: NSString.CompareOptions.literal, range: nil);
     }
 }

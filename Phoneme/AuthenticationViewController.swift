@@ -20,47 +20,47 @@ class AuthenticationViewController: BaseUIViewController {
     @IBOutlet weak var successMessage: UILabel!
     
     override func viewDidLoad() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleButtonsEnableState", name: UITextFieldTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: "handleButtonsEnableState", name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         
         handleButtonsEnableState()
         
-        if(PFUser.currentUser() != nil){
-            self.performSegueWithIdentifier("dataentry", sender: self)
+        if(PFUser.current() != nil){
+            self.performSegue(withIdentifier: "dataentry", sender: self)
         }
     }
     
     func handleButtonsEnableState(){
         let enabled:Bool = !(email.text!.isEmpty || password.text!.isEmpty)
         
-        loginButton.enabled = enabled
-        signUpButton.enabled = enabled
+        loginButton.isEnabled = enabled
+        signUpButton.isEnabled = enabled
         
-        forgotPAssword.enabled = !email.text!.isEmpty
+        forgotPAssword.isEnabled = !email.text!.isEmpty
     }
     
-    func isValidEmail(testStr:String) -> Bool {
+    func isValidEmail(_ testStr:String) -> Bool {
     // println("validate calendar: \(testStr)")
         let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(testStr)
+        return emailTest.evaluate(with: testStr)
     }
     
-    @IBAction func loginUser(sender: UIButton) {
+    @IBAction func loginUser(_ sender: UIButton) {
         
         if(!isValidEmail(email.text!)){
-            showErrorMessage("\(email.text) is not a valid email address", userError: true)
+            showErrorMessage("\(String(describing: email.text)) is not a valid email address", userError: true)
             return
         }
         
-        PFUser.logInWithUsernameInBackground(email.text!, password: password.text!) { (user:PFUser?, error:NSError?) -> Void in
+        PFUser.logInWithUsername(inBackground: email.text!, password: password.text!) { (user, error) -> Void in
         
             if((user) != nil){
                 
                 if let approved: Bool = user!["approved"] as? Bool{
                     if(approved){
                         self.password.text = ""
-                        self.performSegueWithIdentifier("dataentry", sender: self)
+                        self.performSegue(withIdentifier: "dataentry", sender: self)
                         return;
                     }
                 }
@@ -78,7 +78,7 @@ class AuthenticationViewController: BaseUIViewController {
         }
     }
     
-    @IBAction func signUpUser(sender: UIButton) {
+    @IBAction func signUpUser(_ sender: UIButton) {
         
         if(!isValidEmail(email.text!)){
             showErrorMessage("\(email.text) is not a valid email address", userError: true)
@@ -91,14 +91,14 @@ class AuthenticationViewController: BaseUIViewController {
         user.password = password.text
         user["approved"] = false
         
-        user.signUpInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
+        user.signUpInBackground { (success, error) -> Void in
             if(success){
                 
-                self.signUpButton.enabled = false
+                self.signUpButton.isEnabled = false
                 
                 self.successMessage.text = "Your registration was successful, however it must be approved before you an sign in"
                 
-                self.successMessage.hidden = false
+                self.successMessage.isHidden = false
                 
                 PFUser.logOut()
             }
@@ -115,17 +115,17 @@ class AuthenticationViewController: BaseUIViewController {
         
     }
     
-    @IBAction func userForgotPassword(sender: AnyObject) {
+    @IBAction func userForgotPassword(_ sender: AnyObject) {
         if(!isValidEmail(email.text!)){
-            showErrorMessage("\(email.text) is not a valid email address", userError: true)
+            showErrorMessage("\(email.text) is not a valid email address",  userError: true)
             return
         }
         
-        PFUser.requestPasswordResetForEmailInBackground(email.text!, block: { (success:Bool, err:NSError?) -> Void in
+        PFUser.requestPasswordResetForEmail(inBackground: email.text!, block: { (success, err) -> Void in
             if(success){
                 self.successMessage.text = "Please check your email, you shuld receive instructions on how to reset your password"
                 
-                self.successMessage.hidden = false
+                self.successMessage.isHidden = false
             }
             else
             {
@@ -140,6 +140,6 @@ class AuthenticationViewController: BaseUIViewController {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }

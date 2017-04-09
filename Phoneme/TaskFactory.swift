@@ -19,7 +19,7 @@ class TaskFactory: NSObject {
             TaskItem(audio:"Fam5", images:["fly", "bee", "snake"], cascade: [2,3,5], correctImage:"bee"),
             TaskItem(audio:"Fam6", images:["cow", "pig", "fish"], cascade: [2, 3, 4], correctImage:"fish")])
     
-    static let rhymeOddittyTask = Task(intro: "RhymeIntro", outro: "RhymeEnding", title: "Rhyme Odditty", items:
+    static let rhymeOddittyTask = Task(intro: "RhymeIntro", outro: "RhymeEnding", title: "Rhyme Oddity", items:
             [TaskItem(audio: "RhymeCatHat", images:["cat", "hat"], cascade: [0,0], correctImage:"cat", requireResponse:false),
             TaskItem(audio: "RhymeBoatGoat", images:["boat", "goat"], cascade: [0,0], correctImage:"cat", requireResponse:false),
                 TaskItem(audio:"RhymeFishDish", outro:"RhymeBall", images: ["fish", "dish", "ball"], cascade: [6, 7, 9], correctImage:"ball", requireResponse:false),

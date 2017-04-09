@@ -38,11 +38,11 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         let bgimgOw = UIImageView(frame: self.view.frame)
         bgimgOw.image = bgimgO
         
-        self.view.insertSubview(bgimgOw, atIndex: 1)
+        self.view.insertSubview(bgimgOw, at: 1)
         
-        UIView.animateWithDuration(1.5){
+        UIView.animate(withDuration: 1.5, animations: {
             bgimgOw.alpha = 0
-        }
+        })
         
         setEnableStateOnNonFamiliarisationButtons(true)
         
@@ -51,30 +51,30 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         }
     }
     
-    func setEnableStateOnNonFamiliarisationButtons(enabled:Bool){
-        rhymeOddityButton.enabled = enabled
-        initialPhonemeButton.enabled = enabled
-        finalPhonemeButton.enabled = enabled
-        letterNameRecogButton.enabled = enabled
-        letterSoundButton.enabled = enabled
-        singleWordButton.enabled = enabled
+    func setEnableStateOnNonFamiliarisationButtons(_ enabled:Bool){
+        rhymeOddityButton.isEnabled = enabled
+        initialPhonemeButton.isEnabled = enabled
+        finalPhonemeButton.isEnabled = enabled
+        letterNameRecogButton.isEnabled = enabled
+        letterSoundButton.isEnabled = enabled
+        singleWordButton.isEnabled = enabled
     }
     
-    @IBAction func returnToDataView(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+    @IBAction func returnToDataView(_ sender: AnyObject) {
+        self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func trackSelectedButton(sender: UIButton) {
+    @IBAction func trackSelectedButton(_ sender: UIButton) {
         selectedButton = sender
     }
 
-    func uploadResults(results: [TaskResultRawItem]){
+    func uploadResults(_ results: [TaskResultRawItem]){
         
         var correct = 0;
         
         for t in results{
             if t.correctAnswer == t.givenAnswer{
-                correct++
+                correct+=1
             }
         }
 
@@ -97,25 +97,25 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
                             let audioManager = AudioManager()
                             audioManager.playAudioFrom("FamiliarisationError")
                             
-                            self.FamiliarisationButton.enabled = true;
+                            self.FamiliarisationButton.isEnabled = true;
                             self.setEnableStateOnNonFamiliarisationButtons(false)
                             
                         }else{
                             
                             self.setEnableStateOnNonFamiliarisationButtons(true)
-                            self.FamiliarisationButton.enabled = false;
+                            self.FamiliarisationButton.isEnabled = false;
                             
-                            self.outstandingTasks--;
+                            self.outstandingTasks-=1;
                         }
                     }
                     else
                     {
                         if let buttonToDisable = self.selectedButton
                         {
-                            buttonToDisable.enabled = false
+                            buttonToDisable.isEnabled = false
                         }
                         
-                        self.outstandingTasks--;
+                        self.outstandingTasks-=1;
                     }
                     
                     /*
@@ -139,9 +139,9 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "familiarization"){
-            let dest = segue.destinationViewController as! SingleRowImageTask
+            let dest = segue.destination as! SingleRowImageTask
             self.task = TaskFactory.familiarisation;
             dest.delegate = self;
             
@@ -149,7 +149,7 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         }
         
         if(segue.identifier == "rhymeoddity"){
-            let dest = segue.destinationViewController as! SingleRowImageTask
+            let dest = segue.destination as! SingleRowImageTask
             self.task = TaskFactory.rhymeOddittyTask;
             dest.delegate = self;
             
@@ -157,35 +157,35 @@ class ViewController: BaseUIViewController, ImageCollectionViewControllerDelegat
         }
         
         if(segue.identifier == "initialphoneme"){
-            let dest = segue.destinationViewController as! InitialPhonemeViewController
+            let dest = segue.destination as! InitialPhonemeViewController
             self.task = TaskFactory.initialPhonemeTask
             dest.delegate = self
             return
         }
         
         if(segue.identifier == "finalphoneme"){
-            let dest = segue.destinationViewController as! SingleRowImageTask
+            let dest = segue.destination as! SingleRowImageTask
             self.task = TaskFactory.finalPhonemeTask
             dest.delegate = self
             return
         }
         
         if(segue.identifier == "lettername"){
-            let dest = segue.destinationViewController as! LetterNameRecognitionViewController
+            let dest = segue.destination as! LetterNameRecognitionViewController
             self.task = TaskFactory.letterNameTask
             dest.delegate = self
             return
         }
         
         if(segue.identifier == "lettersound"){
-            let dest = segue.destinationViewController as! LetterNameRecognitionViewController
+            let dest = segue.destination as! LetterNameRecognitionViewController
             self.task = TaskFactory.letterSoundTask
             dest.delegate = self
             return
         }
         
         if(segue.identifier == "singleword"){
-            let dest = segue.destinationViewController as! WordReadingTaskViewController
+            let dest = segue.destination as! WordReadingTaskViewController
             self.task = TaskFactory.singleWordTask
             dest.delegate = self
             return

@@ -76,47 +76,47 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         disableContainerView(classContainer)
         setContainerStateAction(schoolContainer)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleButtonEnabledStates", name: UITextFieldTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: "handleButtonEnabledStates", name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         
         handleButtonEnabledStates()
 
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
-    @IBAction func logoutUser(sender: AnyObject) {
+    @IBAction func logoutUser(_ sender: AnyObject) {
         PFUser.logOut()
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func setupTableRefreshers(){
         let schoolsRefresher = UIRefreshControl()
-        schoolsRefresher.addTarget(self, action: "refreshSchools:", forControlEvents: .ValueChanged)
+        schoolsRefresher.addTarget(self, action: "refreshSchools:", for: .valueChanged)
         schoolsTableView.addSubview(schoolsRefresher)
         
         let classesRefresher = UIRefreshControl()
-        classesRefresher.addTarget(self, action: "refreshClasses:", forControlEvents: .ValueChanged)
+        classesRefresher.addTarget(self, action: "refreshClasses:", for: .valueChanged)
         classesTableView.addSubview(classesRefresher)
         
         let studentsRefresher = UIRefreshControl()
-        studentsRefresher.addTarget(self, action: "refreshStudents:", forControlEvents: .ValueChanged)
+        studentsRefresher.addTarget(self, action: "refreshStudents:", for: .valueChanged)
         studentsTableview.addSubview(studentsRefresher)
     }
     
-    func refreshSchools(refreshControl: UIRefreshControl){
+    func refreshSchools(_ refreshControl: UIRefreshControl){
         schoolsData?.reloadSchools()
         refreshControl.endRefreshing()
     }
     
-    func refreshClasses(refreshControl: UIRefreshControl){
+    func refreshClasses(_ refreshControl: UIRefreshControl){
         let schoolId: String = self.selectedSchool!.objectId
         classesData?.reloadClassesForSchool(schoolId)
         refreshControl.endRefreshing()
     }
     
-    func refreshStudents(refreshControl: UIRefreshControl){
+    func refreshStudents(_ refreshControl: UIRefreshControl){
         refreshStudentState()
         refreshControl.endRefreshing()
     }
@@ -130,25 +130,25 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         studentsData!.reloadStudentsForClass(classId)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         schoolsData?.reloadSchools()
     }
     
-    @IBAction func dismissKeyboardEndOnExit(sender: UITextField) {
+    @IBAction func dismissKeyboardEndOnExit(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
     
-    @IBAction func dismissKeyboard(sender: UITextField) {
+    @IBAction func dismissKeyboard(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
-        super.touchesBegan(touches, withEvent: event)
+        super.touchesBegan(touches, with: event)
     }
     
-    @IBAction func saveNewSchool(sender: UIButton) {
+    @IBAction func saveNewSchool(_ sender: UIButton) {
         let name = newSchoolName.text
         
         SchoolsDataLayer.saveNewSchool(name!) { (success, error) -> Void in
@@ -166,7 +166,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
     }
     
 
-    @IBAction func saveNewClass(sender: AnyObject) {
+    @IBAction func saveNewClass(_ sender: AnyObject) {
         let schoolId = self.selectedSchool!.objectId
         let className = newClassName.text
         let teacherName = addTeacherName.text
@@ -186,11 +186,11 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         }
     }
 
-    @IBAction func saveStudent(sender: AnyObject) {
+    @IBAction func saveStudent(_ sender: AnyObject) {
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
-        let date = dateFormatter.stringFromDate(studentDateOfBirth.date)
+        let date = dateFormatter.string(from: studentDateOfBirth.date)
         
         let student = StudentDataLayer.new(self.selectedClass!.objectId, identifier: self.studentIdentifier.text!, dateOfBirth: date, gender: studentGender.selectedSegmentIndex == 0 ? "M" : "F")
         
@@ -206,54 +206,54 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
         }
     }
     
-    func disableContainerView(container: UIView){
-        container.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+    func disableContainerView(_ container: UIView){
+        container.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         container.layer.borderWidth = 0;
         for object in container.subviews{
                 let view = object 
-            view.userInteractionEnabled = false
+            view.isUserInteractionEnabled = false
             view.alpha = 0.4
         }
     }
     
-    func setContainerStateAction(container: UIView){
-        container.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+    func setContainerStateAction(_ container: UIView){
+        container.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         container.alpha = 1
         container.layer.borderWidth = 2
-        container.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor
+        container.layer.borderColor = UIColor.black.withAlphaComponent(0.8).cgColor
         for object in container.subviews{
             let view = object 
-            view.userInteractionEnabled = true
+            view.isUserInteractionEnabled = true
             view.alpha = 1
         }
     }
     
-    func setContainerViewComplete(container: UIView){
-        container.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
+    func setContainerViewComplete(_ container: UIView){
+        container.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         container.layer.borderWidth = 1
         container.alpha = 1
-        container.layer.borderColor = UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor
+        container.layer.borderColor = UIColor.black.withAlphaComponent(0.8).cgColor
         for object in container.subviews{
             let view = object 
-            view.userInteractionEnabled = true
+            view.isUserInteractionEnabled = true
             view.alpha = 0.8
         }
     }
     
-    @IBAction func genderChanged(sender: UISegmentedControl) {
-            startTasksForStudent.enabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
+    @IBAction func genderChanged(_ sender: UISegmentedControl) {
+            startTasksForStudent.isEnabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
     }
     
     func handleButtonEnabledStates(){
-        addNewSchool.enabled = !newSchoolName.text!.isEmpty
-        addNewClass.enabled = !(newClassName.text!.isEmpty || addTeacherName.text!.isEmpty)
-        startTasksForStudent.enabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
+        addNewSchool.isEnabled = !newSchoolName.text!.isEmpty
+        addNewClass.isEnabled = !(newClassName.text!.isEmpty || addTeacherName.text!.isEmpty)
+        startTasksForStudent.isEnabled = (!studentIdentifier.text!.isEmpty && studentGender.selectedSegmentIndex > -1)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "taskSelection")
         {
-            if let dest = segue.destinationViewController as? TaskSelectionViewController {
+            if let dest = segue.destination as? TaskSelectionViewController {
                 dest.delegate = self
             }
         }
@@ -278,19 +278,19 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             }
         }
         
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return parent.schools?.count ?? 0
         }
         
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
             cell.textLabel?.text = parent.schools?[indexPath.row].schoolName
-            cell.backgroundColor = UIColor.blackColor().colorWithAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
+            cell.backgroundColor = UIColor.black.withAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
             
             return cell
         }
         
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             parent.selectedSchool = parent.schools![indexPath.row]
             parent.classesData?.reloadClassesForSchool(parent.selectedSchool!.objectId)
             
@@ -307,7 +307,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             self.parent = parent
         }
         
-        func reloadClassesForSchool(schoolId: String?){
+        func reloadClassesForSchool(_ schoolId: String?){
             
             if(schoolId == nil || schoolId!.isEmpty){
                 return
@@ -324,21 +324,21 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             }
         }
         
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return parent.classes?.count ?? 0
         }
         
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
             cell.textLabel?.text = parent.classes![indexPath.row].className
             cell.detailTextLabel?.text = parent.classes![indexPath.row].teacherName
             
-            cell.backgroundColor = UIColor.blackColor().colorWithAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
+            cell.backgroundColor = UIColor.black.withAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
             
             return cell
         }
         
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             parent.selectedClass = parent.classes![indexPath.row]
             
             parent.setContainerStateAction(parent.studentContainer)
@@ -356,7 +356,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             self.parent = parent
         }
         
-        func reloadStudentsForClass(classId: String?){
+        func reloadStudentsForClass(_ classId: String?){
             if(classId == nil || classId!.isEmpty){
                 return;
             }
@@ -372,12 +372,12 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             })
         }
         
-        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return parent.students?.count ?? 0
         }
         
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! StudentDataTableViewCell
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! StudentDataTableViewCell
             let student = parent.students![indexPath.row];
             
             cell.identifierLabel.text = student.identifier
@@ -386,7 +386,7 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             cell.isCompletedLabel.text = student.isCompleted ? "Complete" : "Pending"
             
             
-            let color =  (!student.isCompleted) ? UIColor.whiteColor() : UIColor.lightGrayColor()
+            let color =  (!student.isCompleted) ? UIColor.white : UIColor.lightGray
             
             cell.identifierLabel.textColor = color
             cell.dateOfBirthLabel.textColor = color
@@ -394,24 +394,24 @@ class DataEntryViewController: BaseUIViewController, TaskSelectorViewControllerD
             cell.isCompletedLabel.textColor = color
             
             if(student.isCompleted){
-                cell.selectionStyle = UITableViewCellSelectionStyle.None
-                cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.selectionStyle = UITableViewCellSelectionStyle.none
+                cell.accessoryType = UITableViewCellAccessoryType.none
             }else{
-                cell.selectionStyle = UITableViewCellSelectionStyle.Gray
-                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                cell.selectionStyle = UITableViewCellSelectionStyle.gray
+                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             
-            cell.backgroundColor = UIColor.blackColor().colorWithAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
+            cell.backgroundColor = UIColor.black.withAlphaComponent((indexPath.row % 2 == 0) ? 0.4 : 0.28)
             
             return cell
         }
         
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             self.parent.selectedStudent = parent.students![indexPath.row];
             
             self.parent.selectedStudent.loadTasks { (success, error) -> Void in
-                self.parent.performSegueWithIdentifier("taskSelection", sender: self.parent)
+                self.parent.performSegue(withIdentifier: "taskSelection", sender: self.parent)
             }
         }
     }

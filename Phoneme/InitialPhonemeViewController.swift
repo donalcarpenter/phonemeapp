@@ -17,11 +17,11 @@ class InitialPhonemeViewController: TaskViewController{
     
         let initPhonemeTask = task?.items[counter] as! InitialPhonemeTaskItem
         
-        collectionView.hidden = true;
+        collectionView.isHidden = true;
 
-        dispatch_after(
-            dispatch_time(DISPATCH_TIME_NOW, Int64(initPhonemeTask.delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
-                self.collectionView.hidden = false
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(initPhonemeTask.delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: { () -> Void in
+                self.collectionView.isHidden = false
                 self.collectionView.reloadData()
         })
         
@@ -29,7 +29,7 @@ class InitialPhonemeViewController: TaskViewController{
         topImage.image = UIImage(named: initPhonemeTask.firstImage)
     }
     
-    override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
+    override func setTaskItemOptionView(_ view: UIView, task: TaskItem, index: Int) {
         
         if let img = view as? UIImageView
         {

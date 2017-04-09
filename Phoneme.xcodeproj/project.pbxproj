@@ -50,7 +50,6 @@
 		460506281B765C0A0053EB1C /* WordReadingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460506271B765C0A0053EB1C /* WordReadingTaskViewController.swift */; };
 		4621E2581B6E27D000446739 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2571B6E27D000446739 /* AuthenticationViewController.swift */; };
 		4621E25A1B6E2E1600446739 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621E2591B6E2E1600446739 /* BaseUIViewController.swift */; };
-		4621E25C1B7030EC00446739 /* key2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4621E25B1B7030EC00446739 /* key2.plist */; };
 		4621E25E1B72A34D00446739 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4621E25D1B72A34D00446739 /* AVFoundation.framework */; };
 		464B04A11B639F2B000312CC /* SingleRowImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B04A01B639F2B000312CC /* SingleRowImageTask.swift */; };
 		464B04B01B63BC39000312CC /* Rhyme1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 464B04A21B63BC39000312CC /* Rhyme1.mp4 */; };
@@ -163,6 +162,8 @@
 		4657425A1B617B8A00FE3E58 /* Fam6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424E1B616CB800FE3E58 /* Fam6.mp4 */; };
 		4657425B1B617B8A00FE3E58 /* Fam7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4657424F1B616CB800FE3E58 /* Fam7.mp4 */; };
 		4657425C1B617B8A00FE3E58 /* FamIntro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465742501B616CB800FE3E58 /* FamIntro.mp4 */; };
+		46590B2F1E992AEB007FC7E8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46590B2D1E992AEB007FC7E8 /* Bolts.framework */; };
+		46590B301E992AEB007FC7E8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46590B2E1E992AEB007FC7E8 /* Parse.framework */; };
 		465B4F131B7604940001EA66 /* LNRec1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465B4EFA1B7604940001EA66 /* LNRec1.mp4 */; };
 		465B4F141B7604940001EA66 /* LNRec2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465B4EFB1B7604940001EA66 /* LNRec2.mp4 */; };
 		465B4F151B7604940001EA66 /* LNRec3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 465B4EFC1B7604940001EA66 /* LNRec3.mp4 */; };
@@ -222,8 +223,6 @@
 		46B8B17D1B794ACF00D74B15 /* RhymeHatBat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B17B1B794ACF00D74B15 /* RhymeHatBat.mp4 */; };
 		46B8B17E1B794ACF00D74B15 /* RhymePig.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46B8B17C1B794ACF00D74B15 /* RhymePig.mp4 */; };
 		46BBAFA11B62D72300B65571 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BBAFA01B62D72300B65571 /* TaskItem.swift */; };
-		46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1761B6C17D2007E8E15 /* Bolts.framework */; };
-		46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1771B6C17D2007E8E15 /* Parse.framework */; };
 		46BED17E1B6C17D2007E8E15 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */; };
 		46BED17F1B6C17D2007E8E15 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */; };
 		46BED1801B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */; };
@@ -264,6 +263,7 @@
 		46E705931C06688E003866E9 /* Phonseg24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057B1C06688E003866E9 /* Phonseg24.mp4 */; };
 		46E705941C06688E003866E9 /* Phonsegfinal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057C1C06688E003866E9 /* Phonsegfinal.mp4 */; };
 		46E705951C06688E003866E9 /* Phonsegintro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 46E7057D1C06688E003866E9 /* Phonsegintro.mp4 */; };
+		46F100C21E9429F1009D51E8 /* key2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F100C11E9429F1009D51E8 /* key2.plist */; };
 		46F154F01B6CD8B600C203F6 /* ClassDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */; };
 		46F154F21B6D012C00C203F6 /* StudentDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */; };
 		46F154F41B6D23D200C203F6 /* StudentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */; };
@@ -324,7 +324,6 @@
 		460506271B765C0A0053EB1C /* WordReadingTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordReadingTaskViewController.swift; sourceTree = "<group>"; };
 		4621E2571B6E27D000446739 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		4621E2591B6E2E1600446739 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
-		4621E25B1B7030EC00446739 /* key2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key2.plist; sourceTree = "<group>"; };
 		4621E25D1B72A34D00446739 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		464B04A01B639F2B000312CC /* SingleRowImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleRowImageTask.swift; sourceTree = "<group>"; };
 		464B04A21B63BC39000312CC /* Rhyme1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rhyme1.mp4; sourceTree = "<group>"; };
@@ -441,6 +440,8 @@
 		4657424F1B616CB800FE3E58 /* Fam7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fam7.mp4; sourceTree = "<group>"; };
 		465742501B616CB800FE3E58 /* FamIntro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FamIntro.mp4; sourceTree = "<group>"; };
 		465742511B6170D000FE3E58 /* CustomImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageCell.swift; sourceTree = "<group>"; };
+		46590B2D1E992AEB007FC7E8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		46590B2E1E992AEB007FC7E8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		465B4EFA1B7604940001EA66 /* LNRec1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LNRec1.mp4; sourceTree = "<group>"; };
 		465B4EFB1B7604940001EA66 /* LNRec2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LNRec2.mp4; sourceTree = "<group>"; };
 		465B4EFC1B7604940001EA66 /* LNRec3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LNRec3.mp4; sourceTree = "<group>"; };
@@ -500,8 +501,6 @@
 		46B8B17B1B794ACF00D74B15 /* RhymeHatBat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymeHatBat.mp4; sourceTree = "<group>"; };
 		46B8B17C1B794ACF00D74B15 /* RhymePig.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RhymePig.mp4; sourceTree = "<group>"; };
 		46BBAFA01B62D72300B65571 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
-		46BED1761B6C17D2007E8E15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Audio/Bolts.framework; sourceTree = "<group>"; };
-		46BED1771B6C17D2007E8E15 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Audio/Parse.framework; sourceTree = "<group>"; };
 		46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Audio/ParseCrashReporting.framework; sourceTree = "<group>"; };
 		46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Audio/ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = Audio/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -542,6 +541,7 @@
 		46E7057B1C06688E003866E9 /* Phonseg24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonseg24.mp4; sourceTree = "<group>"; };
 		46E7057C1C06688E003866E9 /* Phonsegfinal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonsegfinal.mp4; sourceTree = "<group>"; };
 		46E7057D1C06688E003866E9 /* Phonsegintro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phonsegintro.mp4; sourceTree = "<group>"; };
+		46F100C11E9429F1009D51E8 /* key2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key2.plist; sourceTree = "<group>"; };
 		46F154EF1B6CD8B600C203F6 /* ClassDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDataLayer.swift; sourceTree = "<group>"; };
 		46F154F11B6D012C00C203F6 /* StudentDataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataLayer.swift; sourceTree = "<group>"; };
 		46F154F31B6D23D200C203F6 /* StudentDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDataTableViewCell.swift; sourceTree = "<group>"; };
@@ -563,11 +563,11 @@
 				46BED1881B6C1864007E8E15 /* CoreGraphics.framework in Frameworks */,
 				46BED1861B6C185D007E8E15 /* CFNetwork.framework in Frameworks */,
 				46BED1841B6C1855007E8E15 /* AudioToolbox.framework in Frameworks */,
+				46590B301E992AEB007FC7E8 /* Parse.framework in Frameworks */,
 				46BED1811B6C17D2007E8E15 /* ParseUI.framework in Frameworks */,
-				46BED17D1B6C17D2007E8E15 /* Parse.framework in Frameworks */,
+				46590B2F1E992AEB007FC7E8 /* Bolts.framework in Frameworks */,
 				46BED17E1B6C17D2007E8E15 /* ParseCrashReporting.framework in Frameworks */,
 				46BED17F1B6C17D2007E8E15 /* ParseFacebookUtils.framework in Frameworks */,
-				46BED17C1B6C17D2007E8E15 /* Bolts.framework in Frameworks */,
 				46BED1801B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,7 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				465742251B616ADD00FE3E58 /* Info.plist */,
-				4621E25B1B7030EC00446739 /* key2.plist */,
+				46F100C11E9429F1009D51E8 /* key2.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -917,6 +917,8 @@
 		46BED1821B6C17EF007E8E15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46590B2D1E992AEB007FC7E8 /* Bolts.framework */,
+				46590B2E1E992AEB007FC7E8 /* Parse.framework */,
 				4621E25D1B72A34D00446739 /* AVFoundation.framework */,
 				46BED1951B6C18AD007E8E15 /* libsqlite3.dylib */,
 				46BED1931B6C189C007E8E15 /* libz.dylib */,
@@ -927,8 +929,6 @@
 				46BED1871B6C1864007E8E15 /* CoreGraphics.framework */,
 				46BED1851B6C185D007E8E15 /* CFNetwork.framework */,
 				46BED1831B6C1855007E8E15 /* AudioToolbox.framework */,
-				46BED1761B6C17D2007E8E15 /* Bolts.framework */,
-				46BED1771B6C17D2007E8E15 /* Parse.framework */,
 				46BED1781B6C17D2007E8E15 /* ParseCrashReporting.framework */,
 				46BED1791B6C17D2007E8E15 /* ParseFacebookUtils.framework */,
 				46BED17A1B6C17D2007E8E15 /* ParseFacebookUtilsV4.framework */,
@@ -996,12 +996,14 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = donal;
 				TargetAttributes = {
 					465742201B616ADD00FE3E58 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = KXQDM2VXYW;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -1010,6 +1012,9 @@
 					};
 					465742351B616ADE00FE3E58 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = KXQDM2VXYW;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 465742201B616ADD00FE3E58;
 					};
 				};
@@ -1127,6 +1132,7 @@
 				465B4F231B7604940001EA66 /* LNRec17.mp4 in Resources */,
 				460505FB1B7633960053EB1C /* LSRec13.mp4 in Resources */,
 				460505F61B7633960053EB1C /* LSRec8.mp4 in Resources */,
+				46F100C21E9429F1009D51E8 /* key2.plist in Resources */,
 				464B04FF1B6ABB18000312CC /* FinalPhoneme11.mp4 in Resources */,
 				460506171B765B190053EB1C /* WordRead1.mp4 in Resources */,
 				465B4F2B1B7604940001EA66 /* LNRecIntro.mp4 in Resources */,
@@ -1136,7 +1142,6 @@
 				460505F01B7633960053EB1C /* LSRec2.mp4 in Resources */,
 				465B4F191B7604940001EA66 /* LNRec7.mp4 in Resources */,
 				46B8B17D1B794ACF00D74B15 /* RhymeHatBat.mp4 in Resources */,
-				4621E25C1B7030EC00446739 /* key2.plist in Resources */,
 				46B8B16F1B79012100D74B15 /* DidactGothic.ttf in Resources */,
 				460505FF1B7633960053EB1C /* LSRec17.mp4 in Resources */,
 				460505F31B7633960053EB1C /* LSRec5.mp4 in Resources */,
@@ -1353,8 +1358,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -1400,8 +1407,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -1422,6 +1431,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1434,9 +1444,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KXQDM2VXYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phoneme/Audio",
+					"$(PROJECT_DIR)/Phoneme",
 				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1444,7 +1456,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.donalcarpenter.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ba5ef831-df30-4a33-a670-1f71e016c9f3";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1455,9 +1469,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KXQDM2VXYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Phoneme/Audio",
+					"$(PROJECT_DIR)/Phoneme",
 				);
 				INFOPLIST_FILE = Phoneme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -1465,7 +1481,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.donalcarpenter.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ba5ef831-df30-4a33-a670-1f71e016c9f3";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1473,6 +1491,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KXQDM2VXYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1485,6 +1505,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ph.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phoneme.app/Phoneme";
 			};
 			name = Debug;
@@ -1493,6 +1515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KXQDM2VXYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1501,6 +1525,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ph.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phoneme.app/Phoneme";
 			};
 			name = Release;

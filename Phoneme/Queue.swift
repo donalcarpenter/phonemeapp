@@ -15,7 +15,7 @@ class _QueueItem<T> {
     }
 }
 
-public class Queue<T> {
+open class Queue<T> {
     
     public typealias Element = T
     
@@ -29,13 +29,13 @@ public class Queue<T> {
     }
     
     /// Add a new item to the back of the queue.
-    public func enqueue (value: Element) {
+    open func enqueue (_ value: Element) {
         _back.next = _QueueItem(value)
         _back = _back.next!
     }
     
     /// Return and remove the item at the front of the queue.
-    public func dequeue () -> Element? {
+    open func dequeue () -> Element? {
         if let newhead = _front.next {
             _front = newhead
             return newhead.value
@@ -44,7 +44,7 @@ public class Queue<T> {
         }
     }
     
-    public func isEmpty() -> Bool {
+    open func isEmpty() -> Bool {
         return _front === _back
     }
 }

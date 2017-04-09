@@ -12,7 +12,7 @@ class BaseUIViewController: UIViewController {
 
     var showBackgroundBlur = true
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if(showBackgroundBlur){
@@ -20,22 +20,22 @@ class BaseUIViewController: UIViewController {
             let bgimgw = UIImageView(frame: self.view.frame)
             bgimgw.image = bgimg
             
-            self.view.insertSubview(bgimgw, atIndex: 0)
+            self.view.insertSubview(bgimgw, at: 0)
         }
         
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-    func showErrorMessage(message: String, userError: Bool){
+    func showErrorMessage(_ message: String, userError: Bool){
         
-        let alertController = UIAlertController(title: "problems...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "problems...", message: message, preferredStyle: UIAlertControllerStyle.alert)
         
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            alertController.dismissViewControllerAnimated(true, completion: nil)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            alertController.dismiss(animated: true, completion: nil)
         }
         
         alertController.addAction(OKAction)
         
-        self.presentViewController(alertController, animated: true, completion: nil);
+        self.present(alertController, animated: true, completion: nil);
     }
 }

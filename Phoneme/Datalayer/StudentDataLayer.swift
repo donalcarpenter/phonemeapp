@@ -8,6 +8,30 @@
 
 import UIKit
 import Parse
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class StudentDataLayer: NSObject {
     let entity: PFObject
@@ -31,7 +55,7 @@ class StudentDataLayer: NSObject {
         self.entity = entity;
     }
     
-    class func new(classId: String, identifier: String, dateOfBirth: String, gender: String) -> StudentDataLayer {
+    class func new(_ classId: String, identifier: String, dateOfBirth: String, gender: String) -> StudentDataLayer {
         let entity = PFObject(className: "student")
         entity["classId"] = classId
         entity["identifier"] = identifier
@@ -41,54 +65,54 @@ class StudentDataLayer: NSObject {
         return StudentDataLayer(entity: entity)
     }
     
-    func saveTaskResult(result: TaskResult, completionBlock: (success: Bool, error: String) -> Void){
+    func saveTaskResult(_ result: TaskResult, completionBlock: @escaping (_ success: Bool, _ error: String) -> Void){
         
         let student = entity
         
-        let key = result.taskTitle.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let key = result.taskTitle.replacingOccurrences(of: " ", with: "_", options: NSString.CompareOptions.literal, range: nil)
         
         student[key] = result.correctAnswers
         
         results.insert(key)
         
-        student.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
+        student.saveInBackground(block: { (success, err) -> Void in
             if(!success)
             {
-                completionBlock(success: false, error: "\(err)")
+                completionBlock(false, "\(err)")
                 self.results.remove(key)
             }
             else{
-                completionBlock(success: true, error: "")
-                self.saveRawData(student, key:key, rawResults:result.rawData)
+                completionBlock(true, "")
+                self.saveRawData(student, key: key, rawResults: result.rawData)
             }
         })
     }
 
-    static func setStudentCompleted(studentId: String, completionBlock: (success: Bool, error: String) -> Void){
+    static func setStudentCompleted(_ studentId: String, completionBlock: @escaping (_ success: Bool, _ error: String) -> Void){
         
         let query = PFQuery(className: "student")
         
-        query.getObjectInBackgroundWithId(studentId, block: { (student: PFObject?, err: NSError?) -> Void in
+        query.getObjectInBackground(withId: studentId, block: { (student, err) -> Void in
             if(err != nil){
-                completionBlock(success: false, error: "\(err)")
+                completionBlock(false, "\(err)")
                 return
             }
         
             student!["isCompleted"] = true
             
-            student?.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
+            student?.saveInBackground(block: { (success, err) -> Void in
                 if(!success)
                 {
-                    completionBlock(success: false, error: "\(err)")
+                    completionBlock(false, "\(err)")
                 }
                 else{
-                    completionBlock(success: true, error: "")
+                    completionBlock(true, "")
                 }
             })
         })
     }
     
-    func saveRawData(student: PFObject, key: String, rawResults: [TaskResultRawItem]?){
+    func saveRawData(_ student: PFObject, key: String, rawResults: [TaskResultRawItem]?){
         
         if(rawResults == nil){
             return
@@ -98,39 +122,39 @@ class StudentDataLayer: NSObject {
         
         for data in rawResults!{
             let dict : [String: AnyObject] =
-            ["index": data.index, "correctAnswer": data.correctAnswer, "givenAnswer" : data.givenAnswer]
+            ["index": data.index as AnyObject, "correctAnswer": data.correctAnswer as AnyObject, "givenAnswer" : data.givenAnswer as AnyObject]
             
-            rawData.append(dict);
+            rawData.append(dict as NSDictionary);
         }
         
         let query = PFQuery(className: "rawResults")
         query.whereKey("task", equalTo: key)
         query.whereKey("student", equalTo: student)
         
-        query.getFirstObjectInBackgroundWithBlock { (pfResults:PFObject?, err:NSError?) -> Void in
+        query.getFirstObjectInBackground { (pfResults, err) -> Void in
             if let data = pfResults as PFObject!
             {
                 data["results"] = rawData
-                data.saveInBackgroundWithBlock(nil)
+                data.saveInBackground(block: nil)
                 
             }else{
                 let data = PFObject(className: "rawResults")
                 data["task"] = key
                 data["student"] = student
                 data["results"] = rawData
-                data.saveInBackgroundWithBlock(nil)
+                data.saveInBackground(block: nil)
             }
-        }
+        } 
     }
     
-    func loadTasks(completionBlock: (success: Bool, error: String) -> Void){
+    func loadTasks(_ completionBlock: @escaping (_ success: Bool, _ error: String) -> Void){
         let query = PFQuery(className: "rawResults")
         query.whereKey("student", equalTo: self.entity)
         
-        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, err:NSError?) -> Void in
+        query.findObjectsInBackground { (objects, err) -> Void in
             
             if(err != nil){
-                completionBlock(success: false, error: "\(err)")
+                completionBlock(false, "\(err)")
                 return
             }
             
@@ -142,25 +166,25 @@ class StudentDataLayer: NSObject {
                 }
             }
             
-            completionBlock(success: true, error: "")
+            completionBlock(true, "")
         }
     }
     
-    func save(completionBlock: (success: Bool, error: String) -> Void){
+    func save(_ completionBlock: @escaping (_ success: Bool, _ error: String) -> Void){
         let dupeCheck = PFQuery(className: "student")
         dupeCheck.whereKey("classId", equalTo:classId)
         dupeCheck.whereKey("identifier", equalTo:identifier)
         
-        dupeCheck.findObjectsInBackgroundWithBlock { (objs: [AnyObject]?, err:NSError?) -> Void in
+        dupeCheck.findObjectsInBackground { (objs, err) -> Void in
             
             if(err != nil){
-                completionBlock(success: false, error: "\(err)")
+                completionBlock(false, "\(err)")
                 
                 return
             }
             
             if(objs?.count > 0){
-                completionBlock(success: false, error: "There is already a student with the identifier \(self.identifier) in this class")
+                completionBlock(false, "There is already a student with the identifier \(self.identifier) in this class")
                 
                 return
             }
@@ -168,29 +192,29 @@ class StudentDataLayer: NSObject {
             let save = self.entity
             save["isCompleted"] = self.isCompleted
             
-            save.saveInBackgroundWithBlock({ (success: Bool, err: NSError?) -> Void in
+            save.saveInBackground(block: { (success, err) -> Void in
                 if(!success || err != nil){
-                    completionBlock(success: false, error: "\(err)")
+                    completionBlock(false, "\(err)")
                     
                     return
                 }
                 
-                completionBlock(success: true, error: "")
+                completionBlock(true, "")
             })
         }
     }
     
-    class func LoadStudentsInClass(classId: String, completionBlock: (success: Bool, error: String, students: [StudentDataLayer]?) -> Void){
+    class func LoadStudentsInClass(_ classId: String, completionBlock: @escaping (_ success: Bool, _ error: String, _ students: [StudentDataLayer]?) -> Void){
         let query = PFQuery(className: "student")
         query.whereKey("classId", equalTo: classId)
-        query.orderByAscending("identifier")
+        query.order(byAscending: "identifier")
         
-        query.findObjectsInBackgroundWithBlock { (objects:[AnyObject]?, err:NSError?) -> Void in
+        query.findObjectsInBackground { (objects, err) -> Void in
             
             var results = [StudentDataLayer]()
             
             if(err != nil){
-                completionBlock(success: false, error: "\(err)", students: results)
+                completionBlock(false,  "\(err)", results)
                 return
             }
             
@@ -206,7 +230,7 @@ class StudentDataLayer: NSObject {
                 results.append(student)
             }
             
-            completionBlock(success: true, error: "", students: results)
+            completionBlock(true, "", results)
         }
     }
 }

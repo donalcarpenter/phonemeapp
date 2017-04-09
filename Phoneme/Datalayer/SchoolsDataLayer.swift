@@ -7,6 +7,30 @@
 //
 
 import Parse
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class SchoolsDataLayer: NSObject {
     
@@ -18,13 +42,14 @@ class SchoolsDataLayer: NSObject {
         self.objectId = objectId
     }
     
-    class func loadSchools(completionBlock: (success: Bool, error: String, schools:[SchoolsDataLayer]?) -> Void){
+    class func loadSchools(_ completionBlock: @escaping (_ success: Bool, _ error: String, _ schools:[SchoolsDataLayer]?) -> Void){
         let query = PFQuery(className: "school")
-        query.orderByAscending("name")
+        query.order(byAscending: "name")
+    
         
-        query.findObjectsInBackgroundWithBlock { (schools:[AnyObject]?, error: NSError?) -> Void in
+        query.findObjectsInBackground { (schools, error) -> Void in
             if(error != nil){
-                completionBlock(success: false, error: "\(error)", schools: nil)
+                completionBlock( false, "\(error)", nil)
             }
             
             var result = [SchoolsDataLayer]()
@@ -33,19 +58,19 @@ class SchoolsDataLayer: NSObject {
                 result.append(SchoolsDataLayer(schoolName: pfobj["name"] as! String, objectId: pfobj.objectId!))
             }
             
-            completionBlock(success: true, error: "", schools: result)
+            completionBlock(true,  "", result)
         }
     }
     
-    class func saveNewSchool(schoolName: String, completionBlock: (success: Bool, error: String) -> Void){
+    class func saveNewSchool(_ schoolName: String, completionBlock: @escaping (_ success: Bool, _ error: String) -> Void){
         
         let checkDupes = PFQuery(className: "school")
         checkDupes.whereKey("name", equalTo: schoolName)
 
-        checkDupes.findObjectsInBackgroundWithBlock { (schools:[AnyObject]?, error: NSError?) -> Void in
+        checkDupes.findObjectsInBackground { (schools, error) -> Void in
             if(schools?.count > 0){
                 
-                completionBlock(success:false, error: "the school \(schoolName) already exists")
+                completionBlock(false, "the school \(schoolName) already exists")
                 
                 return
             }
@@ -53,8 +78,8 @@ class SchoolsDataLayer: NSObject {
             let newSchool = PFObject(className: "school")
             newSchool["name"] = schoolName
             
-            newSchool.saveInBackgroundWithBlock({ (success:Bool, err:NSError?) -> Void in
-                completionBlock(success:success, error:"\(err)")
+            newSchool.saveInBackground(block: { (success, err) -> Void in
+                completionBlock(success, "\(err)")
             })
         }
     }

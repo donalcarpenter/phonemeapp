@@ -20,7 +20,7 @@ class SegmentationViewController: TaskViewController {
         topImage.image = UIImage(named: t.image)
     }
     
-    override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
+    override func setTaskItemOptionView(_ view: UIView, task: TaskItem, index: Int) {
         
         if let img = view as? UIImageView
         {
@@ -28,7 +28,7 @@ class SegmentationViewController: TaskViewController {
         }
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
     

@@ -15,7 +15,7 @@ protocol ImageCollectionViewControllerDelegate{
     var task : Task { get }
     //var player: AudioManager { get }
     
-    func uploadResults(results: [TaskResultRawItem])
+    func uploadResults(_ results: [TaskResultRawItem])
 }
 
 class SingleRowImageTask: TaskViewController {
@@ -24,7 +24,7 @@ class SingleRowImageTask: TaskViewController {
         super.collectionView.reloadData()
     }
     
-    override func setTaskItemOptionView(view: UIView, task: TaskItem, index: Int) {
+    override func setTaskItemOptionView(_ view: UIView, task: TaskItem, index: Int) {
         
         if let img = view as? UIImageView
         {

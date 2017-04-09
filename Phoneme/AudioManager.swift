@@ -16,11 +16,12 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
     static var count = 0
     static let complimentsAudio = ["Comp1", "Comp2", "Comp3", "Comp4", "Comp5"]
     
-    let postSynchronousPlaybackQueue = Queue<NSOperation>()
+    let postSynchronousPlaybackQueue = Queue<Operation>()
 
     
-    func playComplimentThenContinue(completionBlock: () -> Void){
-        if(AudioManager.nextCompliment == AudioManager.count++){
+    func playComplimentThenContinue(_ completionBlock: @escaping () -> Void){
+        AudioManager.count = AudioManager.count + 1;
+        if(AudioManager.nextCompliment == AudioManager.count){
             AudioManager.nextCompliment += Int(arc4random_uniform(4) + 1)
             
             let audiotoPlay = AudioManager.complimentsAudio[Int(arc4random_uniform(UInt32(AudioManager.complimentsAudio.count)))]
@@ -32,27 +33,27 @@ class AudioManager: NSObject, AVAudioPlayerDelegate {
         }
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         while(!postSynchronousPlaybackQueue.isEmpty()){
-            NSOperationQueue.mainQueue().addOperation(postSynchronousPlaybackQueue.dequeue()!)
+            OperationQueue.main.addOperation(postSynchronousPlaybackQueue.dequeue()!)
         }
     }
     
-    func playAudioFrom(source: String){
+    func playAudioFrom(_ source: String){
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         } catch _ {
         }
-        let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
-        audioPlayer = try! AVAudioPlayer(contentsOfURL: soundURL!)
+        let soundURL = Bundle.main.url(forResource: source, withExtension: "mp4")
+        audioPlayer = try! AVAudioPlayer(contentsOf: soundURL!)
         audioPlayer.delegate = nil
         audioPlayer.play()
     }
     
-    func playAudioFrom(source: String, completionBlock: () -> Void){    
-        let soundURL = NSBundle.mainBundle().URLForResource(source, withExtension: "mp4")
-        postSynchronousPlaybackQueue.enqueue(NSBlockOperation(block: completionBlock))
-        audioPlayer = try! AVAudioPlayer(contentsOfURL: soundURL!)
+    func playAudioFrom(_ source: String, completionBlock: @escaping () -> Void){    
+        let soundURL = Bundle.main.url(forResource: source, withExtension: "mp4")
+        postSynchronousPlaybackQueue.enqueue(BlockOperation(block: completionBlock))
+        audioPlayer = try! AVAudioPlayer(contentsOf: soundURL!)
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         } catch _ {
